@@ -3,13 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>GifOS</title>
 </head>
 <body>
+    <header id="header__container">
+        <picture>
+            <source media="(min-width:780px)" src="assets/logo-desktop.svg">
+            <img src="assets/logo-mobile.svg" alt="gifOS logo">
+        </picture>
+        <nav id="navbar">
+            <ul class="navbar_menu hide">
+                <li class="navbar_menu_item"><a href="">MODO NOCTURNO</a></li>
+                </hr>
+                <li class="navbar_menu_item"><a href="">FAVORITOS</a></li>
+                </hr>
+                <li class="navbar_menu_item"><a href="">MIS GIFOS</a></li>
+                </hr>
+            </ul>
+            
+            <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu">
 
+            <img src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
+        </nav>
+    </header>
+
+    <main id="main__container">
+
+        <!------ HERO ------->
+        <section class="hero__container">
+            <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
+            <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
+           
+            <div class="hero__search">
+                <input type="text" id="search_input" placeholder="Busca GIFOS y más">
+                <a href=""><img class="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>
+                <ul class="recommended__search hide"></ul>
+            </div>
+        </section>
+
+    </main>
     
 </body>
 </html>

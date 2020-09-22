@@ -1,0 +1,15 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body #header__container {
+  border-top: 5px  solid #572EE5;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 9;
+}
+/*# sourceMappingURL=styles.css.map */
