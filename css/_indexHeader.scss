@@ -1,0 +1,66 @@
+body{
+    #header__container{
+        border-top: 5px  solid #572EE5;
+        position: sticky;
+        
+
+        .imgs_container{
+            padding: 2.13rem 1.63rem 1.08rem 1.38rem;
+            display: flex;
+            justify-content: space-between;
+
+            .img_logo{
+                width: 53px;
+                height: 49px;
+            }
+        }
+
+        .hide{
+            display: none;
+        }
+
+        .menu_hamburguesa{
+            cursor: pointer;
+        }
+
+        .navbar{
+            overflow: hidden;
+            height: 0;
+        }
+
+        .navbar_menu_open{
+            position: absolute;
+            background-color: rgba(87,46,229,0.90);
+            opacity: 90%;
+            width: 100%;
+            height: 100vh;
+
+            .navbar_menu{
+                text-decoration: none;
+                list-style: none;
+                
+                li{
+                    text-align: center;
+                    padding: 1rem 0;
+
+                    .navbar_menu_item{
+                        font-family: 'Montserrat', sans-serif;
+                        color: #ffffff;
+                        font-size: 0.94rem;
+                        text-align: center;
+                        padding: 1rem 0;
+                }
+                }
+                .navbar_menu_line{
+                    width: 2.56rem;
+                    height: 0.01rem;
+                    opacity: 50%;
+                    margin-left: 48%;
+                }
+                
+            }
+            
+        }
+    }
+}
+

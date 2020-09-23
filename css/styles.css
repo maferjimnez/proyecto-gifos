@@ -10,6 +10,66 @@ body #header__container {
   border-top: 5px  solid #572EE5;
   position: -webkit-sticky;
   position: sticky;
-  z-index: 9;
+}
+
+body #header__container .imgs_container {
+  padding: 2.13rem 1.63rem 1.08rem 1.38rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #header__container .imgs_container .img_logo {
+  width: 53px;
+  height: 49px;
+}
+
+body #header__container .hide {
+  display: none;
+}
+
+body #header__container .menu_hamburguesa {
+  cursor: pointer;
+}
+
+body #header__container .navbar {
+  overflow: hidden;
+  height: 0;
+}
+
+body #header__container .navbar_menu_open {
+  position: absolute;
+  background-color: rgba(87, 46, 229, 0.9);
+  opacity: 90%;
+  width: 100%;
+  height: 100vh;
+}
+
+body #header__container .navbar_menu_open .navbar_menu {
+  text-decoration: none;
+  list-style: none;
+}
+
+body #header__container .navbar_menu_open .navbar_menu li {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+body #header__container .navbar_menu_open .navbar_menu li .navbar_menu_item {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 0.94rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+body #header__container .navbar_menu_open .navbar_menu .navbar_menu_line {
+  width: 2.56rem;
+  height: 0.01rem;
+  opacity: 50%;
+  margin-left: 48%;
 }
 /*# sourceMappingURL=styles.css.map */

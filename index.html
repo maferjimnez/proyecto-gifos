@@ -3,37 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/styles.css">
     <title>GifOS</title>
 </head>
 <body>
+    <!------ HEADER ------->
     <header id="header__container">
-        <picture>
-            <source media="(min-width:780px)" src="assets/logo-desktop.svg">
-            <img src="assets/logo-mobile.svg" alt="gifOS logo">
-        </picture>
-        <nav id="navbar">
-            <ul class="navbar_menu hide">
-                <li class="navbar_menu_item"><a href="">MODO NOCTURNO</a></li>
-                </hr>
-                <li class="navbar_menu_item"><a href="">FAVORITOS</a></li>
-                </hr>
-                <li class="navbar_menu_item"><a href="">MIS GIFOS</a></li>
-                </hr>
-            </ul>
-            
-            <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu">
+       <div class="imgs_container">
+        <svg class="img_logo" viewBox="0 0 53 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+            <title>logo-mobile</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <polygon id="path-1" points="0.837379272 0.943343486 48.5296106 0.943343486 48.5296106 20.459945 0.837379272 20.459945"></polygon>
+            </defs>
+            <g id="GIFOS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="00-UI-Kit" transform="translate(-347.000000, -2463.000000)">
+                    <g id="logo-mobile" transform="translate(347.000000, 2463.000000)">
+                        <g id="Group-5">
+                            <polygon id="Fill-1" fill="#5ED7C6" points="0 -0.0002 0 48.7913039 48.7915039 48.7913039 48.7915039 38.3359816 45.3063965 38.3359816 45.3063965 45.3061965 3.48510742 45.3061965 3.48510742 3.48490742 34.8510742 3.48490742 34.8510742 13.9402297 45.3063965 13.9402297 45.3063965 20.9111416 48.7915039 20.9111416 48.7915039 10.4551223 38.3361816 -0.0002"></polygon>
+                            <g id="Group-4" transform="translate(7.000000, 16.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-3"></g>
+                                <text id="GIFOS" mask="url(#mask-2)" font-family="Roboto-Black, Roboto" font-size="16" font-weight="700" fill="#572EE5">
+                                    <tspan x="1" y="20">GIFOS</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu" onclick="showMenu()">      
+        
+    </div>
 
-            <img src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
+        <nav id="navbar" class="navbar">
+            <ul class="navbar_menu">
+                <li><a class="navbar_menu_item" href="">MODO NOCTURNO</a></li>
+                <hr class="navbar_menu_line">
+                <li><a class="navbar_menu_item" href="">FAVORITOS</a></li>
+                <hr class="navbar_menu_line">
+                <li><a class="navbar_menu_item" href="">MIS GIFOS</a></li>
+                <hr class="navbar_menu_line">
+            </ul>           
+            <img class="btnCrear hide" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
         </nav>
     </header>
 
-    <main id="main__container">
+  <!------  <main id="main__container">
 
         <!------ HERO ------->
-        <section class="hero__container">
+   <!------      <section class="hero__container">
             <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
             <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
            
@@ -43,8 +68,7 @@
                 <ul class="recommended__search hide"></ul>
             </div>
         </section>
-
-    </main>
-    
+    </main>    ------->
+    <script src="/js/mainHome.js"></script>
 </body>
 </html>
