@@ -6,9 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="">
     <title>GifOS</title>
 </head>
-<body>
+<body class="body">
     <!------ HEADER ------->
     <header id="header__container">
        <div class="imgs_container">
@@ -51,24 +52,30 @@
                 <li><a class="navbar_menu_item" href="">MIS GIFOS</a></li>
                 <hr class="navbar_menu_line">
             </ul>           
-            <img class="btnCrear hide" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
         </nav>
+        <img class="btnCrear hide" id="btnCrear" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
+
     </header>
 
-  <!------  <main id="main__container">
-
+<main class="main">
         <!------ HERO ------->
-   <!------      <section class="hero__container">
-            <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
-            <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
+  <section class="hero__container">
+        <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
+        <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
            
-            <div class="hero__search">
-                <input type="text" id="search_input" placeholder="Busca GIFOS y más">
-                <a href=""><img class="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>
-                <ul class="recommended__search hide"></ul>
-            </div>
-        </section>
-    </main>    ------->
-    <script src="/js/mainHome.js"></script>
+        <div class="hero__search">
+            <input type="text" id="search_input" placeholder="Busca GIFOS y más">
+            <a href=""><img class="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>
+          <!------    <ul class="recommended__search hide"></ul> ----->
+        </div>
+
+        <div class="trending__tags__container">
+            <h3 class="tags__title">Trending:</h3>
+            <p id="tags__content">Harry</p>
+        </div>
+
+    </section>
+</main>
+<script src="/js/mainHome.js"></script>
 </body>
 </html>

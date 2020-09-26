@@ -1,0 +1,109 @@
+.body{
+    .main{
+        .hero__container{
+            padding: 0.44rem 1.31rem 2.81rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .hero__title{
+                padding: 0 2rem 2rem;
+                font-family: 'Montserrat', sans-serif;
+                color: $azulOscuro;
+                font-size: 1.56rem;
+                text-align: center;
+
+                .title_span{
+                    color: $turquesa;
+                }
+            }
+
+            .hero__ilustration{
+                width: 17.06rem;
+            }
+
+            .hero__search{
+                position: relative;
+
+                #search_input{
+                    outline: none;
+                    background: #FFFFFF;
+                    border: 1px solid $azulOscuro;
+                    border-radius: 27px;
+                    width: 100%;
+                    font-size: 16px;
+                    padding: 0.85rem 3.5rem;
+                }
+
+                a{
+                     position: absolute;
+                     right: 6%;
+                     top: 30%;
+                   
+                        .searchIcon{                      
+                        cursor: pointer;
+                        
+                    }
+                }
+            }
+
+            .trending__tags__container{
+                margin-top: 1.94rem;
+                
+                .tags__title{
+                    font: 1rem 'Montserrat', sans-serif;
+                    font-weight: bolder;
+                    color: $azulOscuro;
+                }
+
+                #tags__content{
+                    font: 0.88rem 'Montserrat', sans-serif;
+                    color: $azulOscuro;
+                    text-align: center;
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:780px){
+    .body{
+        .main{
+            .hero__container{
+                padding: 4.75rem 15.81rem 5.94rem;
+
+                .hero__title{
+                    font-size: 2.19rem;
+                    padding: 0 8rem 2rem;
+                }
+
+                .hero__ilustration{
+                    width: 24.94rem;
+                }
+
+                .hero__search{
+                    #search_input{
+                        width: 50vw;
+                    }
+                    a{
+                        .searchIcon{
+                            right: 27vw;
+                            top: 83vh;
+                        }
+                    }
+                }
+
+                .trending__tags__container{
+                    margin-top: 4.56rem;
+                    .tags__title{
+                        font-size: 1.13rem;
+                    }
+                    #tags__content{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

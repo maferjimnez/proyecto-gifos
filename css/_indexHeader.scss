@@ -1,6 +1,6 @@
 body{
     #header__container{
-        border-top: 5px  solid #572EE5;
+        border-top: 5px  solid rgb(87, 46, 229);
         position: sticky;
         
 
@@ -10,30 +10,28 @@ body{
             justify-content: space-between;
 
             .img_logo{
-                width: 53px;
-                height: 49px;
+                width: 3.5rem;
+
             }
         }
 
-        .hide{
-            display: none;
+        .btnCrear{
+            overflow: hidden;
+            width: 0;
         }
 
         .menu_hamburguesa{
             cursor: pointer;
         }
 
-        .navbar{
-            overflow: hidden;
-            height: 0;
-        }
 
-        .navbar_menu_open{
+        .navbar{
             position: absolute;
-            background-color: rgba(87,46,229,0.90);
+            background-color: $azulOscuro;
             opacity: 90%;
             width: 100%;
-            height: 100vh;
+            overflow: hidden;
+            height: 0;
 
             .navbar_menu{
                 text-decoration: none;
@@ -48,8 +46,18 @@ body{
                         color: #ffffff;
                         font-size: 0.94rem;
                         text-align: center;
-                        padding: 1rem 0;
+                        
+                       
+                        &:hover{
+                            border-bottom: 2px solid $turquesa;
+                        }
+
+                        &:active{
+                            color: $textActive;
+                        }
                 }
+
+               
                 }
                 .navbar_menu_line{
                     width: 2.56rem;
@@ -61,6 +69,62 @@ body{
             }
             
         }
+        .navbar_menu_open{
+            height: 100vh;
+        }
     }
 }
 
+@media (min-width:780px){
+    body{
+        #header__container{
+            padding: 1.44rem 9.75rem 0.81rem;
+            display: flex;
+            justify-content: space-between;
+
+            .imgs_container{
+                padding: 0;
+                .img_logo{
+                    width: 4.93rem;
+                    height: 4.93rem;
+                }
+                .menu_hamburguesa{
+                    overflow: hidden;
+                    width: 0;
+                }
+            }
+
+            .navbar{
+                overflow: visible;
+                width: 26rem;
+                position: initial;
+                background-color: #ffffff;
+                margin: 1rem 0 0 22rem;
+                
+                .navbar_menu{
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                        .navbar_menu_item{
+                            color: $azulOscuro;
+                            font-weight: 700;
+                        }
+                        }
+                    .navbar_menu_line{
+                        display: none;
+                    }
+                }
+            }
+
+            .btnCrear{
+                overflow: visible;
+                width: 4.5rem;
+                height: 4.5rem;
+                cursor: pointer;
+            }
+            
+
+        }
+    }
+    
+}
