@@ -1,0 +1,91 @@
+.main{
+ .hero__container{
+    .search__results__container{
+        padding: 5.12rem 0 4.94rem;
+        
+        #search__results__title{
+            text-align: center;
+            color: $azulOscuro;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bolder;
+            margin-bottom: 2.38rem;
+        }
+
+        #search__results__gallery{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100vw;
+ 
+            .gif_result_container{
+                position: relative;
+
+                .gif_result{
+                    width: 9.75rem;
+                    height: 7.5rem;              
+                }
+
+                .icons{
+                    display: none;
+                }
+
+            }
+        }
+    }
+ }   
+}
+
+
+@media (min-width: 780px){
+    .main{
+        .hero__container{
+            .search__results__container{
+                    #search__results__gallery{
+                        width: 98vw;
+                        flex-wrap: wrap;
+
+                        .gif_result_container{
+                            margin-bottom: 1.81rem;
+                            cursor: pointer;
+                            .gif_result{
+                                width: 16.25rem;
+                                height: 12.5rem;
+                            }
+                            .gif_content{
+                                display: none;
+                                
+                                 .icons{                            
+                                display: flex;
+                                justify-content: space-between;
+                                position: absolute;
+                                top: 1rem;
+                                left: 8rem;
+                                width: 47%;
+                            }
+                            .details{
+                                position: absolute;
+                                top: 9rem;
+                                left: 1rem;
+                                .gif_user , .gif_title{
+                                    font-family: 'Roboto-regular', sans-serif;
+                                    color: #ffffff;
+                                }
+                            }
+                            }
+                           
+                           &:hover{
+                               .gif_content{
+                                   display: block;
+                               }
+                           }
+                        }
+                    }
+                    #show_more_btn{
+                        border: 1px solid $azulOscuro;
+                        border-radius: 25px;
+                        font: 0.81rem 'Montserrat-Bold', sans-serif;
+                    }
+                }
+            }
+        
+    }
+}

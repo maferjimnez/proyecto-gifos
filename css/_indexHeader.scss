@@ -10,7 +10,7 @@ body{
             justify-content: space-between;
 
             .img_logo{
-                width: 3.5rem;
+                width: 3.05rem;
 
             }
         }
@@ -75,6 +75,8 @@ body{
     }
 }
 
+
+
 @media (min-width:780px){
     body{
         #header__container{
@@ -85,8 +87,7 @@ body{
             .imgs_container{
                 padding: 0;
                 .img_logo{
-                    width: 4.93rem;
-                    height: 4.93rem;
+                    width: 3.69rem;
                 }
                 .menu_hamburguesa{
                     overflow: hidden;

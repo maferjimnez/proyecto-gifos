@@ -1,0 +1,30 @@
+.main{
+    #trending__tags__container {
+        margin-top: 1.94rem;
+
+        .tags__title {
+          font-family: "Montserrat", sans-serif;
+          font-weight: bolder;
+          color: $azulOscuro;
+          text-align: center;
+        }
+
+        #tags__content {
+          font: 0.88rem "Montserrat", sans-serif;
+          color: $azulOscuro;
+          text-align: center;
+        }
+    }
+}
+
+@media (min-width: 780px){
+    .trending__tags__container {
+    margin-top: 4.56rem;
+    .tags__title {
+      font-size: 1.13rem;
+    }
+    #tags__content {
+      font-size: 1rem;
+    }
+  }
+}

@@ -6,41 +6,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="">
     <title>GifOS</title>
 </head>
 <body class="body">
-    <!------ HEADER ------->
+                
+            <!--    HEADER    -->
+
     <header id="header__container">
        <div class="imgs_container">
-        <svg class="img_logo" viewBox="0 0 53 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-            <title>logo-mobile</title>
-            <desc>Created with Sketch.</desc>
-            <defs>
-                <polygon id="path-1" points="0.837379272 0.943343486 48.5296106 0.943343486 48.5296106 20.459945 0.837379272 20.459945"></polygon>
-            </defs>
-            <g id="GIFOS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="00-UI-Kit" transform="translate(-347.000000, -2463.000000)">
-                    <g id="logo-mobile" transform="translate(347.000000, 2463.000000)">
-                        <g id="Group-5">
-                            <polygon id="Fill-1" fill="#5ED7C6" points="0 -0.0002 0 48.7913039 48.7915039 48.7913039 48.7915039 38.3359816 45.3063965 38.3359816 45.3063965 45.3061965 3.48510742 45.3061965 3.48510742 3.48490742 34.8510742 3.48490742 34.8510742 13.9402297 45.3063965 13.9402297 45.3063965 20.9111416 48.7915039 20.9111416 48.7915039 10.4551223 38.3361816 -0.0002"></polygon>
-                            <g id="Group-4" transform="translate(7.000000, 16.000000)">
-                                <mask id="mask-2" fill="white">
-                                    <use xlink:href="#path-1"></use>
-                                </mask>
-                                <g id="Clip-3"></g>
-                                <text id="GIFOS" mask="url(#mask-2)" font-family="Roboto-Black, Roboto" font-size="16" font-weight="700" fill="#572EE5">
-                                    <tspan x="1" y="20">GIFOS</tspan>
-                                </text>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </svg>
-        <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu" onclick="showMenu()">      
-        
+       <img src="/assets/logo-desktop-agos.svg" alt="Logo GifOS desktop" class="img_logo">
+       <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu" onclick="showMenu()">             
     </div>
 
         <nav id="navbar" class="navbar">
@@ -54,28 +29,63 @@
             </ul>           
         </nav>
         <img class="btnCrear hide" id="btnCrear" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
-
     </header>
 
 <main class="main">
-        <!------ HERO ------->
-  <section class="hero__container">
+       
+            <!--     HERO     -->
+    <section class="hero__container">
         <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
         <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
            
         <div class="hero__search">
             <input type="text" id="search_input" placeholder="Busca GIFOS y más">
-            <a href=""><img class="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>
-          <!------    <ul class="recommended__search hide"></ul> ----->
+            <a href=""><img id="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>
+            <ul class="recommended__search "></ul>
         </div>
 
-        <div class="trending__tags__container">
-            <h3 class="tags__title">Trending:</h3>
-            <p id="tags__content">Harry</p>
-        </div>
+        <div class="search__results__container">
+            <h2 id="search__results__title"></h2>
+            <!-- <section class="search__error__container">
+                <h3 class="search__error__title">eso no ecsiste</h3>
+                <img src="/assets/icon-busqueda-sin-resultado.svg" alt="" srcset="">
+                <h4>Intenta con otra búsqueda.</h4>
+            </section> -->
+            <section id="search__results__gallery">
 
+                    <!-- <section class="gif_content">
+                        <div class="icons">
+                            <img class="icon_fav" src="/assets/icon-fav.svg" alt="" srcset="">
+                            <img class="icon_download" src="/assets/icon-download.svg" alt="">
+                            <img class="icon_max" src="/assets/icon-max-normal.svg" alt="">               
+                        </div>
+                        <div class="details">
+                            <p class="gif_user">meduzalover</p>
+                            <h4 class="gif_title">limda meduza</h4>                          
+                        </div>
+                    </section>                   -->
+                
+
+            </section>
+            <a href="" id="show_more_btn">Ver más</a>
+        </div>
     </section>
+
+        <!--     TREDINGS     -->
+    <section id="trending__tags__container">
+            <h2 class="tags__title">Trending:</h2>
+            <p id="tags__content">Harry</p>
+      
+
+        <div id="trending__gifs__container">
+
+        </div>
+    </section>
+
 </main>
+
+
+<script src="/js/api.js"></script>
 <script src="/js/mainHome.js"></script>
 </body>
 </html>
