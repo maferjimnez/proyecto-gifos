@@ -103,6 +103,13 @@ const showMore = () => {
 };
 
 
+// * * SUGERECIAS * * //
+
+
+
+
+
+
 // * *  EVENTS * * //
 $btnSearch.addEventListener('click', searchGif);
 $searchInput.addEventListener('keypress', function (e){
