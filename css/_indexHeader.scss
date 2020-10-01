@@ -2,9 +2,10 @@ body{
     #header__container{
         border-top: 5px  solid rgb(87, 46, 229);
         position: fixed;
-        width: 98vw;
+        width: 100%;
+        background-color: #ffffff;
+        z-index: 100;
         
-
         .imgs_container{
             padding: 2.13rem 1.63rem 1.08rem 1.38rem;
             display: flex;
@@ -97,6 +98,7 @@ body{
 
             .navbar_search_container {
                 position: relative;
+                margin: 1rem 0 0 2rem;
         
                 #search_input_navbar {
                   outline: none;
@@ -104,13 +106,14 @@ body{
                   border: 1px solid $azulOscuro;
                   border-radius: 27px;
                   font-size: 16px;
-                  padding: 0.85rem 3.5rem;
+                  padding: 0.8rem 2.5rem;
+                  
                 }
         
                 .searchIcon__navbar {
                   position: absolute;
-                  right: 25%;
-                  top: 30%;
+                  right: 8%;
+                  top: 21%;
                   cursor: pointer;
                 }
             }

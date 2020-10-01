@@ -95,7 +95,14 @@
                     #show_more_btn{
                         border: 1px solid $azulOscuro;
                         border-radius: 25px;
-                        font: 0.81rem 'Montserrat-Bold', sans-serif;
+                        font: 13px 'Montserrat', sans-serif;
+                        font-weight: bolder;
+                        display: block;
+                        width: 8rem;
+                        margin: 1rem auto;
+                        text-align: center;
+                        color: $azulOscuro;
+                        padding: 1rem;
                     }
                 }
             }

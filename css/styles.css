@@ -5,6 +5,7 @@
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .hide {
@@ -14,7 +15,9 @@
 body #header__container {
   border-top: 5px solid #572ee5;
   position: fixed;
-  width: 98vw;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 100;
 }
 
 body #header__container .imgs_container {
@@ -107,6 +110,7 @@ body #header__container .navbar_menu_open {
   }
   body #header__container .navbar_search_container {
     position: relative;
+    margin: 1rem 0 0 2rem;
   }
   body #header__container .navbar_search_container #search_input_navbar {
     outline: none;
@@ -114,12 +118,12 @@ body #header__container .navbar_menu_open {
     border: 1px solid #572EE5;
     border-radius: 27px;
     font-size: 16px;
-    padding: 0.85rem 3.5rem;
+    padding: 0.8rem 2.5rem;
   }
   body #header__container .navbar_search_container .searchIcon__navbar {
     position: absolute;
-    right: 25%;
-    top: 30%;
+    right: 8%;
+    top: 21%;
     cursor: pointer;
   }
   body #header__container .navbar {
@@ -205,7 +209,7 @@ body #header__container .navbar_menu_open {
 
 @media (min-width: 780px) {
   .body .main .hero__container {
-    padding: 4.75rem 15.81rem 5.94rem;
+    padding: 9.75rem 15.81rem 5.94rem;
   }
   .body .main .hero__container .hero__title {
     font-size: 2.19rem;
@@ -345,7 +349,14 @@ body #header__container .navbar_menu_open {
   .main .hero__container .search__results__container #show_more_btn {
     border: 1px solid #572EE5;
     border-radius: 25px;
-    font: 0.81rem 'Montserrat-Bold', sans-serif;
+    font: 13px 'Montserrat', sans-serif;
+    font-weight: bolder;
+    display: block;
+    width: 8rem;
+    margin: 1rem auto;
+    text-align: center;
+    color: #572EE5;
+    padding: 1rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -33,7 +33,7 @@
                 <hr class="navbar_menu_line">
             </ul>           
         </nav>
-        <img class="btnCrear hide" id="btnCrear" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
+        <img class="btnCrear" id="btnCrear" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
     </header>
 
 <main class="main">
@@ -44,17 +44,12 @@
         <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
            
         <div class="hero__search">
-            <input type="text" id="search_input" placeholder="Busca GIFOS y más">
+            <input type="text" id="search_input" class="activeSearch" placeholder="Busca GIFOS y más">
             <a href=""><img id="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>    
         </div>
+
         <div class="recommendedSearch__container">
-            <!-- <ul class="recommended__search">
-                <hr class="search_line">
-                <li class="suggestions__item">harry styles</li class="">
-                <li class="suggestions__item">harry styles</li class="">
-                <li class="suggestions__item">harry styles</li class="">
-                <li></li> -->
-            </ul>
+            <ul class="recommended__search"></ul>
         </div>
         
 
@@ -62,7 +57,7 @@
             <h2 id="search__results__title"></h2>
             <section id="search__results__gallery"></section>
             <section class="search__error__container hide"></section>
-            <a href="" class="hide" id="show_more_btn">Ver más</a>
+            <a href="" class="hide" id="show_more_btn">VER MÁS</a>
         </div>
     </section>
 
@@ -125,7 +120,7 @@
 
 </main>
 
-
+<script src="/js/domElements.js"></script>
 <script src="/js/api.js"></script>
 <script src="/js/mainHome.js"></script>
 </body>
