@@ -1,8 +1,6 @@
 //!   HEADER SECTION  !//
 
 /** BURGUER MENU **/
-    const $navbarMenu = document.getElementById("navbar");
-    const $btnMenu = document.getElementById("btnMenu");
 
 const showMenu = () => {
     $navbarMenu.classList.toggle('navbar_menu_open');
@@ -36,7 +34,6 @@ const $navbarSearchBar = document.querySelector('.navbar_search_container');
 const $headerContainer = document.querySelector('#header__container');
 
 function stickyNav() {
-    console.log(document.documentElement.scrollTop);
     if (document.documentElement.scrollTop > 500) {
         if (window.innerWidth < 1024) {
             $navbarSearchBar.classList.add('hide');
@@ -58,32 +55,23 @@ window.addEventListener('scroll', stickyNav);
 
 ///       SEARCH BAR       ///
 
-// * * DOM ELEMENTS * * //
-const $searchInput = document.getElementById('search_input');
-const $btnSearch = document.getElementById('searchIcon');
-const $searchResultGallery = document.getElementById('search__results__gallery')
-const $searchTitle = document.getElementById('search__results__title');
-const $btnShowMore = document.getElementById('show_more_btn');
-const $searchResultContainer = document.querySelector('.search__results__container');
-const $searchErrorContainer = document.querySelector('.search__error__container');
-const $recomendedSearchContainer = document.querySelector('.recommendedSearch__container');
-const $recomendedSearch = document.querySelector('.recommended__search');
-
 
 let offset = 0;
 
 
 // * * FUNCTIONS * * //
-async function searchGif(){
+async function searchGif(search){
 
     event.preventDefault();
-    const USER_SEARCH = $searchInput.value;
+    cleanSearch();
+    $searchInput.value = search;
+    
 
     if (offset === 0) {
 		$searchResultGallery.innerHTML = '';
 	}
 
-    await fetch(searchEndpointWithApiKey + USER_SEARCH + '&limit=12' + '&offset=' + offset)
+    await fetch(searchEndpointWithApiKey + search + '&limit=12' + '&offset=' + offset)
         .then(data => data.json())
         .then(result => {
             console.log(result)
@@ -118,7 +106,7 @@ function displayGif(result) {
                                                 <p class="gif_user">${result.data[i].username}</p>
                                                 <h4 class="gif_title">${result.data[i].title}</h4>                          
                                             </div>
-                                            </section>`
+                                            </section>`                                   
     
         $searchResultGallery.appendChild(gifResultContainer);  
     }
@@ -154,11 +142,13 @@ const showMore = () => {
 
 
 const getSearchSuggestions = async () => {
-    // event.preventDefault();
-    const input = $searchInput.value;
-    if (input.length >= 1) {
+    cleanSearch();
+    $recomendedSearch.classList.remove('hide');
+    const input_user = $searchInput.value;
+
+    if (input_user.length >= 1) {
         await fetch(
-            `https://api.giphy.com/v1/tags/related/${input}?${apiKey}&limit=4`
+            `https://api.giphy.com/v1/tags/related/${input_user}?${apiKey}&limit=4`
         )
             .then((response) => response.json())
             .then((suggestions) => {
@@ -173,15 +163,23 @@ const getSearchSuggestions = async () => {
 
 
 const displaySuggestions = (suggestions) => {
-    for (let i = 0; i < suggestions.data.length; i++) {
+    //estilos
+    for (let i = 0; i < 4; i++) {
         const searchSuggestionItem = document.createElement('li');
         searchSuggestionItem.classList.add('suggestions__item');
-        searchSuggestionItem.innerHTML = `${suggestions.data[i].name}`;
+        searchSuggestionItem.innerHTML = `<p onclick="searchGif('${suggestions.data[i].name}')">${suggestions.data[i].name}</p>`;
         $recomendedSearch.appendChild(searchSuggestionItem);
     }
 };
 $btnSearch.addEventListener('click', getSearchSuggestions);
-// $searchInput.addEventListener('keyup', displaySuggestions);
+
+
+const cleanSearch = () => {
+	$recomendedSearch.classList.add('hide');
+	$recomendedSearch.innerHTML = '';
+};
+
+$searchInput.addEventListener('input', getSearchSuggestions);
 
 
 // * *  EVENTS * * //
