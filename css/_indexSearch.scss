@@ -10,7 +10,6 @@
             font-weight: bolder;
             margin-bottom: 2.38rem;
         }
-
         #search__results__gallery{
             display: flex;
             justify-content: space-evenly;
@@ -29,6 +28,20 @@
                 }
 
             }
+        }
+    }
+
+    .recommendedSearch__container{
+        border: 1px solid $azulOscuro;
+        border-bottom-left-radius: 27px;
+        border-bottom-right-radius: 27px;
+        width: 50vw;
+        padding: 0.85rem 3.5rem;
+
+        .search_line{
+            width: 2.56rem;
+            height: 0.01rem;
+            opacity: 100%;
         }
     }
  }   

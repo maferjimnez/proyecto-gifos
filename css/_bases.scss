@@ -1,6 +1,11 @@
 * {
 	box-sizing: border-box;
 	text-decoration: none;
+	scroll-behavior: smooth;
 	margin: 0;
 	padding: 0;
+}
+
+.hide{
+	display: none;
 }
