@@ -1,7 +1,8 @@
 body{
     #header__container{
         border-top: 5px  solid rgb(87, 46, 229);
-        position: sticky;
+        position: fixed;
+        width: 98vw;
         
 
         .imgs_container{
@@ -23,7 +24,6 @@ body{
         .menu_hamburguesa{
             cursor: pointer;
         }
-
 
         .navbar{
             position: absolute;
@@ -72,12 +72,12 @@ body{
         .navbar_menu_open{
             height: 100vh;
         }
-    }
+    
+}
 }
 
 
-
-@media (min-width:780px){
+@media (min-width: 780px){
     body{
         #header__container{
             padding: 1.44rem 9.75rem 0.81rem;
@@ -92,6 +92,26 @@ body{
                 .menu_hamburguesa{
                     overflow: hidden;
                     width: 0;
+                }
+            }
+
+            .navbar_search_container {
+                position: relative;
+        
+                #search_input_navbar {
+                  outline: none;
+                  background: #ffffff;
+                  border: 1px solid $azulOscuro;
+                  border-radius: 27px;
+                  font-size: 16px;
+                  padding: 0.85rem 3.5rem;
+                }
+        
+                .searchIcon__navbar {
+                  position: absolute;
+                  right: 25%;
+                  top: 30%;
+                  cursor: pointer;
                 }
             }
 
@@ -127,5 +147,4 @@ body{
 
         }
     }
-    
-}
+} 
