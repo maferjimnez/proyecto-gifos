@@ -64,8 +64,11 @@ async function searchGif(search){
 
     event.preventDefault();
     cleanSearch();
+
     $searchInput.value = search;
-    
+    $searchInputNavbar.value = search;
+    $searchTitle.innerHTML = search;
+
 
     if (offset === 0) {
 		$searchResultGallery.innerHTML = '';
@@ -110,9 +113,7 @@ function displayGif(result) {
     
         $searchResultGallery.appendChild(gifResultContainer);  
     }
-
-    $searchTitle.innerHTML = $searchInput.value;
-}
+};
 
 function errorSearch () {
     $searchResultContainer.classList.remove('hide');
@@ -130,11 +131,16 @@ function cleanResultsContainer () {
     $searchErrorContainer.classList.add('hide');
 
     
-}
+};
 
 const showMore = () => {
-	offset += 12;
-	searchGif();
+    offset += 12;
+    if ($searchInput.value) {
+        searchGif($searchInput.value);
+    } else {
+        searchGif($searchInputNavbar.value);      
+    }
+	
 };
 
 
@@ -143,8 +149,8 @@ const showMore = () => {
 
 const getSearchSuggestions = async () => {
     cleanSearch();
-    $recomendedSearch.classList.remove('hide');
     const input_user = $searchInput.value;
+    $recomendedSearchContainer.classList.remove('hide');
 
     if (input_user.length >= 1) {
         await fetch(
@@ -164,10 +170,12 @@ const getSearchSuggestions = async () => {
 
 const displaySuggestions = (suggestions) => {
     //estilos
+    $recomendedSearchContainer.classList.add('recommendedSearch__container');
+    
+    
     for (let i = 0; i < 4; i++) {
         const searchSuggestionItem = document.createElement('li');
-        searchSuggestionItem.classList.add('suggestions__item');
-        searchSuggestionItem.innerHTML = `<p onclick="searchGif('${suggestions.data[i].name}')">${suggestions.data[i].name}</p>`;
+        searchSuggestionItem.innerHTML = `<li class="suggested_item" onclick="searchGif('${suggestions.data[i].name}')"><img class="suggested_icon" src="/assets/icon-search-gray.svg">${suggestions.data[i].name}</li>`;
         $recomendedSearch.appendChild(searchSuggestionItem);
     }
 };
@@ -175,23 +183,31 @@ $btnSearch.addEventListener('click', getSearchSuggestions);
 
 
 const cleanSearch = () => {
-	$recomendedSearch.classList.add('hide');
-	$recomendedSearch.innerHTML = '';
+    $recomendedSearchContainer.classList.add('hide');
+	$recomendedSearchContainer.innerHTML = '';
 };
 
-$searchInput.addEventListener('input', getSearchSuggestions);
+$searchInput.addEventListener('input_user', getSearchSuggestions);
 
 
 // * *  EVENTS * * //
-$btnSearch.addEventListener('click', searchGif);
+//  HERO SEARCH
+$btnSearch.addEventListener('click', searchGif($searchInput.value));
 $searchInput.addEventListener('keypress', function (e){
     if (e.keyCode === 13){
-        searchGif();
+        searchGif($searchInput.value);
     }
 });
-$searchInput.addEventListener('click', () =>{
-    $btnSearch.src = "/assets/close.svg"
-})
+
+// NAVBAR SEARCH
+$btnSearchNavbar.addEventListener('click', searchGif($searchInputNavbar.value));
+$navbarSearchBar.addEventListener('keypress', function (e){
+    if (e.keyCode === 13){
+        searchGif($searchInputNavbar.value);
+    }
+});
+
+
 $btnShowMore.addEventListener('click', showMore);
 
 
@@ -209,3 +225,26 @@ const getTrendingGif = async () => {
 };
 
 getTrendingGif();
+
+const displayTrendingGifs = (trendings) => {
+	for (let i = 0; i < trendings.data.length; i++) {
+		const gifContainer = document.createElement('div');
+		gifContainer.classList.add('gif__container');
+		gifContainer.innerHTML = ` 
+		<img class="gif" src="${trendings.data[i].images.original.url}" alt="${trendings.data[i].title}">
+	
+		<div class="gifActions">
+			<div class="gifActions__btn">
+				<img src="assets/icon-fav.svg" class="favorite" alt="Botón para agregar a mis favoritos">
+				<img src="assets/icon-download.svg" class="download" alt="Botón para descargar">
+				<img src="assets/icon-max-normal.svg" class="maximize" alt="Botón para maximizar">
+			</div>
+			<div class="gif__info">
+				<p class="gif_user">${trendings.data[i].username}</p>
+				<p class="gif_title">${trendings.data[i].title}</p>
+			</div>
+		</div>
+		`;
+		$trendingSlider.appendChild(gifContainer);
+	}
+}

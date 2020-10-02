@@ -21,27 +21,6 @@
       .hero__ilustration {
         width: 17.06rem;
       }
-
-      .hero__search {
-        position: relative;
-
-        #search_input {
-          outline: none;
-          background: #ffffff;
-          border: 1px solid $azulOscuro;
-          border-radius: 27px;
-          width: 100%;
-          font-size: 16px;
-          padding: 0.85rem 3.5rem;
-        }
-
-        a {
-          position: absolute;
-          right: 6%;
-          top: 30%;
-          cursor: pointer;
-        }
-      }
     }
   }
 }
@@ -61,18 +40,6 @@
 
         .hero__ilustration {
           width: 24.94rem;
-        }
-
-        .hero__search {
-          #search_input {
-            width: 50vw;
-          }
-          a {
-            .searchIcon {
-              right: 27vw;
-              top: 83vh;
-            }
-          }
         }
       }
     }

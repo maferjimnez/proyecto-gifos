@@ -186,27 +186,6 @@ body #header__container .navbar_menu_open {
   width: 17.06rem;
 }
 
-.body .main .hero__container .hero__search {
-  position: relative;
-}
-
-.body .main .hero__container .hero__search #search_input {
-  outline: none;
-  background: #ffffff;
-  border: 1px solid #572EE5;
-  border-radius: 27px;
-  width: 100%;
-  font-size: 16px;
-  padding: 0.85rem 3.5rem;
-}
-
-.body .main .hero__container .hero__search a {
-  position: absolute;
-  right: 6%;
-  top: 30%;
-  cursor: pointer;
-}
-
 @media (min-width: 780px) {
   .body .main .hero__container {
     padding: 9.75rem 15.81rem 5.94rem;
@@ -217,13 +196,6 @@ body #header__container .navbar_menu_open {
   }
   .body .main .hero__container .hero__ilustration {
     width: 24.94rem;
-  }
-  .body .main .hero__container .hero__search #search_input {
-    width: 50vw;
-  }
-  .body .main .hero__container .hero__search a .searchIcon {
-    right: 27vw;
-    top: 83vh;
   }
 }
 
@@ -256,6 +228,27 @@ body #header__container .navbar_menu_open {
   }
 }
 
+.main .hero__container .hero__search {
+  position: relative;
+}
+
+.main .hero__container .hero__search #search_input {
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #572EE5;
+  border-radius: 27px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0.85rem 3.5rem;
+}
+
+.main .hero__container .hero__search a {
+  position: absolute;
+  right: 6%;
+  top: 30%;
+  cursor: pointer;
+}
+
 .main .hero__container .search__results__container {
   padding: 5.12rem 0 4.94rem;
 }
@@ -272,6 +265,8 @@ body #header__container .navbar_menu_open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -287,8 +282,26 @@ body #header__container .navbar_menu_open {
   height: 7.5rem;
 }
 
-.main .hero__container .search__results__container #search__results__gallery .gif_result_container .icons {
+.main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content {
   display: none;
+}
+
+.main .hero__container .search__results__container #show_more_btn {
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  font: 13px 'Montserrat', sans-serif;
+  font-weight: bolder;
+  display: block;
+  width: 8rem;
+  margin: 1rem auto;
+  text-align: center;
+  color: #572EE5;
+  padding: 1rem;
+}
+
+.main .hero__container .search__results__container #show_more_btn:hover {
+  background-color: #572EE5;
+  color: #ffffff;
 }
 
 .main .hero__container .recommendedSearch__container {
@@ -299,13 +312,26 @@ body #header__container .navbar_menu_open {
   padding: 0.85rem 3.5rem;
 }
 
-.main .hero__container .recommendedSearch__container .search_line {
-  width: 2.56rem;
-  height: 0.01rem;
-  opacity: 100%;
+.main .hero__container .recommendedSearch__container .recommended__search .suggested_item {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 16px;
+  color: #9CAFC3;
+  margin-top: 1rem;
+}
+
+.main .hero__container .recommendedSearch__container .recommended__search .suggested_item .suggested_icon {
+  width: 1rem;
+  margin-right: 1rem;
 }
 
 @media (min-width: 780px) {
+  .main .hero__container .hero__search #search_input {
+    width: 50vw;
+  }
+  .main .hero__container .hero__search a .searchIcon {
+    right: 27vw;
+    top: 83vh;
+  }
   .main .hero__container .search__results__container #search__results__gallery {
     width: 98vw;
     -ms-flex-wrap: wrap;
@@ -345,18 +371,6 @@ body #header__container .navbar_menu_open {
   }
   .main .hero__container .search__results__container #search__results__gallery .gif_result_container:hover .gif_content {
     display: block;
-  }
-  .main .hero__container .search__results__container #show_more_btn {
-    border: 1px solid #572EE5;
-    border-radius: 25px;
-    font: 13px 'Montserrat', sans-serif;
-    font-weight: bolder;
-    display: block;
-    width: 8rem;
-    margin: 1rem auto;
-    text-align: center;
-    color: #572EE5;
-    padding: 1rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
