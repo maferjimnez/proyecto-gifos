@@ -371,6 +371,13 @@ body #header__container .navbar_menu_open {
   }
   .main .hero__container .search__results__container #search__results__gallery .gif_result_container:hover .gif_content {
     display: block;
+    background-color: #572EE5;
+    width: 100%;
+    height: 99%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    opacity: 80%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

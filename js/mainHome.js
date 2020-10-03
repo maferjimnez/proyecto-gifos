@@ -34,7 +34,7 @@ const $navbarSearchBar = document.querySelector('.navbar_search_container');
 const $headerContainer = document.querySelector('#header__container');
 
 function stickyNav() {
-    if (document.documentElement.scrollTop > 500) {
+    if (document.documentElement.scrollTop > 50) {
         if (window.innerWidth < 1024) {
             $navbarSearchBar.classList.add('hide');
         } else {
@@ -62,7 +62,7 @@ let offset = 0;
 // * * FUNCTIONS * * //
 async function searchGif(search){
 
-    event.preventDefault();
+    //event.preventDefault();
     cleanSearch();
 
     $searchInput.value = search;
@@ -91,8 +91,10 @@ async function searchGif(search){
 
 function displayGif(result) {
 
+    $searchErrorContainer.classList.add('hide');
     $searchResultContainer.classList.remove('hide');
     $btnShowMore.classList.remove('hide');
+    $btnShowMore.style.display = 'block';
 
     for (let i = 0; i < result.data.length; i++){
         const gifResultContainer = document.createElement('div');
@@ -116,9 +118,8 @@ function displayGif(result) {
 };
 
 function errorSearch () {
-    $searchResultContainer.classList.remove('hide');
     $searchErrorContainer.classList.remove('hide');
-    // $btnShowMore.style.display = 'none';
+    $btnShowMore.style.display = 'none';
 
     $searchErrorContainer.innerHTML = `
                                     <h4 class="search__error__title">${$searchInput.value}</h4>
@@ -126,21 +127,21 @@ function errorSearch () {
                                     <h5>Intenta con otra búsqueda.</h5>`;
 };
 
-function cleanResultsContainer () {
+function cleanGifsContainer () {
     $searchResultContainer.classList.add('hide');
     $searchErrorContainer.classList.add('hide');
-
-    
+    //$searchResultContainer.innerHTML = '';
 };
 
-const showMore = () => {
+const showMore = (event) => {
+    event.preventDefault();
     offset += 12;
+    
     if ($searchInput.value) {
         searchGif($searchInput.value);
     } else {
         searchGif($searchInputNavbar.value);      
-    }
-	
+    }	
 };
 
 
@@ -149,8 +150,10 @@ const showMore = () => {
 
 const getSearchSuggestions = async () => {
     cleanSearch();
+    $recomendedSearch.innerHTML = '';
     const input_user = $searchInput.value;
-    $recomendedSearchContainer.classList.remove('hide');
+    
+    
 
     if (input_user.length >= 1) {
         await fetch(
@@ -170,6 +173,7 @@ const getSearchSuggestions = async () => {
 
 const displaySuggestions = (suggestions) => {
     //estilos
+    $recomendedSearchContainer.classList.remove('hide');
     $recomendedSearchContainer.classList.add('recommendedSearch__container');
     
     
@@ -184,10 +188,12 @@ $btnSearch.addEventListener('click', getSearchSuggestions);
 
 const cleanSearch = () => {
     $recomendedSearchContainer.classList.add('hide');
-	$recomendedSearchContainer.innerHTML = '';
+	
 };
 
-$searchInput.addEventListener('input_user', getSearchSuggestions);
+$searchInput.addEventListener('input', getSearchSuggestions);
+$btnSearch.addEventListener('click', cleanGifsContainer);
+
 
 
 // * *  EVENTS * * //
@@ -198,6 +204,7 @@ $searchInput.addEventListener('keypress', function (e){
         searchGif($searchInput.value);
     }
 });
+$btnShowMore.addEventListener('click', showMore);
 
 // NAVBAR SEARCH
 $btnSearchNavbar.addEventListener('click', searchGif($searchInputNavbar.value));
@@ -206,45 +213,46 @@ $navbarSearchBar.addEventListener('keypress', function (e){
         searchGif($searchInputNavbar.value);
     }
 });
+$navbarSearchBar.addEventListener('input', cleanGifsContainer);
 
 
-$btnShowMore.addEventListener('click', showMore);
+
 
 
 
 // ! TRENDING SECTION
 
-const getTrendingGif = async () => {
-    await fetch(`${trendingEndpointWithApiKey}&limit=12&rating=g`)
-        .then((response) => response.json())
-        .then((trendings) => {
-            console.log(trendings);
-            // displayTrendingGifs(trendings);
-        })
-        .catch((err) => console.error(err));
-};
+// const getTrendingGif = async () => {
+//     await fetch(`${trendingEndpointWithApiKey}&limit=12&rating=g`)
+//         .then((response) => response.json())
+//         .then((trendings) => {
+//             console.log(trendings);
+//              displayTrendingGifs(trendings);
+//         })
+//         .catch((err) => console.error(err));
+// };
 
-getTrendingGif();
+// getTrendingGif();
 
-const displayTrendingGifs = (trendings) => {
-	for (let i = 0; i < trendings.data.length; i++) {
-		const gifContainer = document.createElement('div');
-		gifContainer.classList.add('gif__container');
-		gifContainer.innerHTML = ` 
-		<img class="gif" src="${trendings.data[i].images.original.url}" alt="${trendings.data[i].title}">
+// const displayTrendingGifs = (trendings) => {
+// 	for (let i = 0; i < trendings.data.length; i++) {
+// 		const gifContainer = document.createElement('div');
+// 		gifContainer.classList.add('gif__container');
+// 		gifContainer.innerHTML = ` 
+// 		<img class="gif" src="${trendings.data[i].images.original.url}" alt="${trendings.data[i].title}">
 	
-		<div class="gifActions">
-			<div class="gifActions__btn">
-				<img src="assets/icon-fav.svg" class="favorite" alt="Botón para agregar a mis favoritos">
-				<img src="assets/icon-download.svg" class="download" alt="Botón para descargar">
-				<img src="assets/icon-max-normal.svg" class="maximize" alt="Botón para maximizar">
-			</div>
-			<div class="gif__info">
-				<p class="gif_user">${trendings.data[i].username}</p>
-				<p class="gif_title">${trendings.data[i].title}</p>
-			</div>
-		</div>
-		`;
-		$trendingSlider.appendChild(gifContainer);
-	}
-}
+// 		<div class="gifActions">
+// 			<div class="gifActions__btn">
+// 				<img src="assets/icon-fav.svg" class="favorite" alt="Botón para agregar a mis favoritos">
+// 				<img src="assets/icon-download.svg" class="download" alt="Botón para descargar">
+// 				<img src="assets/icon-max-normal.svg" class="maximize" alt="Botón para maximizar">
+// 			</div>
+// 			<div class="gif__info">
+// 				<p class="gif_user">${trendings.data[i].username}</p>
+// 				<p class="gif_title">${trendings.data[i].title}</p>
+// 			</div>
+// 		</div>
+// 		`;
+// 		$trendingSlider.appendChild(gifContainer);
+// 	}
+// }

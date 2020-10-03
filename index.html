@@ -47,12 +47,9 @@
             <a href=""><img id="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>    
         </div>
 
-        <div class="recommendedSearch__container">
+        <div  id="recommendedSearch__container">
             <hr class="search_line">
             <ul class="recommended__search">
-                <!-- <li class="suggested_item"><img class="suggested_icon" src="/assets/icon-search-gray.svg"> hello</li>
-                <li class="suggested_item"><img class="suggested_icon" src="/assets/icon-search-gray.svg"> hello</li>
-                <li class="suggested_item"><img class="suggested_icon" src="/assets/icon-search-gray.svg"> hello</li> -->
             </ul>
         </div>
         
@@ -60,15 +57,16 @@
         <div class="search__results__container hide">
             <h2 id="search__results__title"></h2>
             <section id="search__results__gallery"></section>
-            <section class="search__error__container hide"></section>
+            <section class="search__error__container"></section>
             <a href="" class="hide" id="show_more_btn">VER MÁS</a>
         </div>
+
     </section>
 
         <!--     TREDINGS TAGS     -->
     <section id="trending__tags__container">
             <h2 class="tags__title">Trending:</h2>
-            <p id="tags__content">Harry</p>
+            <p id="tags__content"><span></span></p>
     </section>
 
     <!--     TREDINGS GIFS     -->
@@ -122,5 +120,6 @@
 <script src="/js/domElements.js"></script>
 <script src="/js/api.js"></script>
 <script src="/js/mainHome.js"></script>
+<script src="/js/trending.js"></script>
 </body>
 </html>
