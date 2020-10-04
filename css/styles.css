@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hide {
@@ -157,7 +158,7 @@ body #header__container .navbar_menu_open {
 }
 
 .body .main .hero__container {
-  padding: 0.44rem 1.31rem 2.81rem;
+  padding: 10rem 1.31rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,7 +189,7 @@ body #header__container .navbar_menu_open {
 
 @media (min-width: 780px) {
   .body .main .hero__container {
-    padding: 9.75rem 15.81rem 5.94rem;
+    padding: 9.75rem 15.81rem 2rem;
   }
   .body .main .hero__container .hero__title {
     font-size: 2.19rem;
@@ -199,32 +200,159 @@ body #header__container .navbar_menu_open {
   }
 }
 
-.main #trending__tags__container {
-  margin-top: 1.94rem;
+.trendings__conteiner #trending__tags__container {
+  margin: 1.94rem 0;
 }
 
-.main #trending__tags__container .tags__title {
-  font-family: "Montserrat", sans-serif;
+.trendings__conteiner #trending__tags__container .tags__title {
   font-weight: bolder;
   color: #572EE5;
   text-align: center;
 }
 
-.main #trending__tags__container #tags__content {
-  font: 0.88rem "Montserrat", sans-serif;
+.trendings__conteiner #trending__tags__container #tags__content {
+  font-size: 1rem;
   color: #572EE5;
   text-align: center;
+  padding: 1rem 27vw;
+}
+
+.trendings__conteiner #trending__tags__container #tags__content .trending_tags::after {
+  content: ', ';
+}
+
+.trendings__conteiner #trending__tags__container #tags__content .trending_tags:last-child::after {
+  content: ' ';
 }
 
 @media (min-width: 780px) {
-  .trending__tags__container {
+  .trendings__conteiner #trending__tags__container {
     margin-top: 4.56rem;
   }
-  .trending__tags__container .tags__title {
+  .trendings__conteiner #trending__tags__container .tags__title {
     font-size: 1.13rem;
   }
-  .trending__tags__container #tags__content {
-    font-size: 1rem;
+  .trendings__conteiner #trending__tags__container #tags__content {
+    padding: 1rem 38vw;
+  }
+}
+
+.trendings__conteiner .trending__gifs__conteiner {
+  background-color: #F3F5F8;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_title {
+  text-align: center;
+  color: #572EE5;
+  padding-top: 5rem;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_paragraph {
+  text-align: center;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider {
+  margin: 2rem 0 0 1.40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .arrows {
+  display: none;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content {
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content {
+  cursor: pointer;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_result {
+  width: 15.19rem;
+  height: 11.69rem;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info {
+  display: none;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 1rem;
+  left: 12rem;
+  width: 40%;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .details {
+  position: absolute;
+  top: 13rem;
+  left: 1rem;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .details .gif_user, .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .details .gif_title {
+  font-family: 'Roboto-regular', sans-serif;
+  color: #ffffff;
+}
+
+.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content:hover .trendingGif_info {
+  display: block;
+  background-color: #572EE5;
+  width: 92%;
+  height: 99%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  opacity: 80%;
+}
+
+@media (min-width: 780px) {
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3rem;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .arrows {
+    display: block;
+    cursor: pointer;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content {
+    overflow: hidden;
+    margin: 0 1rem;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_result {
+    width: 22.30rem;
+    height: 17.19rem;
   }
 }
 

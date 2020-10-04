@@ -9,8 +9,8 @@
     <title>GifOS</title>
 </head>
 <body class="body">
-            <!--    HEADER    -->
 
+            <!--    HEADER    -->
     <header id="header__container">
         <div class="imgs_container">
             <img src="/assets/logo-desktop.svg" alt="Logo GifOS desktop" class="img_logo">
@@ -35,13 +35,14 @@
         <img class="btnCrear" id="btnCrear" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
     </header>
 
-<main class="main">
-       
+
+<main class="main">      
             <!--     HERO     -->
     <section class="hero__container">
         <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
         <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
            
+        <!--     SEARCH     -->
         <div class="hero__search">
             <input type="text" id="search_input" class="activeSearch" placeholder="Busca GIFOS y más">
             <a href=""><img id="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>    
@@ -51,8 +52,7 @@
             <hr class="search_line">
             <ul class="recommended__search">
             </ul>
-        </div>
-        
+        </div>        
 
         <div class="search__results__container hide">
             <h2 id="search__results__title"></h2>
@@ -62,60 +62,45 @@
         </div>
 
     </section>
+</main>
 
-        <!--     TREDINGS TAGS     -->
+
+    <!--     TREDINGS      -->
+<section class="trendings__conteiner">
+     <!--     TREDINGS TAGS     -->
     <section id="trending__tags__container">
             <h2 class="tags__title">Trending:</h2>
             <p id="tags__content"><span></span></p>
     </section>
 
     <!--     TREDINGS GIFS     -->
-    <section class="trending">
-        <h2 class="trending__title">Trending GIFOS</h2>
-        <p class="trending__paragraph">Mira los últimos GIFOS de nuestra comunidad</p>
+    <article class="trending__gifs__conteiner">
+        <h2 class="trending_gifs_title">Trending GIFOS</h2>
+        <p class="trending_gifs_paragraph">Mira los últimos GIFOS de nuestra comunidad</p>
 
-        <article class="trending__container">
 
-            <!-- flecha -->
-            <div class="previous-btn arrows">
-                <img src="assets/button-slider-left.svg" alt="Flecha Previous" id="previous-btn">
-            </div>
+            <div class="trending_gifs_slider">
+                <div class="previous_btn_arrow arrows">
+                    <img src="assets/button-slider-left.svg" alt="Previous arrow" id="btn-previous">
+                </div>
 
-            <!-- trending gif slider -->
-            <div class="trending__slider-container">
+                <div class="trending_gifs_content">
 
-                <div class="trending__slider">
+                </div>
 
-                    <!-- <div class="gif__container">
-                        <img src="https://media2.giphy.com/media/l378bu6ZYmzS6nBrW/giphy-downsized.gif?cid=4de92765pllw05wz9ukljvq5z0ul6xb5y38jzfpglxufr8u2&amp;rid=giphy-downsized.gif"
-                            alt="Lmao Lol GIF by Originals" class="gif">
-                        <div class="gifActions">
-                            <div class="gifActions__btn">
-                                <img src="assets/icon-fav.svg" class="favorite"
-                                    alt="Botón para agregar a mis favoritos">
-                                <img src="assets/icon-download.svg" class="download" alt="Botón para descargar">
-                                <img src="assets/icon-max-normal.svg" class="maximize" alt="Botón para maximizar">
-                            </div>
-                            <div class="gif__info">
-                                <p class="gif_user">User</p>
-                                <p class="gif_title">Titulo Gif</p>
-                            </div>
-                        </div>
+                <div class="next_btn_arrow arrows">
+                    <img src="assets/Button-Slider-right.svg" alt="Flecha Next" id="next-btn">
+                </div>
 
-                    </div> -->
                 </div>
 
             </div>
 
-            <!-- flecha -->
-            <div class="next-btn arrows">
-                <img src="assets/Button-Slider-right.svg" alt="Flecha Next" id="next-btn">
-            </div>
-        </article>
+    </article>
+</section>
 
-    </section>
 
-</main>
+
 
 <script src="/js/domElements.js"></script>
 <script src="/js/api.js"></script>

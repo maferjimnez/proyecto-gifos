@@ -25,4 +25,12 @@ const $recomendedSearch = document.querySelector('.recommended__search');
 
 
 // * * TRENDINGS ELEMENTS * * //
-const $trendingsContainer = document.querySelector('#trending__gifs__container');
+
+// trending tags
+$trendingTagsConteiner = document.querySelector('#trending__tags__container');
+$trendingTagsContent = document.querySelector('#tags__content');
+
+// trending gifs
+$trendingGifsSlider = document.querySelector('.trending_gifs_content');
+$btnArrowPrevious = document.querySelector('.previous_btn_arrow');
+$btnArrowNext = document.querySelector('.next_btn_arrow');
