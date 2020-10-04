@@ -86,7 +86,7 @@ async function searchGif(search){
                 }
         })
         .catch (err => console.log("error", err));
-}
+};
 
 
 function displayGif(result) {
@@ -103,8 +103,8 @@ function displayGif(result) {
                                             <img class="gif_result" src="${result.data[i].images.original.url}" alt="${result.data[i].title}">
                                             <section class="gif_content">
                                             <div class="icons">
-                                                <img class="icon_fav" src="/assets/icon-fav.svg" alt="" srcset="">
-                                                <img class="icon_download" src="/assets/icon-download.svg" alt="">
+                                                <img class="icon_fav" onclick="addGifToFavourites('${result.data[i].images.original.url}','${result.data[i].username}','${result.data[i].title}')" src="/assets/icon-fav.svg" alt="" srcset="">
+                                                <img class="icon_download" onclick="downloadGif('${result.data[i].images.original.url}','${result.data[i].title}')" src="/assets/icon-download.svg" alt="">
                                                 <img class="icon_max" src="/assets/icon-max-normal.svg" alt="">               
                                             </div>
                                             <div class="details">
@@ -145,7 +145,7 @@ const showMore = (event) => {
 };
 
 
-// * * SUGERECIAS * * //
+// * * SUGERENCIAS * * //
 
 
 const getSearchSuggestions = async () => {
