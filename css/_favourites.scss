@@ -1,0 +1,15 @@
+.body{
+    .main__favourites{
+        padding: 8rem 0 3rem;
+        text-align: center;
+        .favourites_title{
+            color: $azulOscuro;
+        }
+
+        .favourites_gifs_container{
+            .favourites_gifs_gallery{
+                padding: 0 ;
+            }
+        }
+    }
+}

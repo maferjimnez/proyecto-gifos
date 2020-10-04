@@ -13,7 +13,7 @@
             <!--    HEADER    -->
     <header id="header__container">
         <div class="imgs_container">
-            <img src="/assets/logo-desktop.svg" alt="Logo GifOS desktop" class="img_logo">
+            <img src="/assets/logo-desktop.svg" href="index.html" alt="Logo GifOS desktop" class="img_logo">
                 <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu" onclick="showMenu()">             
         </div>
 
@@ -26,7 +26,7 @@
             <ul class="navbar_menu">
                 <li><a class="navbar_menu_item" href="">MODO NOCTURNO</a></li>
                 <hr class="navbar_menu_line">
-                <li><a class="navbar_menu_item" href="">FAVORITOS</a></li>
+                <li><a class="navbar_menu_item" href="favoritos.html" onclick="templateFavouriteGifs()">FAVORITOS</a></li>
                 <hr class="navbar_menu_line">
                 <li><a class="navbar_menu_item" href="">MIS GIFOS</a></li>
                 <hr class="navbar_menu_line">
@@ -58,7 +58,7 @@
             <h2 id="search__results__title"></h2>
             <section id="search__results__gallery"></section>
             <section class="search__error__container"></section>
-            <a href="" class="hide" id="show_more_btn">VER MÁS</a>
+            <a class="hide" id="show_more_btn">VER MÁS</a>
         </div>
 
     </section>
@@ -101,10 +101,13 @@
 
 
 
-
+<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 <script src="/js/domElements.js"></script>
 <script src="/js/api.js"></script>
+<script src="/js/gifBtnsFunctions.js"></script>
 <script src="/js/mainHome.js"></script>
 <script src="/js/trending.js"></script>
+
+
 </body>
 </html>

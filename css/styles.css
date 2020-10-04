@@ -508,4 +508,17 @@ body #header__container .navbar_menu_open {
     opacity: 80%;
   }
 }
+
+.body .main__favourites {
+  padding: 8rem 0 3rem;
+  text-align: center;
+}
+
+.body .main__favourites .favourites_title {
+  color: #572EE5;
+}
+
+.body .main__favourites .favourites_gifs_container .favourites_gifs_gallery {
+  padding: 0;
+}
 /*# sourceMappingURL=styles.css.map */

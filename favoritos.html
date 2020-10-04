@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>GifOS Favoritos</title>
+</head>
+<body class="body">
+
+            <!--    HEADER    -->
+    <header id="header__container">
+        <div class="imgs_container">
+            <img src="/assets/logo-desktop.svg" href="index.html" alt="Logo GifOS desktop" class="img_logo">
+                <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu" onclick="showMenu()">             
+        </div>
+
+        <div class="navbar_search_container hide">            
+            <input type="text" id="search_input_navbar" placeholder="Busca GIFOS y más">
+            <img id="searchIcon_navbar" class="searchIcon__navbar" src="/assets/icon-search.svg" alt="Ícono de lupa">  
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul class="navbar_menu">
+                <li><a class="navbar_menu_item" href="">MODO NOCTURNO</a></li>
+                <hr class="navbar_menu_line">
+                <li><a class="navbar_menu_item" href="">FAVORITOS</a></li>
+                <hr class="navbar_menu_line">
+                <li><a class="navbar_menu_item" href="">MIS GIFOS</a></li>
+                <hr class="navbar_menu_line">
+            </ul>           
+        </nav>
+        <img class="btnCrear" id="btnCrear" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
+    </header>
+
+            <!--    FAVOURITES MAIN    -->
+    <main class="main__favourites">
+        <section class="title__conteiner">
+            <img class="favourites_img" src="/assets/icon-favoritos.svg" alt="Ilustración de corazón">
+            <h2 class="favourites_title">Favoritos</h2>
+        </section>
+
+        <div class=favourites_gifs_container>
+            <section class="favourites_gifs_gallery"></section>
+            <a class="hide" id="show_more_btn">VER MÁS</a>
+        </div>
+    </main>
+
+
+
+    <section class="trendings__conteiner">
+       <!--     TREDINGS GIFS     -->
+       <article class="trending__gifs__conteiner">
+           <h2 class="trending_gifs_title">Trending GIFOS</h2>
+           <p class="trending_gifs_paragraph">Mira los últimos GIFOS de nuestra comunidad</p>
+   
+   
+               <div class="trending_gifs_slider">
+                   <div class="previous_btn_arrow arrows">
+                       <img src="assets/button-slider-left.svg" alt="Previous arrow" id="btn-previous">
+                   </div>
+   
+                   <div class="trending_gifs_content">
+   
+                   </div>
+   
+                   <div class="next_btn_arrow arrows">
+                       <img src="assets/Button-Slider-right.svg" alt="Flecha Next" id="next-btn">
+                   </div>
+   
+                   </div>
+   
+               </div>
+   
+       </article>
+   </section>
+   
+<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+<script src="/js/domElements.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/gifBtnsFunctions.js"></script>
+<script src="/js/trending.js"></script>
+
+</body>
+</html>
