@@ -214,11 +214,3 @@ $navbarSearchBar.addEventListener('keypress', function (e){
     }
 });
 $navbarSearchBar.addEventListener('input', cleanGifsContainer);
-
-
-
-
-
-
-// ! TRENDING SECTION
-

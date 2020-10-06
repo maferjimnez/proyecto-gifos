@@ -2,6 +2,8 @@
 const $navbarMenu = document.getElementById("navbar");
 const $btnMenu = document.getElementById("btnMenu");
 
+// * * HERO * * //
+const $heroConteiner = document.querySelector('#hero__container');
 
 // * *      SEARCH ELEMENTS       * * //
 
@@ -27,10 +29,18 @@ const $recomendedSearch = document.querySelector('.recommended__search');
 // * * TRENDINGS ELEMENTS * * //
 
 // trending tags
-$trendingTagsConteiner = document.querySelector('#trending__tags__container');
-$trendingTagsContent = document.querySelector('#tags__content');
+const $trendingTagsConteiner = document.querySelector('#trending__tags__container');
+const $trendingTagsContent = document.querySelector('#tags__content');
 
 // trending gifs
-$trendingGifsSlider = document.querySelector('.trending_gifs_content');
-$btnArrowPrevious = document.querySelector('.previous_btn_arrow');
-$btnArrowNext = document.querySelector('.next_btn_arrow');
+const $trendingGifsSlider = document.querySelector('.trending_gifs_content');
+const $btnArrowPrevious = document.querySelector('.previous_btn_arrow');
+const $btnArrowNext = document.querySelector('.next_btn_arrow');
+
+
+// * * GIFS BUTTONS FUNCTIONS * * //
+
+// favourite
+const $favouritesGifsConteiner = document.querySelector('.favourites_gifs_gallery');
+const $favouritesSectionConteiner = document.querySelector('#main__favourites');
+const $navbarFavourite = document.querySelector('#navbar_favourite');

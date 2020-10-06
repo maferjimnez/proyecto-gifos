@@ -26,7 +26,7 @@
             <ul class="navbar_menu">
                 <li><a class="navbar_menu_item" href="">MODO NOCTURNO</a></li>
                 <hr class="navbar_menu_line">
-                <li><a class="navbar_menu_item" href="favoritos.html" onclick="templateFavouriteGifs()">FAVORITOS</a></li>
+                <li><a class="navbar_menu_item" id="navbar_favourite" onclick="displayFavouritesSection()">FAVORITOS</a></li>
                 <hr class="navbar_menu_line">
                 <li><a class="navbar_menu_item" href="">MIS GIFOS</a></li>
                 <hr class="navbar_menu_line">
@@ -38,7 +38,7 @@
 
 <main class="main">      
             <!--     HERO     -->
-    <section class="hero__container">
+    <section class="hero__container" id="hero__container">
         <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
         <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
            
@@ -63,6 +63,20 @@
 
     </section>
 </main>
+
+    <!--     FAVOURITES      -->
+<section class="main__favourites hide" id="main__favourites">
+    <section class="title__conteiner">
+        <img class="favourites_img" src="/assets/icon-favoritos.svg" alt="Ilustración de corazón">
+        <h2 class="favourites_title">Favoritos</h2>
+    </section>
+
+    <div class=favourites_gifs_container>
+        <section class="favourites_gifs_gallery"></section>
+        <a class="hide" id="show_more_btn">VER MÁS</a>
+    </div>
+
+</section>    
 
 
     <!--     TREDINGS      -->
@@ -100,12 +114,17 @@
 </section>
 
 
+    <!--     FOOTER      -->
+<footer class="footer__conteiner">
+
+</footer>
+
 
 <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-<script src="/js/domElements.js"></script>
+<script src="/js/dom-elements.js"></script>
 <script src="/js/api.js"></script>
-<script src="/js/gifBtnsFunctions.js"></script>
-<script src="/js/mainHome.js"></script>
+<script src="/js/gif-btns-functions.js"></script>
+<script src="/js/main-home.js"></script>
 <script src="/js/trending.js"></script>
 
 

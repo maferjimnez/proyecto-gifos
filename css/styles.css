@@ -519,6 +519,74 @@ body #header__container .navbar_menu_open {
 }
 
 .body .main__favourites .favourites_gifs_container .favourites_gifs_gallery {
-  padding: 0;
+  padding: 0 9.80rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.body .main__favourites .favourites_gifs_container .favourites_gifs_gallery .gif_result_container {
+  margin-bottom: 1.81rem;
+  cursor: pointer;
+  position: relative;
+  width: 16.25rem;
+  height: 12.5rem;
+}
+
+.body .main__favourites .favourites_gifs_container .favourites_gifs_gallery .gif_result_container .gif_result {
+  width: 16.25rem;
+  height: 12.5rem;
+}
+
+.body .main__favourites .favourites_gifs_container .favourites_gifs_gallery .gif_result_container .gif_content {
+  display: none;
+}
+
+.body .main__favourites .favourites_gifs_container .favourites_gifs_gallery .gif_result_container .gif_content .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 1rem;
+  left: 8rem;
+  width: 47%;
+}
+
+.body .main__favourites .favourites_gifs_container .favourites_gifs_gallery .gif_result_container .gif_content .details {
+  position: absolute;
+  top: 9rem;
+  left: 1rem;
+}
+
+.body .main__favourites .favourites_gifs_container .favourites_gifs_gallery .gif_result_container .gif_content .details .gif_user, .body .main__favourites .favourites_gifs_container .favourites_gifs_gallery .gif_result_container .gif_content .details .gif_title {
+  font-family: 'Roboto-regular', sans-serif;
+  color: #ffffff;
+}
+
+.body .main__favourites .favourites_gifs_container .favourites_gifs_gallery .gif_result_container:hover .gif_content {
+  display: block;
+  background-color: #572EE5;
+  width: 100%;
+  height: 99%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  opacity: 80%;
+}
+
+.body .main__favourites .favourites_noContent_conteiner {
+  margin-top: 4rem;
+}
+
+.body .main__favourites .favourites_noContent_conteiner .noContent_paragraph {
+  color: #50E3C2;
 }
 /*# sourceMappingURL=styles.css.map */
