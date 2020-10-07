@@ -589,4 +589,145 @@ body #header__container .navbar_menu_open {
 .body .main__favourites .favourites_noContent_conteiner .noContent_paragraph {
   color: #50E3C2;
 }
+
+.body .crearGif__conteiner {
+  padding: 10rem 6rem 1.60rem;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .camera_elements {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .camera_elements .camera_light {
+  margin-bottom: 1rem;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central {
+  width: 43rem;
+  height: 24.40rem;
+  border: 1px solid #572EE5;
+  padding: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .corners {
+  width: 1.60rem;
+  height: 1.60rem;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .top_corners_screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .top_corners_screen .top_left_corner {
+  border-top: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .top_corners_screen .top_right_corner {
+  border-top: 1px solid #50E3C2;
+  border-right: 1px solid #50E3C2;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .texts_central {
+  text-align: center;
+  line-height: 2.19rem;
+  vertical-align: auto;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .texts_central .title_texts {
+  color: #572EE5;
+  padding: 0 13rem;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .texts_central .title_texts .span_title {
+  color: #50E3C2;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .bottom_corners_screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .bottom_corners_screen .bottom_left_corner {
+  border-bottom: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .bottom_corners_screen .bottom_right_corner {
+  border-bottom: 1px solid #50E3C2;
+  border-right: 1px solid #50E3C2;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .buttons_central {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .buttons_central .step_btn_central {
+  border: 2px solid #572EE5;
+  padding: 5px 11px;
+  border-radius: 50%;
+  color: #572EE5;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .line_central {
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #572EE5;
+  width: 100%;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .start_btn {
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  font: 13px 'Montserrat', sans-serif;
+  font-weight: bolder;
+  display: block;
+  width: 8rem;
+  margin: 1rem auto;
+  text-align: center;
+  color: #572EE5;
+  padding: 1rem;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .start_btn:hover {
+  background-color: #572EE5;
+  color: #ffffff;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .cameraRoll_elements {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0 0 5rem 1rem;
+}
 /*# sourceMappingURL=styles.css.map */

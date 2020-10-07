@@ -1,0 +1,122 @@
+
+.body{
+    .crearGif__conteiner{
+        padding: 10rem 6rem 1.60rem;
+        
+        .crearGif_elements_conteiner{
+            display: flex;
+            justify-content: space-between;
+
+            .camera_elements{
+                align-self: center;
+
+                .camera_light{
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .central_elements{
+                .screen_central{
+                    width: 43rem;
+                    height: 24.40rem;
+                    border: 1px solid $azulOscuro;
+                    padding: 1.2rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .corners{
+                        width: 1.60rem;
+                        height: 1.60rem;
+                    }
+
+                    .top_corners_screen{
+                        display: flex;
+                        justify-content: space-between;
+
+                        .top_left_corner{
+                            border-top: 1px solid $turquesa;
+                            border-left: 1px solid $turquesa;
+                        }
+                        .top_right_corner{
+                            border-top: 1px solid $turquesa;
+                            border-right: 1px solid $turquesa;
+                        }
+                    }
+
+                    .texts_central{
+                        text-align: center;
+                        line-height: 2.19rem;
+                        vertical-align: auto;
+
+                        .title_texts{
+                            color: $azulOscuro;
+                            padding: 0 13rem;
+                            .span_title{
+                                color: $turquesa;
+                            }
+                        }
+                    }
+
+                    .bottom_corners_screen{
+                        display: flex;
+                        justify-content: space-between;
+
+                        .bottom_left_corner{
+                            border-bottom: 1px solid $turquesa;
+                            border-left: 1px solid $turquesa;
+                        }
+                        .bottom_right_corner{
+                            border-bottom: 1px solid $turquesa;
+                            border-right: 1px solid $turquesa;
+                        }
+                    }
+                }
+
+                .buttons_central{
+                    text-align: center;
+                    margin: 2rem 0;
+
+                    .step_btn_central{
+                        border: 2px solid $azulOscuro;
+                        padding: 5px 11px;
+                        border-radius: 50%;
+                        color: $azulOscuro;
+
+                    }
+                }
+
+                .line_central{
+                    padding: 3px;
+                    border-radius: 5px;
+                    background-color: $azulOscuro;
+                    width: 100%;
+                }
+            
+
+                .start_btn{
+                    border: 1px solid $azulOscuro;
+                    border-radius: 25px;
+                    font: 13px 'Montserrat', sans-serif;
+                    font-weight: bolder;
+                    display: block;
+                    width: 8rem;
+                    margin: 1rem auto;
+                    text-align: center;
+                    color: $azulOscuro;
+                    padding: 1rem;
+        
+                    &:hover{
+                        background-color: $azulOscuro;
+                        color: #ffffff;
+                    }
+                }
+            }
+
+            .cameraRoll_elements{
+                align-self: flex-end;
+                margin: 0 0 5rem 1rem;
+            }
+        }
+    }
+}
