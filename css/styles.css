@@ -654,6 +654,10 @@ body #header__container .navbar_menu_open {
   border-right: 1px solid #50E3C2;
 }
 
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central #user_video {
+  height: 85%;
+}
+
 .body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .texts_central {
   text-align: center;
   line-height: 2.19rem;
@@ -688,16 +692,32 @@ body #header__container .navbar_menu_open {
   border-right: 1px solid #50E3C2;
 }
 
-.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .buttons_central {
-  text-align: center;
-  margin: 2rem 0;
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .steps_central {
+  margin: 2rem 0 2rem 18rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .buttons_central .step_btn_central {
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .steps_central .steps_conteiner .step_btn_central {
   border: 2px solid #572EE5;
   padding: 5px 11px;
   border-radius: 50%;
   color: #572EE5;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .steps_central .recording_timer {
+  color: #572EE5;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .steps_central .record_again {
+  color: #572EE5;
+  border-bottom: 3px solid #50E3C2;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .line_central {
@@ -707,7 +727,7 @@ body #header__container .navbar_menu_open {
   width: 100%;
 }
 
-.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .start_btn {
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .buttons_central {
   border: 1px solid #572EE5;
   border-radius: 25px;
   font: 13px 'Montserrat', sans-serif;
@@ -718,9 +738,10 @@ body #header__container .navbar_menu_open {
   text-align: center;
   color: #572EE5;
   padding: 1rem;
+  cursor: pointer;
 }
 
-.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .start_btn:hover {
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .buttons_central:hover {
   background-color: #572EE5;
   color: #ffffff;
 }

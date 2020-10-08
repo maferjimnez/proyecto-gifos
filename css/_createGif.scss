@@ -44,6 +44,10 @@
                         }
                     }
 
+                    #user_video{
+                        height: 85%;
+                    }
+
                     .texts_central{
                         text-align: center;
                         line-height: 2.19rem;
@@ -73,16 +77,29 @@
                     }
                 }
 
-                .buttons_central{
-                    text-align: center;
-                    margin: 2rem 0;
+                .steps_central{
+                    margin: 2rem 0 2rem 18rem;
+                    display: flex;
+                    justify-content: space-between;
 
+                    .steps_conteiner{
                     .step_btn_central{
                         border: 2px solid $azulOscuro;
                         padding: 5px 11px;
                         border-radius: 50%;
                         color: $azulOscuro;
 
+                    }                        
+                    }
+
+                    .recording_timer{
+                        color: $azulOscuro;
+                    }
+                    .record_again{
+                        color: $azulOscuro;
+                        border-bottom: 3px solid $turquesa;
+                        font-weight: bold;
+                        cursor: pointer;
                     }
                 }
 
@@ -94,7 +111,7 @@
                 }
             
 
-                .start_btn{
+                .buttons_central{
                     border: 1px solid $azulOscuro;
                     border-radius: 25px;
                     font: 13px 'Montserrat', sans-serif;
@@ -105,6 +122,7 @@
                     text-align: center;
                     color: $azulOscuro;
                     padding: 1rem;
+                    cursor: pointer;
         
                     &:hover{
                         background-color: $azulOscuro;

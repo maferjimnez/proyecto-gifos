@@ -44,3 +44,16 @@ const $btnArrowNext = document.querySelector('.next_btn_arrow');
 const $favouritesGifsConteiner = document.querySelector('.favourites_gifs_gallery');
 const $favouritesSectionConteiner = document.querySelector('#main__favourites');
 const $navbarFavourite = document.querySelector('#navbar_favourite');
+
+
+// * * CREATE GIF * * //
+$userVideo = document.querySelector('#user_video');
+$titleVideo = document.querySelector('#title_texts');
+$paragraphVideo = document.querySelector('#paragraph_central');
+$startBtn = document.querySelector('#start_btn');
+$recordBtn = document.querySelector('#record_btn');
+$textScreenConteiner = document.querySelector('.texts_central');
+$stepOne = document.querySelector('#step_1');
+$stepTwo = document.querySelector('#step_2');
+$stepThree = document.querySelector('#step_3');
+$recordingTimer = document.querySelector('#recording_timer');

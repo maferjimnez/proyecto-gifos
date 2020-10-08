@@ -56,27 +56,37 @@
          <div class="top_left_corner corners"></div>
          <div class="top_right_corner corners"></div>
      </div>
-     <div class="texts_central">
 
-         <video id="user_video" class="hide"></video>
+     <video id="user_video" class="hide"></video>
+     <img id="user_gif" src="" >
+
+     <div class="texts_central">
          <h2 class="title_texts" id="title_texts">Aquí podrás crear tus propios <span class="span_title">GIFOS</span></h2>
          <p class="paragraph_central" id="paragraph_central">¡Crea tu GIFO en sólo 3 pasos! 
          </br>(sólo necesitas una cámara para grabar un video)</p>
      </div>
+
      <div class="bottom_corners_screen">
         <div class="bottom_left_corner corners"></div>
         <div class="bottom_right_corner corners"></div>
     </div>
 </section>
 
- <div class="buttons_central">
-     <a class="step_btn_central" id="step_1">1</a>
-     <a class="step_btn_central" id="step_2">2</a>
-     <a class="step_btn_central" id="step_3">3</a>
+ <div class="steps_central">
+     <div class="steps_conteiner">
+        <a class="step_btn_central" id="step_1">1</a>
+        <a class="step_btn_central" id="step_2">2</a>
+        <a class="step_btn_central" id="step_3">3</a>         
+     </div>
+
+
+     <p id="recording_timer" class="hide">00:00:00</p>
+     <a id="record_again" class="hide">REPETIR CAPTURA</a>
  </div>
  <div class="line_central"></div>
- <a class="start_btn" id="start_btn">COMENZAR</a>
- <a class="start_btn" id="record_btn">GRABAR</a>
+ <a class="buttons_central" id="start_btn">COMENZAR</a>
+ <a class="hide" id="record_btn">GRABAR</a>
+ <a class="hide" id="stop_btn">FINALIZAR</a>
 </div>
 
     <!--    CAMERA ROLL    -->
@@ -85,7 +95,6 @@
 </div>
 
 </div>
-
 </section>
 
 
@@ -181,7 +190,6 @@
 <script src="/js/main-home.js"></script>
 <script src="/js/trending.js"></script>
 <script src="/js/create-gif.js"></script>
-
 
 </body>
 </html>
