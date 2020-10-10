@@ -44,9 +44,10 @@
                         }
                     }
 
-                    #user_video{
-                        height: 85%;
-                    }
+                    // .video_conteiner{
+                    //     posi
+                    //     .video_overlay
+                    // }
 
                     .texts_central{
                         text-align: center;
@@ -88,6 +89,14 @@
                         padding: 5px 11px;
                         border-radius: 50%;
                         color: $azulOscuro;
+
+                    }
+                    .step_btn_central_active{
+                        border: 2px solid $azulOscuro;
+                        padding: 5px 11px;
+                        border-radius: 50%;
+                        color: #ffffff;
+                        background-color: $azulOscuro;
 
                     }                        
                     }

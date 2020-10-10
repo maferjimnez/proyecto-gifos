@@ -654,10 +654,6 @@ body #header__container .navbar_menu_open {
   border-right: 1px solid #50E3C2;
 }
 
-.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central #user_video {
-  height: 85%;
-}
-
 .body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .texts_central {
   text-align: center;
   line-height: 2.19rem;
@@ -707,6 +703,14 @@ body #header__container .navbar_menu_open {
   padding: 5px 11px;
   border-radius: 50%;
   color: #572EE5;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .steps_central .steps_conteiner .step_btn_central_active {
+  border: 2px solid #572EE5;
+  padding: 5px 11px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #572EE5;
 }
 
 .body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .steps_central .recording_timer {

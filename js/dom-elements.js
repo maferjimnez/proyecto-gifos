@@ -57,3 +57,5 @@ $stepOne = document.querySelector('#step_1');
 $stepTwo = document.querySelector('#step_2');
 $stepThree = document.querySelector('#step_3');
 $recordingTimer = document.querySelector('#recording_timer');
+$userGif = document.querySelector('#user_gif');
+$stopBtn = document.querySelector('#stop_btn');

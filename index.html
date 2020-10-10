@@ -57,8 +57,15 @@
          <div class="top_right_corner corners"></div>
      </div>
 
-     <video id="user_video" class="hide"></video>
-     <img id="user_gif" src="" >
+     <div class="video_conteiner">
+        <video id="user_video" class="hide"></video>
+        <img id="user_gif" src="" >        
+        <section class="video_overlay" id="video_overlay">
+            <img src="/assets/loader.svg" alt="Icono de cargando">
+            <p></p>
+        </section> 
+     </div>
+
 
      <div class="texts_central">
          <h2 class="title_texts" id="title_texts">Aquí podrás crear tus propios <span class="span_title">GIFOS</span></h2>
@@ -87,6 +94,7 @@
  <a class="buttons_central" id="start_btn">COMENZAR</a>
  <a class="hide" id="record_btn">GRABAR</a>
  <a class="hide" id="stop_btn">FINALIZAR</a>
+ <a class="hide" id="upload_btn">SUBIR GIFO</a>
 </div>
 
     <!--    CAMERA ROLL    -->
