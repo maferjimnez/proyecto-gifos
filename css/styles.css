@@ -654,6 +654,47 @@ body #header__container .navbar_menu_open {
   border-right: 1px solid #50E3C2;
 }
 
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .video_conteiner {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .video_conteiner #user_video, .body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .video_conteiner #user_gif {
+  width: 405px;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .video_conteiner .video_overlay {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  background-color: rgba(86, 46, 229, 0.6);
+  width: 100%;
+  height: 98.7%;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .video_conteiner .video_overlay .actions_overlay {
+  position: absolute;
+  top: 1rem;
+  left: 18rem;
+  cursor: pointer;
+  padding-left: 1rem;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .video_conteiner .video_overlay .actions_overlay .btn_actions {
+  padding-left: 1rem;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .video_conteiner .video_overlay #icon_overlay {
+  margin-top: 8rem;
+}
+
+.body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .video_conteiner .video_overlay #paragraph_overlay {
+  color: #ffffff;
+  font-weight: bold;
+}
+
 .body .crearGif__conteiner .crearGif_elements_conteiner .central_elements .screen_central .texts_central {
   text-align: center;
   line-height: 2.19rem;
