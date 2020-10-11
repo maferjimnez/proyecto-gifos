@@ -65,3 +65,6 @@ const $videoOverlay = document.querySelector('#video_overlay');
 const $overlayIcon = document.querySelector('#icon_overlay');
 const $overlayText = document.querySelector('#paragraph_overlay');
 const $overlayActionBtns = document.querySelector('#actions_overlay');
+
+// * *      MIS GIFOS       * * //
+const $misGifosConteiner = document.querySelector('#mis_gifos_conteiner');

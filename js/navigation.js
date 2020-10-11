@@ -7,7 +7,8 @@ function displayHomePage() {
     $favouritesSectionConteiner.classList.add('hide');
     //$favouritesGifsConteiner.classList.remove('main__favourites');
     $createGifConteiner.classList.add('hide');
-    //mis gifos hide
+    $misGifosConteiner.classList.add('hide');
+    
 
 };
 
@@ -20,6 +21,7 @@ function displayFavouritesSection() {
     $heroConteiner.classList.add('hide');
     $heroConteiner.classList.remove('hero__container');
     $trendingTagsConteiner.classList.add('hide');
+    $misGifosConteiner.classList.add('hide');
 
     templateFavouriteGifs()
 };
@@ -27,6 +29,13 @@ function displayFavouritesSection() {
 // * * MIS GIFOS SECTION * * //
 
 function displayMisGifos() {
+    $misGifosConteiner.classList.add('mis_gifos_conteiner');
+    $misGifosConteiner.classList.remove('hide');
+    $heroConteiner.classList.add('hide');
+    $heroConteiner.classList.remove('hero__container');
+    $trendingTagsConteiner.classList.add('hide');
+    $trendingGifsConteiner.classList.remove('hide');
+    $favouritesSectionConteiner.classList.add('hide');
     
 };
 
@@ -39,4 +48,5 @@ function displayCreateGif() {
     $favouritesGifsConteiner.classList.remove('main__favourites');
     $trendingTagsConteiner.classList.add('hide');
     $trendingGifsConteiner.classList.add('hide');
+    $misGifosConteiner.classList.add('hide');
 };
