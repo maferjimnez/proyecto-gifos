@@ -1,7 +1,8 @@
 let recorder;
 let form = new FormData();
+let arrUserGifos = [];
 
-function recordVideo (){
+function recordVideo(){
     $startBtn.classList.remove('buttons_central');
     $startBtn.classList.add('hide');
 
@@ -24,6 +25,8 @@ function recordVideo (){
         $recordBtn.classList.remove('hide');
         $textScreenConteiner.classList.add('hide');
         $userVideo.classList.remove('hide');
+        $videoConteiner.classList.remove('hide');
+        $videoConteiner.classList.add('video_conteiner');
 
         $stepOne.classList.remove('step_btn_central_active');
         $stepOne.classList.add('step_btn_central');
@@ -83,9 +86,60 @@ function stopRecordingGif(){
         console.log(form.get('file'));
     });
 
-    $
+    $stopBtn.classList.add('hide');
+    $stopBtn.classList.remove('buttons_central');
+    $uploadBtn.classList.remove('hide');
+    $uploadBtn.classList.add('buttons_central');
+    $recordAgainBtn.classList.remove('hide');
+    $recordAgainBtn.classList.add('record_again');
+    $recordingTimer.classList.add('hide');
+    $recordingTimer.classList.remove('recording_timer');
+
+    //clearTimeout(calculateRecordingTime);
+    $recordingTimer.innerHTML = '00:00:00';
 };
 
+async function  uploadGif() {
+    $uploadBtn.classList.add('hide');
+    $uploadBtn.classList.remove('buttons_central');
+    $recordAgainBtn.classList.add('hide');
+    $recordAgainBtn.classList.remove('record_again');
+
+    $stepTwo.classList.remove('step_btn_central_active');
+    $stepTwo.classList.add('step_btn_central');
+    $stepThree.classList.remove('step_btn_central');
+    $stepThree.classList.add('step_btn_central_active');
+    
+    $videoOverlay.classList.remove('hide');
+    $videoOverlay.classList.add('video_overlay');
+
+    await fetch (`${uploadEndpointWithApiKey}`, {
+		method: 'POST',
+		body: form,
+    })
+
+        .then((response) => response.json())
+        .then((userGif) => {
+            let userGifId = userGif.data.id;
+            console.log(userGif.data.id);
+
+            $overlayIcon.src = '/assets/check.svg';
+            $overlayText.innerHTML = ' GIFO subido con éxito';
+            $overlayActionBtns.classList.remove('hide');
+            $overlayActionBtns.classList.add('actions_overlay');
+
+            arrUserGifos.push(userGifId);
+            console.log(arrUserGifos);
+
+            userGifos =localStorage.setItem('UserGifs', JSON.stringify(arrUserGifos));
+        })
+
+        .catch((err) => {
+			console.error(err);
+		});
+    
+};
+$uploadBtn.addEventListener('click', uploadGif);
 
 
 function calculateRecordingTime(secs) {
@@ -109,3 +163,4 @@ function calculateRecordingTime(secs) {
 $startBtn.addEventListener('click', recordVideo);
 $recordBtn.addEventListener('click', startRecordingGif);
 $stopBtn.addEventListener('click', stopRecordingGif);
+$recordAgainBtn.addEventListener('click', recordVideo); // ! ver cómo arreglar esto para no hacer otra función

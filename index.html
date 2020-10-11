@@ -13,7 +13,7 @@
             <!--    HEADER    -->
     <header id="header__container">
         <div class="imgs_container">
-            <img src="/assets/logo-desktop.svg" href="index.html" alt="Logo GifOS desktop" class="img_logo">
+            <img src="/assets/logo-desktop.svg" onclick="displayHomePage()" alt="Logo GifOS desktop" class="img_logo">
                 <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu" onclick="showMenu()">             
         </div>
 
@@ -32,12 +32,12 @@
                 <hr class="navbar_menu_line">
             </ul>           
         </nav>
-        <img class="btnCrear" id="btnCrear" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
+        <img class="btnCrear" id="btnCrear" onclick="displayCreateGif()" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
     </header>
 
 
         <!--     CREATE GIFO      -->
-<section class="crearGif__conteiner" id="crearGif__conteiner">
+<section class="crearGif__conteiner hide" id="crearGif__conteiner">
 
     <!--    ELEMENTS    -->
 <div class="crearGif_elements_conteiner">
@@ -57,12 +57,17 @@
          <div class="top_right_corner corners"></div>
      </div>
 
-     <div class="video_conteiner">
-        <video id="user_video" class="hide"></video>
-        <img id="user_gif" src="" >        
-        <section class="video_overlay" id="video_overlay">
-            <img src="/assets/loader.svg" alt="Icono de cargando">
-            <p></p>
+     <div class="hide" id="video_conteiner">
+        <video id="user_video"></video>
+        <img id="user_gif" src="">        
+        <section class="hide" id="video_overlay">
+            <div class="hide" id="actions_overlay">
+                <img class="btn_actions" id="deleteGifBtn" src="/assets/icon-download-hover.svg" alt="Icono de descarga">
+                <img class="btn_actions" id="" src="/assets/icon-link-hover.svg" alt="Icono de vínculo">
+            </div>           
+            <img id="icon_overlay" src="/assets/loader.svg" alt="Icono de cargando">
+            <p id="paragraph_overlay" >Estamos subiendo tu GIFO</p>
+
         </section> 
      </div>
 
@@ -106,7 +111,7 @@
 </section>
 
 
-<main class="main">      
+<main class="main" id="main_conteiner">      
             <!--     HERO     -->
     <section class="hero__container" id="hero__container">
         <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
@@ -148,9 +153,23 @@
 
 </section>    
 
+    <!--     MIS GIFOS      -->
+    <section class="mis_gifos_conteiner" id="mis_gifos_conteiner">
+        <section class="title__conteiner">
+            <img class="mis_gifos_img" src="/assets/icon-mis-gifos.svg" alt="Ilustración de carita feliz">
+            <h2 class="mis_gifos_title">Mis GIFOS</h2>
+        </section>
+    
+        <div class=mis_gifos_container>
+            <section class="mis_gifos_gallery"></section>
+            <a class="hide" id="show_more_btn">VER MÁS</a>
+        </div>
+    
+    </section>  
+
 
     <!--     TREDINGS      -->
-<section class="trendings__conteiner">
+<section class="trendings__conteiner" id="trendings_conteiner">
      <!--     TREDINGS TAGS     -->
     <section id="trending__tags__container">
             <h2 class="tags__title">Trending:</h2>
@@ -158,7 +177,7 @@
     </section>
 
     <!--     TREDINGS GIFS     -->
-    <article class="trending__gifs__conteiner">
+    <article class="trending__gifs__conteiner" id="trending_gifs_conteiner">
         <h2 class="trending_gifs_title">Trending GIFOS</h2>
         <p class="trending_gifs_paragraph">Mira los últimos GIFOS de nuestra comunidad</p>
 
@@ -198,6 +217,7 @@
 <script src="/js/main-home.js"></script>
 <script src="/js/trending.js"></script>
 <script src="/js/create-gif.js"></script>
+<script src="/js/navigation.js"></script>
 
 </body>
 </html>

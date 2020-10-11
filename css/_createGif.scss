@@ -44,10 +44,43 @@
                         }
                     }
 
-                    // .video_conteiner{
-                    //     posi
-                    //     .video_overlay
-                    // }
+                    .video_conteiner{
+                        align-self: center;
+                        position: relative;
+
+                        #user_video , #user_gif{
+                            width: 405px;
+                        }
+
+                        .video_overlay{
+                            position: absolute;
+                            top: 0;
+                            text-align: center;
+                            background-color: hsla(253, 78%, 54%, 0.6);
+                            width: 100%;
+                            height: 98.7%;
+
+                            .actions_overlay{
+                                position: absolute;
+                                top: 1rem;
+                                left: 18rem;
+                                cursor: pointer;
+                                padding-left: 1rem;
+
+                                .btn_actions{
+                                    padding-left: 1rem;
+                                }
+                            }
+
+                            #icon_overlay{
+                                margin-top: 8rem;
+                            }
+                            #paragraph_overlay{
+                                color: #ffffff;
+                                font-weight: bold;
+                            }
+                        }
+                    }
 
                     .texts_central{
                         text-align: center;
