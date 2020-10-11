@@ -1,14 +1,18 @@
 .body{
     .main__favourites{
         padding: 8rem 0 3rem;
-        text-align: center;
-        .favourites_title{
-            color: $azulOscuro;
-        }
 
+        .title__conteiner{
+            margin-bottom: 2rem;
+            text-align: center;
+            .favourites_title{
+                color: $azulOscuro;
+        }
+        }
+  
         .favourites_gifs_container{
             .favourites_gifs_gallery{
-                padding: 0 9.80rem;
+                padding: 0 5rem;
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
@@ -51,7 +55,7 @@
                             display: block;
                             background-color: $azulOscuro;
                             width: 100%;
-                            height: 99%;
+                            height: 100%;
                             position: absolute;
                             z-index: 1;
                             top: 0;

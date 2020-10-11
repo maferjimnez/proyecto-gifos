@@ -511,15 +511,19 @@ body #header__container .navbar_menu_open {
 
 .body .main__favourites {
   padding: 8rem 0 3rem;
+}
+
+.body .main__favourites .title__conteiner {
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-.body .main__favourites .favourites_title {
+.body .main__favourites .title__conteiner .favourites_title {
   color: #572EE5;
 }
 
 .body .main__favourites .favourites_gifs_container .favourites_gifs_gallery {
-  padding: 0 9.80rem;
+  padding: 0 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,7 +579,7 @@ body #header__container .navbar_menu_open {
   display: block;
   background-color: #572EE5;
   width: 100%;
-  height: 99%;
+  height: 100%;
   position: absolute;
   z-index: 1;
   top: 0;
@@ -795,5 +799,90 @@ body #header__container .navbar_menu_open {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 0 0 5rem 1rem;
+}
+
+.body .mis_gifos_conteiner {
+  padding: 8rem 0 3rem;
+}
+
+.body .mis_gifos_conteiner .title__conteiner {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.body .mis_gifos_conteiner .title__conteiner .mis_gifos_title {
+  color: #572EE5;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery {
+  padding: 0 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container {
+  margin-bottom: 1.81rem;
+  cursor: pointer;
+  position: relative;
+  width: 16.25rem;
+  height: 12.5rem;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_result {
+  width: 16.25rem;
+  height: 12.5rem;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content {
+  display: none;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 1rem;
+  left: 8rem;
+  width: 47%;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content .details {
+  position: absolute;
+  top: 9rem;
+  left: 1rem;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content .details .gif_user, .body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content .details .gif_title {
+  font-family: 'Roboto-regular', sans-serif;
+  color: #ffffff;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container:hover .gif_content {
+  display: block;
+  background-color: #572EE5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  opacity: 80%;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_noContent_conteiner {
+  margin-top: 4rem;
+}
+
+.body .mis_gifos_conteiner .mis_gifos_noContent_conteiner .noContent_paragraph {
+  color: #50E3C2;
 }
 /*# sourceMappingURL=styles.css.map */

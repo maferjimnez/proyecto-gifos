@@ -142,6 +142,15 @@ async function  uploadGif() {
 $uploadBtn.addEventListener('click', uploadGif);
 
 
+function displayMisGifosTemplate() {
+    
+}
+
+
+
+
+
+
 function calculateRecordingTime(secs) {
     var hr = Math.floor(secs / 3600);
     var min = Math.floor((secs - (hr * 3600)) / 60);

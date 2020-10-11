@@ -28,7 +28,7 @@
                 <hr class="navbar_menu_line">
                 <li><a class="navbar_menu_item" id="navbar_favourite" onclick="displayFavouritesSection()">FAVORITOS</a></li>
                 <hr class="navbar_menu_line">
-                <li><a class="navbar_menu_item" href="">MIS GIFOS</a></li>
+                <li><a class="navbar_menu_item" onclick="displayMisGifos()">MIS GIFOS</a></li>
                 <hr class="navbar_menu_line">
             </ul>           
         </nav>
@@ -148,21 +148,21 @@
 
     <div class=favourites_gifs_container>
         <section class="favourites_gifs_gallery"></section>
-        <a class="hide" id="show_more_btn">VER MÁS</a>
+        <a class="hide" id="fav_show_more_btn">VER MÁS</a>
     </div>
 
 </section>    
 
     <!--     MIS GIFOS      -->
-    <section class="mis_gifos_conteiner" id="mis_gifos_conteiner">
+    <section class="mis_gifos_conteiner hide" id="mis_gifos_conteiner">
         <section class="title__conteiner">
             <img class="mis_gifos_img" src="/assets/icon-mis-gifos.svg" alt="Ilustración de carita feliz">
             <h2 class="mis_gifos_title">Mis GIFOS</h2>
         </section>
     
-        <div class=mis_gifos_container>
+        <div class="mis_gifos_container">
             <section class="mis_gifos_gallery"></section>
-            <a class="hide" id="show_more_btn">VER MÁS</a>
+            <a class="hide" id="misGifos_show_more_btn">VER MÁS</a>
         </div>
     
     </section>  
