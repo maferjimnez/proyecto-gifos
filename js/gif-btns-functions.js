@@ -26,7 +26,7 @@ function addGifToFavourites(gif, username, title) {
     console.log(arrayFavourites);
 
     localStorage.setItem('FavouriteGifs', JSON.stringify(arrayFavourites));
-    templateFavouriteGifs();
+    //templateFavouriteGifs();
 };
 
 
