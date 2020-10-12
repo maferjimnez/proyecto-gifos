@@ -68,3 +68,5 @@ const $overlayActionBtns = document.querySelector('#actions_overlay');
 
 // * *      MIS GIFOS       * * //
 const $misGifosConteiner = document.querySelector('#mis_gifos_conteiner');
+const $misGifosContent = document.querySelector('#mis_gifos_content');
+const $misGifosGallery = document.querySelector('.mis_gifos_gallery');

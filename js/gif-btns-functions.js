@@ -1,12 +1,5 @@
 // ! FAVOURITES
 
-function displayFavouritesSection() {
-
-    $heroConteiner.classList.add('hide');
-    $heroConteiner.classList.remove('hero__container');
-    $favouritesSectionConteiner.classList.remove('hide');
-};
-
 let arrayFavourites;
 if (localStorage.getItem('FavouriteGifs') === null) {
     arrayFavourites = [];

@@ -120,6 +120,9 @@ async function  uploadGif() {
 
         .then((response) => response.json())
         .then((userGif) => {
+
+            console.log(userGif);
+
             let userGifId = userGif.data.id;
             console.log(userGif.data.id);
 
@@ -142,9 +145,59 @@ async function  uploadGif() {
 $uploadBtn.addEventListener('click', uploadGif);
 
 
-function displayMisGifosTemplate() {
-    
-}
+
+
+
+function templateMisGifos()  {
+    $misGifosGallery.innerHTML = '';
+
+    arrUserGifos = JSON.parse(localStorage.getItem('UserGifs'));
+    console.log(arrUserGifos);
+
+    if (arrUserGifos == null) {
+        arrUserGifos = [];
+        const misGifosWithoutContent = document.createElement('section');
+        misGifosWithoutContent.classList.add('mis_gifos_noContent_conteiner');
+        misGifosWithoutContent.innerHTML= `<img class="noContent_face" src="/assets/icon-mis-gifos-sin-contenido.svg" alt="Icono carita">
+                                            <h3 class="noContent_paragraph">¡Anímate a crear tu primer GIFO!</h3>
+                                            `;
+        $misGifosConteiner.appendChild(misGifosWithoutContent);
+
+
+    } else {
+        for (let i = 0; i < arrUserGifos.length; i++) {
+            fetch(
+                `${getGifByIdEndpoint}?ids=${arrUserGifos[i]}&${apiKey}`
+            )
+                .then((response) => response.json())
+                .then((misGifosGiphy) => {
+                    console.log(misGifosGiphy);
+                    console.log(typeof misGifosGiphy.data[0].id);
+
+                    const gifContainer = document.createElement('div');
+                    gifContainer.classList.add('gif_result_container');
+                    gifContainer.innerHTML = `
+
+                    <img class="gif_result" src="${misGifosGiphy.data[0].images.original.url}" alt="GIFO creado por usuario">
+                    <section class="gif_content">
+                    <div class="icons">
+                        <img class="icon_fav" onclick=" // ! REMOVE GIF ('${misGifosGiphy.data[0].images.original.url}')" src="/assets/icon-fav.svg" alt="" srcset="">
+                        <img class="icon_download" onclick="downloadGif('${misGifosGiphy.data[0].images.original.url}', gif)" src="/assets/icon-download.svg" alt="">
+                        <img class="icon_max" //! MAXIMIZAR src="/assets/icon-max-normal.svg" alt="">               
+                    </div>
+                    <div class="details">
+                        <p class="gif_user">User</p>
+                        <h4 class="gif_title">Home-made Gif</h4>                          
+                    </div>
+                    </section>`;
+                    $misGifosGallery.appendChild(gifContainer);
+                })
+                .catch((err) => {
+                    console.error(err);
+                });
+        }
+    }
+};
 
 
 

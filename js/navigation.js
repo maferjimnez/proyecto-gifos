@@ -9,7 +9,6 @@ function displayHomePage() {
     $createGifConteiner.classList.add('hide');
     $misGifosConteiner.classList.add('hide');
     
-
 };
 
 
@@ -23,8 +22,9 @@ function displayFavouritesSection() {
     $trendingTagsConteiner.classList.add('hide');
     $misGifosConteiner.classList.add('hide');
 
-    templateFavouriteGifs()
+    templateFavouriteGifs();
 };
+
 
 // * * MIS GIFOS SECTION * * //
 
@@ -36,7 +36,9 @@ function displayMisGifos() {
     $trendingTagsConteiner.classList.add('hide');
     $trendingGifsConteiner.classList.remove('hide');
     $favouritesSectionConteiner.classList.add('hide');
-    
+    $createGifConteiner.classList.add('hide');
+
+    templateMisGifos();
 };
 
 // * * CREATE GIF SECTION * * //

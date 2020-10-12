@@ -811,10 +811,10 @@ body #header__container .navbar_menu_open {
 }
 
 .body .mis_gifos_conteiner .title__conteiner .mis_gifos_title {
-  color: #572EE5;
+  color: black;
 }
 
-.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery {
+.body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_gallery {
   padding: 0 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -826,7 +826,7 @@ body #header__container .navbar_menu_open {
       flex-wrap: wrap;
 }
 
-.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container {
+.body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_gallery .gif_result_container {
   margin-bottom: 1.81rem;
   cursor: pointer;
   position: relative;
@@ -834,16 +834,16 @@ body #header__container .navbar_menu_open {
   height: 12.5rem;
 }
 
-.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_result {
+.body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_gallery .gif_result_container .gif_result {
   width: 16.25rem;
   height: 12.5rem;
 }
 
-.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content {
+.body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_gallery .gif_result_container .gif_content {
   display: none;
 }
 
-.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content .icons {
+.body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_gallery .gif_result_container .gif_content .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -856,18 +856,18 @@ body #header__container .navbar_menu_open {
   width: 47%;
 }
 
-.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content .details {
+.body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_gallery .gif_result_container .gif_content .details {
   position: absolute;
   top: 9rem;
   left: 1rem;
 }
 
-.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content .details .gif_user, .body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container .gif_content .details .gif_title {
+.body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_gallery .gif_result_container .gif_content .details .gif_user, .body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_gallery .gif_result_container .gif_content .details .gif_title {
   font-family: 'Roboto-regular', sans-serif;
   color: #ffffff;
 }
 
-.body .mis_gifos_conteiner .mis_gifos_container .mis_gifos_gallery .gif_result_container:hover .gif_content {
+.body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_gallery .gif_result_container:hover .gif_content {
   display: block;
   background-color: #572EE5;
   width: 100%;
