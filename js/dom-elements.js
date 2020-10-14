@@ -39,9 +39,9 @@ const $btnArrowNext = document.querySelector('.next_btn_arrow');
 
 // * * GIFS BUTTONS FUNCTIONS * * //
 // favourite
-const $favouritesGifsConteiner = document.querySelector('.favourites_gifs_gallery');
 const $favouritesSectionConteiner = document.querySelector('#main__favourites');
 const $navbarFavourite = document.querySelector('#navbar_favourite');
+const $favouritesGifContent = document.querySelector('.favourites_gifs_container');
 
 
 // * * CREATE GIF * * //
@@ -70,3 +70,6 @@ const $overlayActionBtns = document.querySelector('#actions_overlay');
 const $misGifosConteiner = document.querySelector('#mis_gifos_conteiner');
 const $misGifosContent = document.querySelector('#mis_gifos_content');
 const $misGifosGallery = document.querySelector('.mis_gifos_gallery');
+
+// * *      MAX GIFO       * * //
+const $maxGifConteiner = document.querySelector('#max_gif_conteiner');

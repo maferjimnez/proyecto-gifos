@@ -9,9 +9,8 @@
                 color: $azulOscuro;
         }
         }
-  
+
         .favourites_gifs_container{
-            .favourites_gifs_gallery{
                 padding: 0 5rem;
                 display: flex;
                 justify-content: space-between;
@@ -63,12 +62,12 @@
                         }
                     }
                 }
-                }
 
             }
 
         .favourites_noContent_conteiner{
             margin-top: 4rem;
+            text-align: center;
             .noContent_paragraph{
                 color: $turquesa;
             }

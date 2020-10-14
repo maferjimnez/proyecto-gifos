@@ -11,20 +11,19 @@ function displayHomePage() {
     
 };
 
-
 // * * FAVOURITES SECTION * * //
 function displayFavouritesSection() {
     $favouritesSectionConteiner.classList.remove('hide');
-    $favouritesGifsConteiner.classList.add('main__favourites');
+    $favouritesSectionConteiner.classList.add('main__favourites');
     $createGifConteiner.classList.add('hide');
     $heroConteiner.classList.add('hide');
     $heroConteiner.classList.remove('hero__container');
     $trendingTagsConteiner.classList.add('hide');
     $misGifosConteiner.classList.add('hide');
+    $trendingGifsConteiner.classList.remove('hide');
 
     templateFavouriteGifs();
 };
-
 
 // * * MIS GIFOS SECTION * * //
 

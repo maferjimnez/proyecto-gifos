@@ -44,8 +44,8 @@ const templateTrendingGifs = (trendings) => {
         <img class="trendingGif_result" src="${trendings.data[i].images.original.url}" alt="${trendings.data[i].title}">
         <section class="trendingGif_info">
         <div class="icons">
-            <img class="icon_fav" src="/assets/icon-fav.svg" alt="" srcset="">
-            <img class="icon_download" src="/assets/icon-download.svg" alt="">
+            <img class="icon_fav" onclick="addGifToFavourites('${trendings.data[i].images.original.url}','${trendings.data[i].username}','${trendings.data[i].title}')" src="/assets/icon-fav.svg" alt="">
+            <img class="icon_download" onclick="downloadGif('${trendings.data[i].images.original.url}','${trendings.data[i].title}')" src="/assets/icon-download.svg" alt="">
             <img class="icon_max" src="/assets/icon-max-normal.svg" alt="">               
         </div>
         <div class="details">

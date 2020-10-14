@@ -183,17 +183,12 @@ const displaySuggestions = (suggestions) => {
         $recomendedSearch.appendChild(searchSuggestionItem);
     }
 };
-$btnSearch.addEventListener('click', getSearchSuggestions);
 
 
 const cleanSearch = () => {
     $recomendedSearchContainer.classList.add('hide');
 	
 };
-
-$searchInput.addEventListener('input', getSearchSuggestions);
-$btnSearch.addEventListener('click', getSearchSuggestions);
-
 
 
 // * *  EVENTS * * //
@@ -205,6 +200,10 @@ $searchInput.addEventListener('keypress', function (e){
     }
 });
 $btnShowMore.addEventListener('click', showMore);
+$searchInput.addEventListener('input', getSearchSuggestions);
+$btnSearch.addEventListener('click', getSearchSuggestions);
+$btnSearch.addEventListener('click', getSearchSuggestions);
+
 
 // NAVBAR SEARCH
 $btnSearchNavbar.addEventListener('click', searchGif($searchInputNavbar.value));

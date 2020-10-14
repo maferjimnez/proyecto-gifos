@@ -13,7 +13,6 @@
 
 
         .mis_gifos_content{
-            .mis_gifos_gallery{
                 padding: 0 5rem;
                 display: flex;
                 justify-content: space-between;
@@ -65,12 +64,11 @@
                         }
                     }
                 }
-                }
-
             }
 
         .mis_gifos_noContent_conteiner{
             margin-top: 4rem;
+            text-align: center;
             .noContent_paragraph{
                 color: $turquesa;
             }

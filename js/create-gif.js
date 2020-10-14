@@ -134,7 +134,7 @@ async function  uploadGif() {
             arrUserGifos.push(userGifId);
             console.log(arrUserGifos);
 
-            userGifos =localStorage.setItem('UserGifs', JSON.stringify(arrUserGifos));
+            userGifos = localStorage.setItem('UserGifs', JSON.stringify(arrUserGifos));
         })
 
         .catch((err) => {
@@ -142,26 +142,23 @@ async function  uploadGif() {
 		});
     
 };
-$uploadBtn.addEventListener('click', uploadGif);
-
-
-
-
 
 function templateMisGifos()  {
-    $misGifosGallery.innerHTML = '';
+    $misGifosContent.innerHTML = '';
 
     arrUserGifos = JSON.parse(localStorage.getItem('UserGifs'));
     console.log(arrUserGifos);
 
-    if (arrUserGifos == null) {
+    if (arrUserGifos == 0) {
         arrUserGifos = [];
+        
+        $misGifosContent.style.justifyContent = "center";
         const misGifosWithoutContent = document.createElement('section');
         misGifosWithoutContent.classList.add('mis_gifos_noContent_conteiner');
         misGifosWithoutContent.innerHTML= `<img class="noContent_face" src="/assets/icon-mis-gifos-sin-contenido.svg" alt="Icono carita">
                                             <h3 class="noContent_paragraph">¡Anímate a crear tu primer GIFO!</h3>
                                             `;
-        $misGifosConteiner.appendChild(misGifosWithoutContent);
+        $misGifosContent.appendChild(misGifosWithoutContent);
 
 
     } else {
@@ -174,6 +171,8 @@ function templateMisGifos()  {
                     console.log(misGifosGiphy);
                     console.log(typeof misGifosGiphy.data[0].id);
 
+                    $misGifosContent.style.justifyContent = "space-between";
+
                     const gifContainer = document.createElement('div');
                     gifContainer.classList.add('gif_result_container');
                     gifContainer.innerHTML = `
@@ -181,7 +180,7 @@ function templateMisGifos()  {
                     <img class="gif_result" src="${misGifosGiphy.data[0].images.original.url}" alt="GIFO creado por usuario">
                     <section class="gif_content">
                     <div class="icons">
-                        <img class="icon_fav" onclick=" // ! REMOVE GIF ('${misGifosGiphy.data[0].images.original.url}')" src="/assets/icon-fav.svg" alt="" srcset="">
+                        <img class="icon_delete" onclick="removeFromMisGifos('${misGifosGiphy.data[0].id}')" src="/assets/icon-trash-normal.svg" >
                         <img class="icon_download" onclick="downloadGif('${misGifosGiphy.data[0].images.original.url}', gif)" src="/assets/icon-download.svg" alt="">
                         <img class="icon_max" //! MAXIMIZAR src="/assets/icon-max-normal.svg" alt="">               
                     </div>
@@ -190,7 +189,7 @@ function templateMisGifos()  {
                         <h4 class="gif_title">Home-made Gif</h4>                          
                     </div>
                     </section>`;
-                    $misGifosGallery.appendChild(gifContainer);
+                    $misGifosContent.appendChild(gifContainer);
                 })
                 .catch((err) => {
                     console.error(err);
@@ -199,7 +198,17 @@ function templateMisGifos()  {
     }
 };
 
-
+function removeFromMisGifos(userGif) {
+    arrUserGifos = JSON.parse(localStorage.getItem('UserGifs'));
+    for (let i = 0; i < arrUserGifos.length; i++) {
+        if (arrUserGifos[i] == userGif) {
+            arrUserGifos.splice(i, 1);
+            localStorage.setItem('UserGifs', JSON.stringify(arrUserGifos));
+        }
+        
+    }
+    
+};
 
 
 
@@ -218,7 +227,7 @@ function calculateRecordingTime(secs) {
     }
 
     return hr + ':' + min + ':' + sec;
-}
+};
 
 
 // * * EVENTS * * //
@@ -226,3 +235,4 @@ $startBtn.addEventListener('click', recordVideo);
 $recordBtn.addEventListener('click', startRecordingGif);
 $stopBtn.addEventListener('click', stopRecordingGif);
 $recordAgainBtn.addEventListener('click', recordVideo); // ! ver cómo arreglar esto para no hacer otra función
+$uploadBtn.addEventListener('click', uploadGif);
