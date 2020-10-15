@@ -5,6 +5,8 @@ let arrUserGifos = [];
 function recordVideo(){
     $startBtn.classList.remove('buttons_central');
     $startBtn.classList.add('hide');
+    $recordBtn.classList.add('buttons_central');
+    $recordBtn.style.display = "block";
 
     $titleVideo.innerHTML = '¿Nos das acceso </br>a tu cámara?';
     $paragraphVideo.innerHTML = 'El acceso a tu camara será válido sólo </br>por el tiempo en el que estés creando el GIFO.';
@@ -21,8 +23,6 @@ function recordVideo(){
      })
 
      .then(function(stream) {
-        $recordBtn.classList.add('buttons_central');
-        $recordBtn.classList.remove('hide');
         $textScreenConteiner.classList.add('hide');
         $userVideo.classList.remove('hide');
         $videoConteiner.classList.remove('hide');
@@ -75,12 +75,15 @@ function startRecordingGif() {
 
 };
 
+$downloadBtn = document.querySelector('#downloadBtn');
 function stopRecordingGif(){
     $userVideo.classList.add('hide');
-
+    $userGif.classList.remove('hide');
     recorder.stopRecording(() => {
         blob = recorder.getBlob();
         $userGif.src = URL.createObjectURL(blob);
+     
+        $downloadBtn.onclick = () => downloadGif(URL.createObjectURL(blob), 'My_Gifo');
     
         form.append('file', recorder.getBlob(), 'myGif.gif');
         console.log(form.get('file'));
@@ -88,8 +91,9 @@ function stopRecordingGif(){
 
     $stopBtn.classList.add('hide');
     $stopBtn.classList.remove('buttons_central');
-    $uploadBtn.classList.remove('hide');
+    // $uploadBtn.classList.remove('hide');
     $uploadBtn.classList.add('buttons_central');
+    $uploadBtn.style.display = 'block';
     $recordAgainBtn.classList.remove('hide');
     $recordAgainBtn.classList.add('record_again');
     $recordingTimer.classList.add('hide');
@@ -100,7 +104,7 @@ function stopRecordingGif(){
 };
 
 async function  uploadGif() {
-    $uploadBtn.classList.add('hide');
+    $uploadBtn.style.display = 'none';
     $uploadBtn.classList.remove('buttons_central');
     $recordAgainBtn.classList.add('hide');
     $recordAgainBtn.classList.remove('record_again');
@@ -134,7 +138,7 @@ async function  uploadGif() {
             arrUserGifos.push(userGifId);
             console.log(arrUserGifos);
 
-            userGifos = localStorage.setItem('UserGifs', JSON.stringify(arrUserGifos));
+            localStorage.setItem('UserGifs', JSON.stringify(arrUserGifos));
         })
 
         .catch((err) => {
@@ -207,7 +211,7 @@ function removeFromMisGifos(userGif) {
         }
         
     }
-    
+    displayMisGifos();
 };
 
 
@@ -234,5 +238,11 @@ function calculateRecordingTime(secs) {
 $startBtn.addEventListener('click', recordVideo);
 $recordBtn.addEventListener('click', startRecordingGif);
 $stopBtn.addEventListener('click', stopRecordingGif);
-$recordAgainBtn.addEventListener('click', recordVideo); // ! ver cómo arreglar esto para no hacer otra función
+$recordAgainBtn.addEventListener('click', () => {
+    $uploadBtn.style.display = 'none';
+    $userGif.classList.add('hide');
+    recorder.clearRecordedData();
+    recordVideo();
+
+} );
 $uploadBtn.addEventListener('click', uploadGif);

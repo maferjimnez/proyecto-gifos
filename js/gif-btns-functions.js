@@ -19,11 +19,13 @@ function addGifToFavourites(gif, username, title) {
     console.log(arrayFavourites);
 
     localStorage.setItem('FavouriteGifs', JSON.stringify(arrayFavourites));
+    templateFavouriteGifs();
 };
 
-const arrayFavouritesStoraged = JSON.parse(localStorage.getItem('FavouriteGifs'));
 
 function templateFavouriteGifs(){
+   const arrayFavouritesStoraged = JSON.parse(localStorage.getItem('FavouriteGifs'));
+ 
   $favouritesGifContent.innerHTML = '';
 //   let arrayFavouritesStoraged = JSON.parse(localStorage.getItem('FavouriteGifs'));
   console.log(arrayFavouritesStoraged);
@@ -70,11 +72,12 @@ function templateFavouriteGifs(){
 
 function removeFromFavourites(gif) {
     //let arrayFavouritesStoraged = JSON.parse(localStorage.getItem('FavouriteGifs'));
-    for (let i = 0; i < arrayFavouritesStoraged.length; i++)
-        if(arrayFavouritesStoraged[i].gif === gif){
-            arrayFavouritesStoraged.splice(i, 1);
-            localStorage.setItem('FavouriteGifs', JSON.stringify(arrayFavouritesStoraged));
+    for (let i = 0; i < arrayFavourites.length; i++)
+        if(arrayFavourites[i].gif === gif){
+            arrayFavourites.splice(i, 1);
+            localStorage.setItem('FavouriteGifs', JSON.stringify(arrayFavourites));
         }
+        templateFavouriteGifs();
 };
 
 
