@@ -1,18 +1,17 @@
 .trendings__conteiner{
 
-  // * TAGS * //
     #trending__tags__container {
         margin: 1.94rem 0;
 
         .tags__title {
           font-weight: bolder;
-          color: $azulOscuro;
+          color: var(--principal-colour);
           text-align: center;
         }
 
         #tags__content {
           font-size: 1rem; 
-          color: $azulOscuro;
+          color: var(--principal-colour);
           text-align: center;
           padding: 1rem 27vw;
 
@@ -27,7 +26,6 @@
       }
     }
 
-    // * GIFS *//
   }
 
 

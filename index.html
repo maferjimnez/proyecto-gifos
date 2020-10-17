@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>GifOS</title>
 </head>
-<body class="body">
+<body id="body">
 
             <!--    HEADER    -->
     <header id="header__container">
@@ -24,7 +24,7 @@
 
         <nav id="navbar" class="navbar">
             <ul class="navbar_menu">
-                <li><a class="navbar_menu_item" href="">MODO NOCTURNO</a></li>
+                <li><a id="dark_mode_btn" class="navbar_menu_item" href="">MODO NOCTURNO</a></li>
                 <hr class="navbar_menu_line">
                 <li><a class="navbar_menu_item" id="navbar_favourite" onclick="displayFavouritesSection()">FAVORITOS</a></li>
                 <hr class="navbar_menu_line">
@@ -199,18 +199,21 @@
 
     <!--     MAX GIF      -->
 <section class="hide" id="max_gif_conteiner">
-    <img class="close_icon" src="/assets/close.svg" alt="Close icon">
-    <img class="main_gif" src="/assets/original (2).jpg" alt="">
-    <div class="gif_max_details">
-        <div class="gif_max_info">
-            <p class="gifmax_user">homlaa</p>
-            <h3 class="gifmax_title">adioms</h3>
-        </div>
-        <div class="gifmax_btns">
-            <img src="/assets/icon-fav-hover.svg" alt="">
-            <img src="/assets/icon-download-hover.svg" alt="">
+    <div class="max_gif_content">
+        <img onclick="closeMaxGif()" class="close_icon" src="/assets/close.svg" alt="Close icon">
+        <img class="main_gif" id="gif_max" src="" alt="">
+        <div class="gif_max_details">
+            <div class="gif_max_info">
+                <p id="gifmax_user" class="gifmax_user"></p>
+                <h3 id="gifmax_title" class="gifmax_title"></h3>
+            </div>
+            <div class="gifmax_btns">
+                <img id="gifmax_fav" src="/assets/icon-fav-hover.svg" alt="">
+                <img src="/assets/icon-download-hover.svg" alt="">
+            </div>
         </div>
     </div>
+
 </section>
 
     <!--     FOOTER      -->
@@ -222,6 +225,7 @@
 <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 <script src="/js/dom-elements.js"></script>
 <script src="/js/api.js"></script>
+<script src="/js/dark-mode.js"></script>
 <script src="/js/gif-btns-functions.js"></script>
 <script src="/js/main-home.js"></script>
 <script src="/js/trending.js"></script>

@@ -1,8 +1,10 @@
 // * *      NAVBAR ELEMENTS       * * //
 const $navbarMenu = document.getElementById("navbar");
 const $btnMenu = document.getElementById("btnMenu");
+const $darkModeBtn = document.querySelector("#dark_mode_btn");
 
 // * *            BODY             * * //
+const $body = document.querySelector('#body');
 const $heroConteiner = document.querySelector('#hero__container');
 
 // * *      SEARCH ELEMENTS       * * //
@@ -73,3 +75,7 @@ const $misGifosGallery = document.querySelector('.mis_gifos_gallery');
 
 // * *      MAX GIFO       * * //
 const $maxGifConteiner = document.querySelector('#max_gif_conteiner');
+const $maxGif = document.querySelector('#gif_max');
+const $maxGifTitle = document.querySelector('#gifmax_title');
+const $maxGifUser = document.querySelector('#gifmax_user');
+const $maxFavIcon = document.querySelector('#gifmax_fav');

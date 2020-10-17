@@ -12,3 +12,22 @@ $fondoClaroDiurno: #F3F5F8;
 $fondoClaroNocturno: #37383C;
 $fondoOscuroNocturno: #222326;
 
+
+// * * LIGHT MODE * * //
+body{
+    --principal-colour: #572EE5;
+    --secondary-colour: #000000;
+    --principal-background: #FFFFFF;
+    --secondary-background: #F3F5F8;
+    --burger-menu-background: #572EE5;
+}
+
+// * * DARK MODE * * //
+body.dark{
+    --principal-colour: #FFFFFF;
+    --secondary-colour: #FFFFFF;
+    --principal-background: #37383C;
+    --secondary-background:  #222326;
+    --burger-menu-background: #000000;
+
+}

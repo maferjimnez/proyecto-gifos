@@ -1,15 +1,16 @@
 .trendings__conteiner{
     .trending__gifs__conteiner{
-        background-color: $fondoClaroDiurno;
+        background-color: var(--secondary-background);
   
         .trending_gifs_title{
           text-align: center;
-          color: $azulOscuro;
+          color: var(--principal-colour);
           padding-top: 5rem;
         }
   
         .trending_gifs_paragraph{
           text-align: center;
+          color: var(--secondary-colour);
         }
   
         .trending_gifs_slider{
@@ -131,7 +132,7 @@
                 //  &:hover{
                 //      .trendingGif_info{
                 //          display: block;
-                //          background-color: $azulOscuro;
+                //          background-color: var(--principal-colour);
                 //          width: 16.25rem;
                 //          height: 12.5rem;
                 //          position: absolute;
