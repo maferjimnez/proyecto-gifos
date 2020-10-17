@@ -186,11 +186,11 @@ function templateMisGifos()  {
                     <div class="icons">
                         <img class="icon_delete" onclick="removeFromMisGifos('${misGifosGiphy.data[0].id}')" src="/assets/icon-trash-normal.svg" >
                         <img class="icon_download" onclick="downloadGif('${misGifosGiphy.data[0].images.original.url}', gif)" src="/assets/icon-download.svg" alt="">
-                        <img class="icon_max" //! MAXIMIZAR src="/assets/icon-max-normal.svg" alt="">               
+                        <img class="icon_max" onclick="maximizeGifFromFavourites('${misGifosGiphy.data[0].images.original.url}','User', 'Home-made GIFO')" src="/assets/icon-max-normal.svg" alt="">               
                     </div>
                     <div class="details">
                         <p class="gif_user">User</p>
-                        <h4 class="gif_title">Home-made Gif</h4>                          
+                        <h4 class="gif_title">Home-made GIFO</h4>                          
                     </div>
                     </section>`;
                     $misGifosContent.appendChild(gifContainer);

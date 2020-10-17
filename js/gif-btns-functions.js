@@ -1,6 +1,5 @@
 // * *   FAVOURITES  * * //
 
-
 let arrayFavourites;
 if (localStorage.getItem('FavouriteGifs') === null) {
     arrayFavourites = [];
@@ -24,11 +23,9 @@ function addGifToFavourites(gif, username, title) {
 
 
 function templateFavouriteGifs(){
-   const arrayFavouritesStoraged = JSON.parse(localStorage.getItem('FavouriteGifs'));
- 
-  $favouritesGifContent.innerHTML = '';
-//   let arrayFavouritesStoraged = JSON.parse(localStorage.getItem('FavouriteGifs'));
-  console.log(arrayFavouritesStoraged);
+    const arrayFavouritesStoraged = JSON.parse(localStorage.getItem('FavouriteGifs'));
+    console.log(arrayFavouritesStoraged);      
+    $favouritesGifContent.innerHTML = '';
 
     if (arrayFavouritesStoraged == 0 || arrayFavouritesStoraged == null) {
         $favouritesGifContent.style.justifyContent = "center";
@@ -42,8 +39,6 @@ function templateFavouriteGifs(){
 
  
     } else {
-        // let arrayFavouritesStoraged = JSON.parse(localStorage.getItem('FavouriteGifs'));
-        // console.log(arrayFavouritesStoraged);      
         
 
         for (let i = 0; i < arrayFavouritesStoraged.length; i++) {
@@ -71,7 +66,6 @@ function templateFavouriteGifs(){
 };
 
 function removeFromFavourites(gif) {
-    //let arrayFavouritesStoraged = JSON.parse(localStorage.getItem('FavouriteGifs'));
     for (let i = 0; i < arrayFavourites.length; i++)
         if(arrayFavourites[i].gif === gif){
             arrayFavourites.splice(i, 1);
@@ -90,27 +84,27 @@ async function downloadGif(url, title) {
 
   // * *   MAX GIF  * * //
   function maximizeGifFromFavourites(gif, username, title) {
-    $maxGifConteiner.innerHTML = '';
     $maxGifConteiner.classList.remove('hide');
     $maxGifConteiner.classList.add('max_gif_conteiner');
+    $maxGif.src = gif;
+    $maxGifUser.innerHTML = username;
+    $maxGifTitle.innerHTML = title;
 
-    const maxGifcontent = document.createElement('div');
-    maxGifcontent.classList.add('max_gif_content');
-    maxGifcontent.innerHTML = `
-                <img class="close_icon" onclick="closeMaxGif()" src="/assets/close.svg" alt="Close icon">
-                <img class="main_gif" src="${gif}" alt="">
-                <div class="gif_max_details">
-                    <div class="gif_max_info">
-                        <p class="gifmax_user">${username}</p>
-                        <h4 class="gifmax_title">${title}</h4>
-                    </div>
-                    <div class="gifmax_btns">
-                        <img src="/assets/icon-trash-normal.svg" onclick="removeFromFavourites('${gif}')">
-                        <img src="/assets/icon-download-hover.svg" onclick=" downloadGif('${gif}', '${title}')">
-                    </div>
-                </div>`;
+    if (arrayFavourites.find((element) => element.gif === gif) == undefined) {
+        $maxFavIcon.src = "/assets/icon-fav-hover.svg";
+        $maxFavIcon.addEventListener("click", () => {
+            
+            addGifToFavourites(gif, username, title);
+            maximizeGifFromFavourites(gif, username, title);
+        });
 
-    $maxGifConteiner.appendChild(maxGifcontent);
+    } else {
+        $maxFavIcon.src = "/assets/icon-trash-normal.svg";
+        $maxFavIcon.addEventListener("click", () => {
+            removeFromFavourites(gif);
+            maximizeGifFromFavourites(gif, username, title);
+        });
+    }
   };
 
   function closeMaxGif() {
