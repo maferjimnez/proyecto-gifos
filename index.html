@@ -8,33 +8,61 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>GifOS</title>
 </head>
+
 <body id="body">
+        <!--    HEADER    -->
+<header id="header__container">
+    <div class="imgs_container">
+        <img src="/assets/logo-desktop.svg" onclick="displayHomePage()" alt="Logo GifOS desktop" class="img_logo">
+        <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu" onclick="showMenu()">             
+    </div>    
 
-            <!--    HEADER    -->
-    <header id="header__container">
-        <div class="imgs_container">
-            <img src="/assets/logo-desktop.svg" onclick="displayHomePage()" alt="Logo GifOS desktop" class="img_logo">
-                <img src="/assets/burger.svg" alt="Icono menú hamburguesa" class="menu_hamburguesa" id="btnMenu" onclick="showMenu()">             
-        </div>
+    <div class="navbar_search_container hide">            
+        <input type="text" id="search_input_navbar" placeholder="Busca GIFOS y más">
+        <img id="searchIcon_navbar" class="searchIcon__navbar" src="/assets/icon-search.svg" alt="Ícono de lupa">  
+    </div>
 
-        <div class="navbar_search_container hide">            
-            <input type="text" id="search_input_navbar" placeholder="Busca GIFOS y más">
-            <img id="searchIcon_navbar" class="searchIcon__navbar" src="/assets/icon-search.svg" alt="Ícono de lupa">  
-        </div>
-
-        <nav id="navbar" class="navbar">
-            <ul class="navbar_menu">
-                <li><a id="dark_mode_btn" class="navbar_menu_item" href="">MODO NOCTURNO</a></li>
-                <hr class="navbar_menu_line">
-                <li><a class="navbar_menu_item" id="navbar_favourite" onclick="displayFavouritesSection()">FAVORITOS</a></li>
-                <hr class="navbar_menu_line">
-                <li><a class="navbar_menu_item" onclick="displayMisGifos()">MIS GIFOS</a></li>
-                <hr class="navbar_menu_line">
+    <nav id="navbar" class="navbar">
+        <ul class="navbar_menu">
+            <li><a id="dark_mode_btn" class="navbar_menu_item" href="">MODO NOCTURNO</a></li>
+            <hr class="navbar_menu_line">
+            <li><a class="navbar_menu_item" id="navbar_favourite" onclick="displayFavouritesSection()">FAVORITOS</a></li>
+            <hr class="navbar_menu_line">
+            <li><a class="navbar_menu_item" onclick="displayMisGifos()">MIS GIFOS</a></li>
+            <hr class="navbar_menu_line">
             </ul>           
         </nav>
         <img class="btnCrear" id="btnCrear" onclick="displayCreateGif()" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
-    </header>
+    </header>        
 
+
+<main class="main" id="main_conteiner">      
+            <!--     HERO     -->
+    <section class="hero__container" id="hero__container">
+        <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
+        <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
+           
+        <!--     SEARCH     -->
+        <div class="hero__search">
+            <input type="text" id="search_input" class="search_input" placeholder="Busca GIFOS y más">
+            <a href=""><img id="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>    
+        </div>
+
+        <div  id="recommendedSearch__container">
+            <hr class="search_line">
+            <ul class="recommended__search">
+            </ul>
+        </div>        
+
+        <div class="search__results__container hide">
+            <h2 id="search__results__title"></h2>
+            <section id="search__results__gallery"></section>
+            <section class="search__error__container"></section>
+            <a class="hide" id="show_more_btn">VER MÁS</a>
+        </div>
+
+    </section>
+</main>
 
         <!--     CREATE GIFO      -->
 <section class="crearGif__conteiner hide" id="crearGif__conteiner">
@@ -44,7 +72,7 @@
 
     <!--    CAMERA    -->
 <div class="camera_elements">
- <img src="/assets/camara.svg" alt="Ilustración de cámara">
+ <img src="/assets/camara.svg" alt="Ilustración de cámara" id="camera">
  <img class="camera_light" src="/assets/element-luz-camara.svg" alt="Ilustración luz de cámara">
 </div>
 
@@ -104,40 +132,12 @@
 
     <!--    CAMERA ROLL    -->
 <div class="cameraRoll_elements">
- <img src="/assets/pelicula.svg" alt="Ilustración rollo de pelicula">
+ <img id="camera_roll" src="/assets/pelicula.svg" alt="Ilustración rollo de pelicula">
 </div>
 
 </div>
 </section>
 
-
-<main class="main" id="main_conteiner">      
-            <!--     HERO     -->
-    <section class="hero__container" id="hero__container">
-        <h1 class="hero__title">Inspírate, busca, guarda, y crea los mejores <span class="title_span">GIFOS</span></h1>
-        <img class="hero__ilustration" src="/assets/ilustra_header.svg" alt="Ilustración de tres personas saludando y sonriéndo">
-           
-        <!--     SEARCH     -->
-        <div class="hero__search">
-            <input type="text" id="search_input" class="activeSearch" placeholder="Busca GIFOS y más">
-            <a href=""><img id="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>    
-        </div>
-
-        <div  id="recommendedSearch__container">
-            <hr class="search_line">
-            <ul class="recommended__search">
-            </ul>
-        </div>        
-
-        <div class="search__results__container hide">
-            <h2 id="search__results__title"></h2>
-            <section id="search__results__gallery"></section>
-            <section class="search__error__container"></section>
-            <a class="hide" id="show_more_btn">VER MÁS</a>
-        </div>
-
-    </section>
-</main>
 
     <!--     FAVOURITES      -->
 <section class="main__favourites hide" id="main__favourites">
@@ -151,16 +151,16 @@
 </section>    
 
     <!--     MIS GIFOS      -->
-    <section class="mis_gifos_conteiner hide" id="mis_gifos_conteiner">
-        <section class="title__conteiner">
-            <img class="mis_gifos_img" src="/assets/icon-mis-gifos.svg" alt="Ilustración de carita feliz">
-            <h2 class="mis_gifos_title">Mis GIFOS</h2>
-        </section>
+<section class="mis_gifos_conteiner hide" id="mis_gifos_conteiner">
+    <section class="title__conteiner">
+        <img class="mis_gifos_img" src="/assets/icon-mis-gifos.svg" alt="Ilustración de carita feliz">
+        <h2 class="mis_gifos_title">Mis GIFOS</h2>
+    </section>
     
-        <div class="mis_gifos_content" id="mis_gifos_content">
-            <section class="mis_gifos_gallery"></section>
-        </div>
-    </section>  
+    <div class="mis_gifos_content" id="mis_gifos_content">
+        <section class="mis_gifos_gallery"></section>
+    </div>
+</section>  
  
 
     <!--     TREDINGS      -->
@@ -218,7 +218,15 @@
 
     <!--     FOOTER      -->
 <footer class="footer__conteiner">
-
+    <section class="social_media_conteiner">
+        <p class="social_media_paragraph">Compartir en:</p>
+        <div class="social_media_icons">
+            <a class="socialmedia__item" href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+			<a class="socialmedia__item" href="twitter.com"><i class="fab fa-twitter"></i></a>
+			<a class="socialmedia__item" href="instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+    <p class="footer_credits">© GIFOS 2020 All Rights Reserved.</p>
 </footer>
 
 

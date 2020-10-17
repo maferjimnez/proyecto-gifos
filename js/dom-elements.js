@@ -3,6 +3,14 @@ const $navbarMenu = document.getElementById("navbar");
 const $btnMenu = document.getElementById("btnMenu");
 const $darkModeBtn = document.querySelector("#dark_mode_btn");
 
+// * *      DARK MODE ICONS * * //
+const $logo = document.querySelector('.img_logo');
+const $camera = document.querySelector('#camera');
+const $cameraRoll = document.querySelector('#camera_roll');
+const $btnCrear = document.getElementById('btnCrear');
+// flechas slider
+
+
 // * *            BODY             * * //
 const $body = document.querySelector('#body');
 const $heroConteiner = document.querySelector('#hero__container');
@@ -35,8 +43,8 @@ const $trendingTagsContent = document.querySelector('#tags__content');
 // trending gifs
 const $trendingGifsConteiner = document.querySelector('#trending_gifs_conteiner');
 const $trendingGifsSlider = document.querySelector('.trending_gifs_content');
-const $btnArrowPrevious = document.querySelector('.previous_btn_arrow');
-const $btnArrowNext = document.querySelector('.next_btn_arrow');
+const $btnArrowPrevious = document.querySelector('#btn-previous');
+const $btnArrowNext = document.querySelector('#next-btn');
 
 
 // * * GIFS BUTTONS FUNCTIONS * * //
