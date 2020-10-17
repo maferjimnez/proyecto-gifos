@@ -1,9 +1,11 @@
 body{
+    	background-color: var(--principal-background);
+
     #header__container{
-        border-top: 5px  solid rgb(87, 46, 229);
+        border-top: 5px  solid var(--principal-colour);
         position: fixed;
         width: 100%;
-        background-color: #ffffff;
+        background-color: var(--principal-background);
         z-index: 100;
         
         .imgs_container{
@@ -28,7 +30,7 @@ body{
 
         .navbar{
             position: absolute;
-            background-color: $azulOscuro;
+            background-color: var(--principal-colour);
             opacity: 90%;
             width: 100%;
             overflow: hidden;
@@ -47,6 +49,7 @@ body{
                         color: #ffffff;
                         font-size: 0.94rem;
                         text-align: center;
+                        cursor: pointer;
                         
                        
                         &:hover{
@@ -102,12 +105,11 @@ body{
         
                 #search_input_navbar {
                   outline: none;
-                  background: #ffffff;
-                  border: 1px solid $azulOscuro;
+                  background:var(--principal-background);
+                  border: 1px solid var(--principal-colour);
                   border-radius: 27px;
                   font-size: 16px;
                   padding: 0.8rem 2.5rem;
-                  
                 }
         
                 .searchIcon__navbar {
@@ -130,7 +132,7 @@ body{
                     justify-content: space-between;
                     li{
                         .navbar_menu_item{
-                            color: $azulOscuro;
+                            color: var(--principal-colour);
                             font-weight: 700;
                         }
                         }

@@ -1,4 +1,4 @@
-.body{
+body{
     .main__favourites{
         padding: 8rem 0 3rem;
 
@@ -6,7 +6,7 @@
             margin-bottom: 2rem;
             text-align: center;
             .favourites_title{
-                color: $azulOscuro;
+                color: var(--principal-colour);
         }
         }
 

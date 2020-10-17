@@ -1,4 +1,4 @@
-.body{
+body{
     .mis_gifos_conteiner{
         padding: 8rem 0 3rem;
 
@@ -7,7 +7,7 @@
             margin-bottom: 2rem;
             text-align: center;
             .mis_gifos_title{
-                color: $azulOscuro;
+                color: var(--principal-colour);
         } 
         }
 

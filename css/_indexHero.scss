@@ -1,4 +1,4 @@
-.body {
+body {
   .main {
     .hero__container {
       padding: 10rem 1.31rem 2rem;
@@ -9,7 +9,7 @@
       .hero__title {
         padding: 0 2rem 2rem;
         font-family: "Montserrat", sans-serif;
-        color: $azulOscuro;
+        color: var(--principal-colour);
         font-size: 1.56rem;
         text-align: center;
 
@@ -28,7 +28,7 @@
 
 
 @media (min-width: 780px) {
-  .body {
+  body {
     .main {
       .hero__container {
         padding: 9.75rem 15.81rem 2rem;

@@ -10,7 +10,7 @@ body{
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #ffffff;
+            background-color: var(--principal-background);
             .close_icon{
                 margin: 0 0 1rem 40%;
             }
@@ -23,7 +23,7 @@ body{
                 margin: 1rem 35%;
                 justify-content: space-between;
                 .gif_max_info{
-                    color: $azulOscuro;
+                    color: var(--principal-colour);
                 }
                 .gifmax_btns{
                     display: flex;
