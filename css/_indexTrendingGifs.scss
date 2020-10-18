@@ -1,4 +1,5 @@
 .trendings__conteiner{
+  padding: 5rem 0;
     .trending__gifs__conteiner{
         background-color: var(--secondary-background);
         padding: 3rem 0;
@@ -49,7 +50,6 @@
 
 @media (min-width: 780px){
     .trendings__conteiner{
-      padding: 5rem 0;
         .trending__gifs__conteiner{  
                    
             .trending_gifs_slider{

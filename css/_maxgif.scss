@@ -17,16 +17,17 @@ body{
 
             }
             .main_gif{
-                width: 50vw;
+                width: 70vw;
                 align-self: center;
             }
             .gif_max_details{
                 display: flex;
-                margin: 1rem 42%;
+                margin: 1rem 16%;
                 justify-content: space-between;
                 .gif_max_info{
                     color: var(--principal-colour);
                     width: 80%;
+                    font-size: 13px;
                 }
                 .gifmax_btns{
                     cursor: pointer;
@@ -49,11 +50,15 @@ body{
             }
 
             .main_gif{
-                width: 30vw;
+                width: 40vw;
                 align-self: center;
             }
             .gif_max_details{
-                margin: 1rem 35%;
+                margin: 1rem 30%;
+
+                .gif_max_info{
+                    font-size: 20px;
+                }
         }
     }
 }

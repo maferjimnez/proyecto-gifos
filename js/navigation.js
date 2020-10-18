@@ -13,6 +13,9 @@ function displayHomePage() {
 
 // * * FAVOURITES SECTION * * //
 function displayFavouritesSection() {
+    if (window.matchMedia("(max-width: 779px)").matches) {
+        showMenu();
+    }
     $favouritesSectionConteiner.classList.remove('hide');
     $favouritesSectionConteiner.classList.add('main__favourites');
     $createGifConteiner.classList.add('hide');
@@ -28,6 +31,10 @@ function displayFavouritesSection() {
 // * * MIS GIFOS SECTION * * //
 
 function displayMisGifos() {
+    if (window.matchMedia("(max-width: 779px)").matches) {
+        showMenu();
+    }
+    
     $misGifosConteiner.classList.add('mis_gifos_conteiner');
     $misGifosConteiner.classList.remove('hide');
     $heroConteiner.classList.add('hide');
