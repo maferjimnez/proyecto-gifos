@@ -1,6 +1,12 @@
 let recorder;
 let form = new FormData();
-let arrUserGifos = [];
+let arrUserGifos;
+if (localStorage.getItem('UserGifs') === null) {
+   arrUserGifos = []; 
+} else {
+    arrUserGifos = JSON.parse(localStorage.getItem('UserGifs'));
+}
+
 
 function recordVideo(){
     $startBtn.classList.remove('buttons_central');
@@ -150,10 +156,9 @@ async function  uploadGif() {
 function templateMisGifos()  {
     $misGifosContent.innerHTML = '';
 
-    arrUserGifos = JSON.parse(localStorage.getItem('UserGifs'));
     console.log(arrUserGifos);
 
-    if (arrUserGifos.length == 0 || arrUserGifos.length == null) {
+    if (arrUserGifos === 0 || arrUserGifos === null || arrUserGifos === undefined) {
         arrUserGifos = [];
         
         $misGifosContent.style.justifyContent = "center";
