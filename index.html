@@ -26,11 +26,11 @@
     <nav id="navbar" class="navbar">
         <ul class="navbar_menu">
             <li><a id="dark_mode_btn" class="navbar_menu_item">MODO NOCTURNO</a></li>
-            <hr class="navbar_menu_line">
+            <li class="navbar_menu_line"></li>
             <li><a class="navbar_menu_item" id="navbar_favourite" onclick="displayFavouritesSection()">FAVORITOS</a></li>
-            <hr class="navbar_menu_line">
+            <li class="navbar_menu_line"></li>
             <li><a id="mis_gifos_btn" class="navbar_menu_item">MIS GIFOS</a></li>
-            <hr class="navbar_menu_line">
+            <li class="navbar_menu_line"></li>
             </ul>           
         </nav>
         <img class="btnCrear" id="btnCrear" onclick="displayCreateGif()" src="/assets/button-crear-gifo.svg" alt="Icono crear gifo">        
@@ -90,11 +90,11 @@
 
      <div class="hide" id="video_conteiner">
         <video id="user_video"></video>
-        <img id="user_gif" src="">        
+        <img id="user_gif" src="/assets/" alt="Gif del usuario">        
         <section class="hide" id="video_overlay">
             <div class="hide" id="actions_overlay">
                 <img class="btn_actions" id="downloadBtn" src="/assets/icon-download-hover.svg" alt="Icono de descarga">
-                <img class="btn_actions" id="" src="/assets/icon-link-hover.svg" alt="Icono de vínculo" onclick="displayMisGifos()" >
+                <img class="btn_actions" src="/assets/icon-link-hover.svg" alt="Icono de vínculo" onclick="displayMisGifos()" >
             </div>           
             <img id="icon_overlay" src="/assets/loader.svg" alt="Icono de cargando">
             <p id="paragraph_overlay" >Estamos subiendo tu GIFO</p>
@@ -106,7 +106,7 @@
      <div class="texts_central">
          <h2 class="title_texts" id="title_texts">Aquí podrás crear tus propios <span class="span_title">GIFOS</span></h2>
          <p class="paragraph_central" id="paragraph_central">¡Crea tu GIFO en sólo 3 pasos! 
-         </br>(sólo necesitas una cámara para grabar un video)</p>
+         <br>(sólo necesitas una cámara para grabar un video)</p>
      </div>
 
      <div class="bottom_corners_screen">
@@ -185,14 +185,10 @@
                     <img src="assets/button-slider-left.svg" alt="Previous arrow" id="btn-previous">
                 </div>
 
-                <div class="trending_gifs_content">
-
-                </div>
+                <div class="trending_gifs_content"></div>
 
                 <div class="next_btn_arrow arrows">
                     <img src="assets/Button-Slider-right.svg" alt="Flecha Next" id="next-btn">
-                </div>
-
                 </div>
 
             </div>
@@ -211,8 +207,8 @@
                 <h3 id="gifmax_title" class="gifmax_title"></h3>
             </div>
             <div class="gifmax_btns">
-                <img id="gifmax_fav" src="/assets/icon-fav-hover.svg" alt="">
-                <img src="/assets/icon-download-hover.svg" alt="">
+                <img id="gifmax_fav" src="/assets/icon-fav-hover.svg" alt="Giv maximizado">
+                <img src="/assets/icon-download-hover.svg" alt="Icono de descarga">
             </div>
         </div>
     </div>

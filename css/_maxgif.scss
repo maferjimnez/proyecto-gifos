@@ -43,6 +43,7 @@ body{
 }
 
 @media (min-width: 780px){
+    body{
     .max_gif_conteiner{
         .max_gif_content{
             padding: 0 20%;
@@ -62,5 +63,6 @@ body{
                 }
         }
     }
+}
 }
 }

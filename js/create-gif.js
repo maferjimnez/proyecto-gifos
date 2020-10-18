@@ -13,6 +13,8 @@ function recordVideo(){
     $startBtn.classList.add('hide');
     $recordBtn.classList.add('buttons_central');
     $recordBtn.style.display = "block";
+    $userGif.classList.add('hide');
+
 
     $titleVideo.innerHTML = '¿Nos das acceso </br>a tu cámara?';
     $paragraphVideo.innerHTML = 'El acceso a tu camara será válido sólo </br>por el tiempo en el que estés creando el GIFO.';
@@ -172,8 +174,6 @@ function templateMisGifos()  {
 
 
     } else {
-        console.log();
-
         for (let i = 0; i < arrUserGifos.length; i++) {
             fetch(
                 `${getGifByIdEndpoint}?ids=${arrUserGifos[i]}&${apiKey}`
