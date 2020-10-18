@@ -158,9 +158,10 @@ function templateMisGifos()  {
 
     console.log(arrUserGifos);
 
-    if (arrUserGifos === 0 || arrUserGifos === null || arrUserGifos === undefined) {
+    if (arrUserGifos.length === 0 || arrUserGifos === null || arrUserGifos === undefined) {
         arrUserGifos = [];
-        
+        console.log();
+
         $misGifosContent.style.justifyContent = "center";
         const misGifosWithoutContent = document.createElement('section');
         misGifosWithoutContent.classList.add('mis_gifos_noContent_conteiner');
@@ -171,6 +172,8 @@ function templateMisGifos()  {
 
 
     } else {
+        console.log();
+
         for (let i = 0; i < arrUserGifos.length; i++) {
             fetch(
                 `${getGifByIdEndpoint}?ids=${arrUserGifos[i]}&${apiKey}`
