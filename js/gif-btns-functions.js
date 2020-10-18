@@ -40,7 +40,6 @@ function templateFavouriteGifs(){
  
     } else {
         
-
         for (let i = 0; i < arrayFavouritesStoraged.length; i++) {
             $favouritesGifContent.style.justifyContent = "space-between";
 

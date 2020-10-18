@@ -1135,7 +1135,7 @@ body .max_gif_conteiner .max_gif_content {
 }
 
 body .max_gif_conteiner .max_gif_content .close_icon {
-  margin: 0 0 1rem 51%;
+  margin: 0 0 1rem 65%;
   cursor: pointer;
 }
 
@@ -1174,8 +1174,11 @@ body .max_gif_conteiner .max_gif_content .gif_max_details .gifmax_btns {
 }
 
 @media (min-width: 780px) {
+  .max_gif_conteiner .max_gif_content {
+    padding: 0 20%;
+  }
   .max_gif_conteiner .max_gif_content .close_icon {
-    margin: 0 0 1rem 40%;
+    margin: 0 0 1rem 65%;
   }
   .max_gif_conteiner .max_gif_content .main_gif {
     width: 40vw;

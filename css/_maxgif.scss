@@ -12,7 +12,7 @@ body{
             left: 0;
             background-color: var(--principal-background);
             .close_icon{
-                margin: 0 0 1rem 51%;
+                margin: 0 0 1rem 65%;
                 cursor: pointer;
 
             }
@@ -45,8 +45,9 @@ body{
 @media (min-width: 780px){
     .max_gif_conteiner{
         .max_gif_content{
+            padding: 0 20%;
             .close_icon{
-                margin: 0 0 1rem 40%;
+                margin: 0 0 1rem 65%;
             }
 
             .main_gif{
