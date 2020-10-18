@@ -153,7 +153,7 @@ function templateMisGifos()  {
     arrUserGifos = JSON.parse(localStorage.getItem('UserGifs'));
     console.log(arrUserGifos);
 
-    if (arrUserGifos.length === 0) {
+    if (arrUserGifos.length == 0 || arrUserGifos.length == null) {
         arrUserGifos = [];
         
         $misGifosContent.style.justifyContent = "center";
