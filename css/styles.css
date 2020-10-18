@@ -274,10 +274,6 @@ body .main .hero__container .hero__ilustration {
   }
 }
 
-.trendings__conteiner {
-  padding: 5rem 0;
-}
-
 .trendings__conteiner .trending__gifs__conteiner {
   background-color: var(--secondary-background);
   padding: 3rem 0;

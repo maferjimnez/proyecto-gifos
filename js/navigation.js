@@ -1,5 +1,6 @@
 // * *     HOME PAGE       * * //
 function displayHomePage() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     $heroConteiner.classList.remove('hide');
     $heroConteiner.classList.add('hero__container');
     $trendingTagsConteiner.classList.remove('hide');
@@ -13,6 +14,7 @@ function displayHomePage() {
 
 // * * FAVOURITES SECTION * * //
 function displayFavouritesSection() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     if (window.matchMedia("(max-width: 779px)").matches) {
         showMenu();
     }
@@ -31,6 +33,7 @@ function displayFavouritesSection() {
 // * * MIS GIFOS SECTION * * //
 
 function displayMisGifos() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     if (window.matchMedia("(max-width: 779px)").matches) {
         showMenu();
     }
@@ -49,6 +52,7 @@ function displayMisGifos() {
 
 // * * CREATE GIF SECTION * * //
 function displayCreateGif() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     $createGifConteiner.classList.remove('hide');
     $heroConteiner.classList.add('hide');
     $heroConteiner.classList.remove('hero__container');
