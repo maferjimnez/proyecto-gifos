@@ -1,6 +1,7 @@
 // * *      NAVBAR ELEMENTS       * * //
 const $navbarMenu = document.getElementById("navbar");
 const $btnMenu = document.getElementById("btnMenu");
+const $misGifosBtn = document.querySelector('#mis_gifos_btn');
 const $darkModeBtn = document.querySelector("#dark_mode_btn");
 
 // * *      DARK MODE ICONS * * //

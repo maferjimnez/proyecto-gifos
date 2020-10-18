@@ -49,6 +49,7 @@ function displayMisGifos() {
 
     templateMisGifos();
 };
+$misGifosBtn.addEventListener('click', displayMisGifos);
 
 // * * CREATE GIF SECTION * * //
 function displayCreateGif() {
