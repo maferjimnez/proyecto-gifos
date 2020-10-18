@@ -8,8 +8,6 @@ const $logo = document.querySelector('.img_logo');
 const $camera = document.querySelector('#camera');
 const $cameraRoll = document.querySelector('#camera_roll');
 const $btnCrear = document.getElementById('btnCrear');
-// flechas slider
-
 
 // * *            BODY             * * //
 const $body = document.querySelector('#body');

@@ -30,6 +30,27 @@ body{
 
                     .gif_content{
                         display: none;
+                    }
+                }
+
+            }
+
+        .favourites_noContent_conteiner{
+            margin-top: 4rem;
+            text-align: center;
+            .noContent_paragraph{
+                color: $turquesa;
+            }
+        }
+        }
+    }
+
+    @media (min-width: 780px){
+        .main__favourites{
+            .favourites_gifs_container{
+                .gif_result_container{
+                    .gif_content{
+                        display: none;
                         
                         .icons{                            
                         display: flex;
@@ -38,6 +59,37 @@ body{
                         top: 1rem;
                         left: 8rem;
                         width: 47%;
+
+                        .icon{
+                            width: 2rem;
+                            height: 2rem;
+                          }
+                          .icon_delete{
+                            background: url('/assets/icon-trash-normal.svg') center no-repeat;
+    
+                              &:hover {
+                                background: url('/assets/icon-trash-hover.svg') center no-repeat;
+                              }
+    
+                              &:active {
+                                background: url('/assets/icon-fav-active.svg') center no-repeat;
+                              }
+                          }
+                          .icon_download{
+                            background: url('/assets/icon-download.svg') center no-repeat;
+    
+                              &:hover {
+                                background: url('/assets/icon-download-hover.svg') center
+                                  no-repeat;
+                              }
+                          }
+                          .icon_max{
+                            background: url('/assets/icon-max-normal.svg') center no-repeat;
+    
+                            &:hover {
+                              background: url('/assets/icon-max-hover.svg') center no-repeat;
+                            }
+                          } 
                     }
                     .details{
                         position: absolute;
@@ -62,15 +114,7 @@ body{
                         }
                     }
                 }
-
-            }
-
-        .favourites_noContent_conteiner{
-            margin-top: 4rem;
-            text-align: center;
-            .noContent_paragraph{
-                color: $turquesa;
             }
         }
-        }
+
     }

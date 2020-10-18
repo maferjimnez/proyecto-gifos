@@ -2,10 +2,25 @@
  .hero__container{
 
     .hero__search {
-        position: relative;
 
-        .active_search{
-            width: 50vw;
+        .hero_input{
+            position: relative;
+
+            .active_search{
+                width: 50vw;
+                outline: none;
+                background:var(--principal-background);
+                border: 1px solid var(--principal-colour);
+                border-radius: 27px;
+                width: 100%;
+                font-size: 16px;
+                padding: 0.85rem 3.5rem;
+                border-bottom: none;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .search_input {
             outline: none;
             background:var(--principal-background);
             border: 1px solid var(--principal-colour);
@@ -13,27 +28,40 @@
             width: 100%;
             font-size: 16px;
             padding: 0.85rem 3.5rem;
-            border-bottom: none;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            }
+
+            #searchIcon {
+            position: absolute;
+            right: 6%;
+            top: 30%;
+            cursor: pointer;
+            }           
         }
 
-        .search_input {
-          outline: none;
-          background:var(--principal-background);
-          border: 1px solid var(--principal-colour);
-          border-radius: 27px;
-          width: 100%;
-          font-size: 16px;
-          padding: 0.85rem 3.5rem;
-        }
 
-        a {
-          position: absolute;
-          right: 6%;
-          top: 30%;
-          cursor: pointer;
+      .recommendedSearch__container{
+        border: 1px solid var(--principal-colour);
+        border-bottom-left-radius: 27px;
+        border-bottom-right-radius: 27px;
+        border-top: none;
+        width: 100%;
+        padding: 0.85rem 3.5rem;
+
+        .recommended__search{
+            .suggested_item{
+                font-family: 'Roboto-Regular', sans-serif;
+                font-size: 16px;
+                color: #9CAFC3;
+                margin-top: 1rem;
+
+                .suggested_icon{
+                    width: 1rem;
+                    margin-right: 1rem;
+                }
+            }
         }
+    }
+      
       }
 
     .search__results__container{
@@ -41,7 +69,7 @@
         
         #search__results__title{
             text-align: center;
-            color: var(--principal-colour);
+            color: $azulOscuro;
             font-family: "Montserrat", sans-serif;
             font-weight: bolder;
             margin-bottom: 2.38rem;
@@ -86,28 +114,6 @@
         }
     }
 
-    .recommendedSearch__container{
-        border: 1px solid var(--principal-colour);
-        border-bottom-left-radius: 27px;
-        border-bottom-right-radius: 27px;
-        border-top: none;
-        width: 50vw;
-        padding: 0.85rem 3.5rem;
-
-        .recommended__search{
-            .suggested_item{
-                font-family: 'Roboto-Regular', sans-serif;
-                font-size: 16px;
-                color: #9CAFC3;
-                margin-top: 1rem;
-
-                .suggested_icon{
-                    width: 1rem;
-                    margin-right: 1rem;
-                }
-            }
-        }
-    }
  }   
 }
 
@@ -152,6 +158,37 @@
                                 top: 1rem;
                                 left: 8rem;
                                 width: 47%;
+                                .icon{
+                                    width: 2rem;
+                                    height: 2rem;
+                                  }
+                                  .icon_fav{
+                                    background: url('/assets/icon-fav.svg') center no-repeat;
+            
+                                      &:hover {
+                                        background: url('/assets/icon-fav-hover.svg') center no-repeat;
+                                      }
+            
+                                      &:active {
+                                        background: url('/assets/icon-fav-active.svg') center no-repeat;
+                                      }
+                                  }
+                                  .icon_download{
+                                    background: url('/assets/icon-download.svg') center no-repeat;
+            
+                                      &:hover {
+                                        background: url('/assets/icon-download-hover.svg') center
+                                          no-repeat;
+                                      }
+                                  }
+                                  .icon_max{
+                                    background: url('/assets/icon-max-normal.svg') center no-repeat;
+            
+                                    &:hover {
+                                      background: url('/assets/icon-max-hover.svg') center no-repeat;
+                                    }
+                                  }
+            
                             }
                             .details{
                                 position: absolute;
@@ -167,7 +204,7 @@
                            &:hover{
                                .gif_content{
                                    display: block;
-                                   background-color: var(--principal-colour);
+                                   background-color: $azulOscuro;
                                    width: 100%;
                                    height: 99%;
                                    position: absolute;

@@ -54,7 +54,12 @@ body #header__container .imgs_container {
 }
 
 body #header__container .imgs_container .img_logo {
-  width: 3.05rem;
+  width: 3rem;
+  cursor: pointer;
+}
+
+body #header__container .imgs_container .img_logo:hover {
+  width: 4rem;
 }
 
 body #header__container .btnCrear {
@@ -68,7 +73,7 @@ body #header__container .menu_hamburguesa {
 
 body #header__container .navbar {
   position: absolute;
-  background-color: var(--principal-colour);
+  background-color: var(--burger-menu-background);
   opacity: 90%;
   width: 100%;
   overflow: hidden;
@@ -262,12 +267,12 @@ body .main .hero__container .hero__ilustration {
 
 .trendings__conteiner .trending__gifs__conteiner {
   background-color: var(--secondary-background);
+  padding: 3rem 0;
 }
 
 .trendings__conteiner .trending__gifs__conteiner .trending_gifs_title {
   text-align: center;
   color: var(--principal-colour);
-  padding-top: 5rem;
 }
 
 .trendings__conteiner .trending__gifs__conteiner .trending_gifs_paragraph {
@@ -305,7 +310,7 @@ body .main .hero__container .hero__ilustration {
 .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content {
   cursor: pointer;
   position: relative;
-  padding-right: 2rem;
+  margin-right: 2rem;
 }
 
 .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_result {
@@ -317,42 +322,10 @@ body .main .hero__container .hero__ilustration {
   display: none;
 }
 
-.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  top: 1rem;
-  left: 12rem;
-  width: 40%;
-}
-
-.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .details {
-  position: absolute;
-  top: 13rem;
-  left: 1rem;
-}
-
-.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .details .gif_user, .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .details .gif_title {
-  font-family: 'Roboto-regular', sans-serif;
-  color: #ffffff;
-}
-
-.trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content:hover .trendingGif_info {
-  display: block;
-  background-color: #572EE5;
-  width: 92%;
-  height: 99%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  opacity: 80%;
-}
-
 @media (min-width: 780px) {
+  .trendings__conteiner {
+    padding: 5rem 0;
+  }
   .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider {
     margin: 0;
     display: -webkit-box;
@@ -378,13 +351,71 @@ body .main .hero__container .hero__ilustration {
     width: 22.30rem;
     height: 17.19rem;
   }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info {
+    width: 100%;
+    height: 98%;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    top: 1rem;
+    left: 13rem;
+    width: 35%;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons .icon_fav {
+    background: url("/assets/icon-fav.svg") center no-repeat;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons .icon_fav:hover {
+    background: url("/assets/icon-fav-hover.svg") center no-repeat;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons .icon_fav:active {
+    background: url("/assets/icon-fav-active.svg") center no-repeat;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons .icon_download {
+    background: url("/assets/icon-download.svg") center no-repeat;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons .icon_download:hover {
+    background: url("/assets/icon-download-hover.svg") center no-repeat;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons .icon_max {
+    background: url("/assets/icon-max-normal.svg") center no-repeat;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons .icon_max:hover {
+    background: url("/assets/icon-max-hover.svg") center no-repeat;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .details {
+    position: absolute;
+    top: 13rem;
+    left: 1rem;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .details .gif_user, .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .details .gif_title {
+    font-family: 'Roboto-regular', sans-serif;
+    color: #ffffff;
+  }
+  .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content:hover .trendingGif_info {
+    display: block;
+    background-color: #572EE5;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    opacity: 80%;
+  }
 }
 
-.main .hero__container .hero__search {
+.main .hero__container .hero__search .hero_input {
   position: relative;
 }
 
-.main .hero__container .hero__search .active_search {
+.main .hero__container .hero__search .hero_input .active_search {
   width: 50vw;
   outline: none;
   background: var(--principal-background);
@@ -398,7 +429,7 @@ body .main .hero__container .hero__ilustration {
   border-bottom-right-radius: 0;
 }
 
-.main .hero__container .hero__search .search_input {
+.main .hero__container .hero__search .hero_input .search_input {
   outline: none;
   background: var(--principal-background);
   border: 1px solid var(--principal-colour);
@@ -408,11 +439,32 @@ body .main .hero__container .hero__ilustration {
   padding: 0.85rem 3.5rem;
 }
 
-.main .hero__container .hero__search a {
+.main .hero__container .hero__search .hero_input #searchIcon {
   position: absolute;
   right: 6%;
   top: 30%;
   cursor: pointer;
+}
+
+.main .hero__container .hero__search .recommendedSearch__container {
+  border: 1px solid var(--principal-colour);
+  border-bottom-left-radius: 27px;
+  border-bottom-right-radius: 27px;
+  border-top: none;
+  width: 100%;
+  padding: 0.85rem 3.5rem;
+}
+
+.main .hero__container .hero__search .recommendedSearch__container .recommended__search .suggested_item {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 16px;
+  color: #9CAFC3;
+  margin-top: 1rem;
+}
+
+.main .hero__container .hero__search .recommendedSearch__container .recommended__search .suggested_item .suggested_icon {
+  width: 1rem;
+  margin-right: 1rem;
 }
 
 .main .hero__container .search__results__container {
@@ -421,7 +473,7 @@ body .main .hero__container .hero__ilustration {
 
 .main .hero__container .search__results__container #search__results__title {
   text-align: center;
-  color: var(--principal-colour);
+  color: #572EE5;
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
   margin-bottom: 2.38rem;
@@ -470,27 +522,6 @@ body .main .hero__container .hero__ilustration {
   color: #ffffff;
 }
 
-.main .hero__container .recommendedSearch__container {
-  border: 1px solid var(--principal-colour);
-  border-bottom-left-radius: 27px;
-  border-bottom-right-radius: 27px;
-  border-top: none;
-  width: 50vw;
-  padding: 0.85rem 3.5rem;
-}
-
-.main .hero__container .recommendedSearch__container .recommended__search .suggested_item {
-  font-family: 'Roboto-Regular', sans-serif;
-  font-size: 16px;
-  color: #9CAFC3;
-  margin-top: 1rem;
-}
-
-.main .hero__container .recommendedSearch__container .recommended__search .suggested_item .suggested_icon {
-  width: 1rem;
-  margin-right: 1rem;
-}
-
 @media (min-width: 780px) {
   .main .hero__container .hero__search #search_input {
     width: 50vw;
@@ -527,6 +558,31 @@ body .main .hero__container .hero__ilustration {
     left: 8rem;
     width: 47%;
   }
+  .main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content .icons .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content .icons .icon_fav {
+    background: url("/assets/icon-fav.svg") center no-repeat;
+  }
+  .main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content .icons .icon_fav:hover {
+    background: url("/assets/icon-fav-hover.svg") center no-repeat;
+  }
+  .main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content .icons .icon_fav:active {
+    background: url("/assets/icon-fav-active.svg") center no-repeat;
+  }
+  .main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content .icons .icon_download {
+    background: url("/assets/icon-download.svg") center no-repeat;
+  }
+  .main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content .icons .icon_download:hover {
+    background: url("/assets/icon-download-hover.svg") center no-repeat;
+  }
+  .main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content .icons .icon_max {
+    background: url("/assets/icon-max-normal.svg") center no-repeat;
+  }
+  .main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content .icons .icon_max:hover {
+    background: url("/assets/icon-max-hover.svg") center no-repeat;
+  }
   .main .hero__container .search__results__container #search__results__gallery .gif_result_container .gif_content .details {
     position: absolute;
     top: 9rem;
@@ -538,7 +594,7 @@ body .main .hero__container .hero__ilustration {
   }
   .main .hero__container .search__results__container #search__results__gallery .gif_result_container:hover .gif_content {
     display: block;
-    background-color: var(--principal-colour);
+    background-color: #572EE5;
     width: 100%;
     height: 99%;
     position: absolute;
@@ -655,41 +711,6 @@ body .main__favourites .favourites_gifs_container .gif_result_container .gif_con
   display: none;
 }
 
-body .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  top: 1rem;
-  left: 8rem;
-  width: 47%;
-}
-
-body .main__favourites .favourites_gifs_container .gif_result_container .gif_content .details {
-  position: absolute;
-  top: 9rem;
-  left: 1rem;
-}
-
-body .main__favourites .favourites_gifs_container .gif_result_container .gif_content .details .gif_user, body .main__favourites .favourites_gifs_container .gif_result_container .gif_content .details .gif_title {
-  font-family: 'Roboto-regular', sans-serif;
-  color: #ffffff;
-}
-
-body .main__favourites .favourites_gifs_container .gif_result_container:hover .gif_content {
-  display: block;
-  background-color: #572EE5;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  opacity: 80%;
-}
-
 body .main__favourites .favourites_noContent_conteiner {
   margin-top: 4rem;
   text-align: center;
@@ -697,6 +718,68 @@ body .main__favourites .favourites_noContent_conteiner {
 
 body .main__favourites .favourites_noContent_conteiner .noContent_paragraph {
   color: #50E3C2;
+}
+
+@media (min-width: 780px) {
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content {
+    display: none;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    top: 1rem;
+    left: 8rem;
+    width: 47%;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons .icon_delete {
+    background: url("/assets/icon-trash-normal.svg") center no-repeat;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons .icon_delete:hover {
+    background: url("/assets/icon-trash-hover.svg") center no-repeat;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons .icon_delete:active {
+    background: url("/assets/icon-fav-active.svg") center no-repeat;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons .icon_download {
+    background: url("/assets/icon-download.svg") center no-repeat;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons .icon_download:hover {
+    background: url("/assets/icon-download-hover.svg") center no-repeat;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons .icon_max {
+    background: url("/assets/icon-max-normal.svg") center no-repeat;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .icons .icon_max:hover {
+    background: url("/assets/icon-max-hover.svg") center no-repeat;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .details {
+    position: absolute;
+    top: 9rem;
+    left: 1rem;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container .gif_content .details .gif_user, .main__favourites .favourites_gifs_container .gif_result_container .gif_content .details .gif_title {
+    font-family: 'Roboto-regular', sans-serif;
+    color: #ffffff;
+  }
+  .main__favourites .favourites_gifs_container .gif_result_container:hover .gif_content {
+    display: block;
+    background-color: #572EE5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    opacity: 80%;
+  }
 }
 
 body .crearGif__conteiner {
@@ -925,11 +1008,9 @@ body .mis_gifos_conteiner .mis_gifos_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .mis_gifos_conteiner .mis_gifos_content .gif_result_container {
@@ -949,48 +1030,82 @@ body .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content 
   display: none;
 }
 
-body .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  top: 1rem;
-  left: 8rem;
-  width: 47%;
-}
-
-body .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .details {
-  position: absolute;
-  top: 9rem;
-  left: 1rem;
-}
-
-body .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .details .gif_user, body .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .details .gif_title {
-  font-family: 'Roboto-regular', sans-serif;
-  color: #ffffff;
-}
-
-body .mis_gifos_conteiner .mis_gifos_content .gif_result_container:hover .gif_content {
-  display: block;
-  background-color: #572EE5;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  opacity: 80%;
-}
-
-body .mis_gifos_conteiner .mis_gifos_noContent_conteiner {
+body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_noContent_conteiner {
   margin-top: 4rem;
   text-align: center;
 }
 
-body .mis_gifos_conteiner .mis_gifos_noContent_conteiner .noContent_paragraph {
+body .mis_gifos_conteiner .mis_gifos_content .mis_gifos_noContent_conteiner .noContent_paragraph {
   color: #50E3C2;
+}
+
+@media (min-width: 780px) {
+  .mis_gifos_conteiner .mis_gifos_content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content {
+    display: none;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    top: 1rem;
+    left: 8rem;
+    width: 47%;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons .icon_delete {
+    background: url("/assets/icon-trash-normal.svg") center no-repeat;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons .icon_delete:hover {
+    background: url("/assets/icon-trash-hover.svg") center no-repeat;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons .icon_delete:active {
+    background: url("/assets/icon-fav-active.svg") center no-repeat;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons .icon_download {
+    background: url("/assets/icon-download.svg") center no-repeat;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons .icon_download:hover {
+    background: url("/assets/icon-download-hover.svg") center no-repeat;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons .icon_max {
+    background: url("/assets/icon-max-normal.svg") center no-repeat;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .icons .icon_max:hover {
+    background: url("/assets/icon-max-hover.svg") center no-repeat;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .details {
+    position: absolute;
+    top: 9rem;
+    left: 1rem;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .details .gif_user, .mis_gifos_conteiner .mis_gifos_content .gif_result_container .gif_content .details .gif_title {
+    font-family: 'Roboto-regular', sans-serif;
+    color: #ffffff;
+  }
+  .mis_gifos_conteiner .mis_gifos_content .gif_result_container:hover .gif_content {
+    display: block;
+    background-color: #572EE5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    opacity: 80%;
+  }
 }
 
 body .max_gif_conteiner .max_gif_content {
@@ -1014,11 +1129,12 @@ body .max_gif_conteiner .max_gif_content {
 }
 
 body .max_gif_conteiner .max_gif_content .close_icon {
-  margin: 0 0 1rem 40%;
+  margin: 0 0 1rem 51%;
+  cursor: pointer;
 }
 
 body .max_gif_conteiner .max_gif_content .main_gif {
-  width: 30vw;
+  width: 50vw;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1028,7 +1144,7 @@ body .max_gif_conteiner .max_gif_content .gif_max_details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1rem 35%;
+  margin: 1rem 42%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1036,11 +1152,32 @@ body .max_gif_conteiner .max_gif_content .gif_max_details {
 
 body .max_gif_conteiner .max_gif_content .gif_max_details .gif_max_info {
   color: var(--principal-colour);
+  width: 80%;
 }
 
 body .max_gif_conteiner .max_gif_content .gif_max_details .gifmax_btns {
+  cursor: pointer;
+  width: 18%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 780px) {
+  .max_gif_conteiner .max_gif_content .close_icon {
+    margin: 0 0 1rem 40%;
+  }
+  .max_gif_conteiner .max_gif_content .main_gif {
+    width: 30vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .max_gif_conteiner .max_gif_content .gif_max_details {
+    margin: 1rem 35%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/logo-mobile.svg">
     <title>GifOS</title>
 </head>
 
@@ -44,15 +45,17 @@
            
         <!--     SEARCH     -->
         <div class="hero__search">
-            <input type="text" id="search_input" class="search_input" placeholder="Busca GIFOS y más">
-            <a href=""><img id="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa"></a>    
+            <div class="hero_input">
+                <input type="text" id="search_input" class="search_input" placeholder="Busca GIFOS y más">
+                <img id="searchIcon" src="/assets/icon-search.svg" alt="Ícono de lupa">
+            </div>
+            <div  id="recommendedSearch__container">
+                <hr class="search_line">
+                <ul class="recommended__search">
+                </ul>
+            </div>        
         </div>
 
-        <div  id="recommendedSearch__container">
-            <hr class="search_line">
-            <ul class="recommended__search">
-            </ul>
-        </div>        
 
         <div class="search__results__container hide">
             <h2 id="search__results__title"></h2>

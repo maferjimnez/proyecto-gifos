@@ -48,12 +48,12 @@ function templateFavouriteGifs(){
             gifResultContainer.classList.add('gif_result_container');
             gifResultContainer.innerHTML = ` 
 
-            <img class="gif_result" src="${arrayFavouritesStoraged[i].gif}" alt="${arrayFavouritesStoraged[i].title}">
+            <img class="gif_result" onclick="maximizeGif('${arrayFavouritesStoraged[i].gif}', '${arrayFavouritesStoraged[i].username}', '${arrayFavouritesStoraged[i].title}')" src="${arrayFavouritesStoraged[i].gif}" alt="${arrayFavouritesStoraged[i].title}">
             <section class="gif_content">
             <div class="icons">
-                <img class="icon_delete" onclick="removeFromFavourites('${arrayFavouritesStoraged[i].gif}')" src="/assets/icon-trash-normal.svg">
-                <img class="icon_download" onclick="downloadGif('${arrayFavouritesStoraged[i].url}','${arrayFavouritesStoraged[i].title}')" src="/assets/icon-download.svg">
-                <img class="icon_max" onclick="maximizeGifFromFavourites('${arrayFavouritesStoraged[i].gif}', '${arrayFavouritesStoraged[i].username}', '${arrayFavouritesStoraged[i].title}')" src="/assets/icon-max-normal.svg">               
+                <div class="icon icon_delete" onclick="removeFromFavourites('${arrayFavouritesStoraged[i].gif}')" src="/assets/icon-trash-normal.svg"></div>
+                <div class="icon icon_download" onclick="downloadGif('${arrayFavouritesStoraged[i].url}','${arrayFavouritesStoraged[i].title}')" src="/assets/icon-download.svg"></div>
+                <div class="icon icon_max" onclick="maximizeGif('${arrayFavouritesStoraged[i].gif}', '${arrayFavouritesStoraged[i].username}', '${arrayFavouritesStoraged[i].title}')" src="/assets/icon-max-normal.svg"></div>               
             </div>
             <div class="details">
                 <p class="gif_user">${arrayFavouritesStoraged[i].username}</p>
@@ -83,7 +83,7 @@ async function downloadGif(url, title) {
   };
 
   // * *   MAX GIF  * * //
-  function maximizeGifFromFavourites(gif, username, title) {
+  function maximizeGif(gif, username, title) {
     $maxGifConteiner.classList.remove('hide');
     $maxGifConteiner.classList.add('max_gif_conteiner');
     $maxGif.src = gif;
@@ -95,14 +95,14 @@ async function downloadGif(url, title) {
         $maxFavIcon.addEventListener("click", () => {
             
             addGifToFavourites(gif, username, title);
-            maximizeGifFromFavourites(gif, username, title);
+            maximizeGif(gif, username, title);
         });
 
     } else {
         $maxFavIcon.src = "/assets/icon-trash-normal.svg";
         $maxFavIcon.addEventListener("click", () => {
             removeFromFavourites(gif);
-            maximizeGifFromFavourites(gif, username, title);
+            maximizeGif(gif, username, title);
         });
     }
   };

@@ -12,25 +12,49 @@ body{
             left: 0;
             background-color: var(--principal-background);
             .close_icon{
-                margin: 0 0 1rem 40%;
+                margin: 0 0 1rem 51%;
+                cursor: pointer;
+
             }
             .main_gif{
-                width: 30vw;
+                width: 50vw;
                 align-self: center;
             }
             .gif_max_details{
                 display: flex;
-                margin: 1rem 35%;
+                margin: 1rem 42%;
                 justify-content: space-between;
                 .gif_max_info{
                     color: var(--principal-colour);
+                    width: 80%;
                 }
                 .gifmax_btns{
+                    cursor: pointer;
+                    width: 18%;
                     display: flex;
+                    justify-content: space-between;
                 }
 
             }
         }
 
     }
+}
+
+@media (min-width: 780px){
+    .max_gif_conteiner{
+        .max_gif_content{
+            .close_icon{
+                margin: 0 0 1rem 40%;
+            }
+
+            .main_gif{
+                width: 30vw;
+                align-self: center;
+            }
+            .gif_max_details{
+                margin: 1rem 35%;
+        }
+    }
+}
 }

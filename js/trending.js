@@ -1,4 +1,4 @@
-// ! TRENDING TAGS
+// * *  TRENDING TAGS  * * //
 
 async function getTrendingTag (){
     await fetch (`https://api.giphy.com/v1/trending/searches?${apiKey}`)
@@ -8,9 +8,7 @@ async function getTrendingTag (){
 };
 getTrendingTag();
 
-function templateTrendingTags(response){
-    window.scrollTo(0, 456);
-    
+function templateTrendingTags(response){    
     for (i = 0; i < 5; i++){
         let $trendingTag = document.createElement('span');
         $trendingTag.classList.add('trending_tags');
@@ -22,7 +20,7 @@ function templateTrendingTags(response){
 };
 
 
-// ! TRENDING GIFS
+// * *  TRENDING GIFS  * * //
 
 async function getTrendingGif() {
     await fetch(`${trendingEndpointWithApiKey}&limit=12&rating=g`)
@@ -41,12 +39,12 @@ const templateTrendingGifs = (trendings) => {
 		const trendingGifsContainer = document.createElement('div');
 		trendingGifsContainer.classList.add('trending_gif_content');
 		trendingGifsContainer.innerHTML = ` 
-        <img class="trendingGif_result" src="${trendings.data[i].images.original.url}" alt="${trendings.data[i].title}">
+        <img class="trendingGif_result" onclick="maximizeGif('${trendings.data[i].images.original.url}','${trendings.data[i].username}','${trendings.data[i].title}')" src="${trendings.data[i].images.original.url}" alt="${trendings.data[i].title}">
         <section class="trendingGif_info">
         <div class="icons">
-            <img class="icon_fav" onclick="addGifToFavourites('${trendings.data[i].images.original.url}','${trendings.data[i].username}','${trendings.data[i].title}')" src="/assets/icon-fav.svg" alt="">
-            <img class="icon_download" onclick="downloadGif('${trendings.data[i].images.original.url}','${trendings.data[i].title}')" src="/assets/icon-download.svg" alt="">
-            <img class="icon_max" src="/assets/icon-max-normal.svg" alt="">               
+            <div class="icon icon_fav" onclick="addGifToFavourites('${trendings.data[i].images.original.url}','${trendings.data[i].username}','${trendings.data[i].title}')" src="/assets/icon-fav.svg" alt=""></div>
+            <div class="icon icon_download" onclick="downloadGif('${trendings.data[i].images.original.url}','${trendings.data[i].title}')" src="/assets/icon-download.svg" alt=""></div>
+            <div class="icon icon_max" onclick="maximizeGif('${trendings.data[i].images.original.url}','${trendings.data[i].username}','${trendings.data[i].title}')" src="/assets/icon-max-normal.svg" alt=""></div>               
         </div>
         <div class="details">
             <p class="gif_user">${trendings.data[i].username}</p>
@@ -67,4 +65,4 @@ function slidePrevious(){
 };
 
 $btnArrowNext.addEventListener('click', slideNext);
-$btnArrowPrevious.addEventListener('click',slidePrevious);
+$btnArrowPrevious.addEventListener('click', slidePrevious);

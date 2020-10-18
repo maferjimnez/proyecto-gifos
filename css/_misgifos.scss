@@ -15,8 +15,7 @@ body{
         .mis_gifos_content{
                 padding: 0 5rem;
                 display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
+                justify-content: center;
                 .gif_result_container{
                     margin-bottom: 1.81rem;
                     cursor: pointer;
@@ -32,37 +31,6 @@ body{
 
                     .gif_content{
                         display: none;
-                        
-                        .icons{                            
-                        display: flex;
-                        justify-content: space-between;
-                        position: absolute;
-                        top: 1rem;
-                        left: 8rem;
-                        width: 47%;
-                    }
-                    .details{
-                        position: absolute;
-                        top: 9rem;
-                        left: 1rem;
-                        .gif_user , .gif_title{
-                            font-family: 'Roboto-regular', sans-serif;
-                            color: #ffffff;
-                        }
-                    }
-                    }
-                    &:hover{
-                        .gif_content{
-                            display: block;
-                            background-color: $azulOscuro;
-                            width: 100%;
-                            height: 100%;
-                            position: absolute;
-                            z-index: 1;
-                            top: 0;
-                            opacity: 80%;
-                        }
-                    }
                 }
             }
 
@@ -75,3 +43,82 @@ body{
         }
         }
     }
+}
+
+@media (min-width: 780px){
+    .mis_gifos_conteiner{
+        .mis_gifos_content{
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .gif_result_container{
+                .gif_content{
+                    display: none;
+                    
+                    .icons{                            
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    top: 1rem;
+                    left: 8rem;
+                    width: 47%;
+
+                    .icon{
+                        width: 2rem;
+                        height: 2rem;
+                      }
+                      .icon_delete{
+                        background: url('/assets/icon-trash-normal.svg') center no-repeat;
+
+                          &:hover {
+                            background: url('/assets/icon-trash-hover.svg') center no-repeat;
+                          }
+
+                          &:active {
+                            background: url('/assets/icon-fav-active.svg') center no-repeat;
+                          }
+                      }
+                      .icon_download{
+                        background: url('/assets/icon-download.svg') center no-repeat;
+
+                          &:hover {
+                            background: url('/assets/icon-download-hover.svg') center
+                              no-repeat;
+                          }
+                      }
+                      .icon_max{
+                        background: url('/assets/icon-max-normal.svg') center no-repeat;
+
+                        &:hover {
+                          background: url('/assets/icon-max-hover.svg') center no-repeat;
+                        }
+                      }
+
+                }
+                .details{
+                    position: absolute;
+                    top: 9rem;
+                    left: 1rem;
+                    .gif_user , .gif_title{
+                        font-family: 'Roboto-regular', sans-serif;
+                        color: #ffffff;
+                    }
+                }
+                }
+                &:hover{
+                    .gif_content{
+                        display: block;
+                        background-color: $azulOscuro;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        opacity: 80%;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}

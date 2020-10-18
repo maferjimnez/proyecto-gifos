@@ -1,5 +1,5 @@
 body{
-    	background-color: var(--principal-background);
+    background-color: var(--principal-background);
 
     #header__container{
         border-top: 5px  solid var(--principal-colour);
@@ -14,8 +14,12 @@ body{
             justify-content: space-between;
 
             .img_logo{
-                width: 3.05rem;
+                width: 3rem;
+                cursor: pointer;
 
+                &:hover{
+                    width: 4rem;
+                }
             }
         }
 
@@ -30,7 +34,7 @@ body{
 
         .navbar{
             position: absolute;
-            background-color: var(--principal-colour);
+            background-color: var(--burger-menu-background);
             opacity: 90%;
             width: 100%;
             overflow: hidden;

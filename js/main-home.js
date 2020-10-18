@@ -1,6 +1,4 @@
-//!   HEADER SECTION  !//
-
-/** BURGUER MENU **/
+// * * BURGUER MENU * * //
 
 const showMenu = () => {
     $navbarMenu.classList.toggle('navbar_menu_open');
@@ -13,15 +11,8 @@ const showMenu = () => {
 };
 
 // * * NAVBAR ICONS EVENTS * * //
-
-const $btnCrear = document.getElementById('btnCrear');
-
 $btnCrear.addEventListener('mouseover', () => {
     $btnCrear.src = "assets/CTA-crear-gifo-hover.svg";
-}  )
-
-$btnCrear.addEventListener('mouseout', () => {
-    $btnCrear.src = "assets/button-crear-gifo.svg";
 }  )
 
 $btnCrear.addEventListener('click', () => {
@@ -34,7 +25,7 @@ const $navbarSearchBar = document.querySelector('.navbar_search_container');
 const $headerContainer = document.querySelector('#header__container');
 
 function stickyNav() {
-    if (document.documentElement.scrollTop > 50) {
+    if (document.documentElement.scrollTop > 500) {
         if (window.innerWidth < 1024) {
             $navbarSearchBar.classList.add('hide');
         } else {
@@ -51,18 +42,14 @@ function stickyNav() {
 window.addEventListener('scroll', stickyNav);
 
 
-// *!   HERO SECTION
 
-///       SEARCH BAR       ///
-
+// * *    SEARCH BAR      * * //
 
 let offset = 0;
-
 
 // * * FUNCTIONS * * //
 async function searchGif(search){
 
-    //event.preventDefault();
     cleanSearch();
 
     $searchInput.value = search;
@@ -79,7 +66,7 @@ async function searchGif(search){
         .then(result => {
             console.log(result)
                 if (result.data == 0) {
-                    errorSearch ();
+                    errorSearch();
         
                  } else {
                     displayGif(result);
@@ -100,12 +87,12 @@ function displayGif(result) {
         const gifResultContainer = document.createElement('div');
         gifResultContainer.classList.add('gif_result_container');
         gifResultContainer.innerHTML = `
-                                            <img class="gif_result" src="${result.data[i].images.original.url}" alt="${result.data[i].title}">
+                                            <img class="gif_result" onclick="maximizeGif('${result.data[i].images.original.url}','${result.data[i].username}','${result.data[i].title}')" src="${result.data[i].images.original.url}" alt="${result.data[i].title}">
                                             <section class="gif_content">
                                             <div class="icons">
-                                                <img class="icon_fav" onclick="addGifToFavourites('${result.data[i].images.original.url}','${result.data[i].username}','${result.data[i].title}')" src="/assets/icon-fav.svg" alt="" srcset="">
-                                                <img class="icon_download" onclick="downloadGif('${result.data[i].images.original.url}','${result.data[i].title}')" src="/assets/icon-download.svg" alt="">
-                                                <img class="icon_max" src="/assets/icon-max-normal.svg" alt="">               
+                                                <div class="icon icon_fav" onclick="addGifToFavourites('${result.data[i].images.original.url}','${result.data[i].username}','${result.data[i].title}')" src="/assets/icon-fav.svg" alt="" srcset=""></div>
+                                                <div class="icon icon_download" onclick="downloadGif('${result.data[i].images.original.url}','${result.data[i].title}')" src="/assets/icon-download.svg" alt=""></div>
+                                                <div class="icon icon_max" onclick="maximizeGif('${result.data[i].images.original.url}','${result.data[i].username}','${result.data[i].title}')" src="/assets/icon-max-normal.svg"></div>               
                                             </div>
                                             <div class="details">
                                                 <p class="gif_user">${result.data[i].username}</p>
@@ -130,7 +117,6 @@ function errorSearch () {
 function cleanGifsContainer () {
     $searchResultContainer.classList.add('hide');
     $searchErrorContainer.classList.add('hide');
-    //$searchResultContainer.innerHTML = '';
 };
 
 const showMore = (event) => {
@@ -145,7 +131,7 @@ const showMore = (event) => {
 };
 
 
-// * * SUGERENCIAS * * //
+// * * SUGGESTIONS * * //
 
 
 const getSearchSuggestions = async () => {
@@ -175,6 +161,8 @@ const displaySuggestions = (suggestions) => {
     //estilos
     $recomendedSearchContainer.classList.remove('hide');
     $recomendedSearchContainer.classList.add('recommendedSearch__container');
+    $searchInput.classList.remove('search_input');
+    $searchInput.classList.add('active_search');
     
     
     for (let i = 0; i < 4; i++) {
@@ -187,7 +175,9 @@ const displaySuggestions = (suggestions) => {
 
 const cleanSearch = () => {
     $recomendedSearchContainer.classList.add('hide');
-	
+    $searchInput.classList.add('search_input');
+    $searchInput.classList.remove('active_search');
+
 };
 
 
@@ -201,8 +191,6 @@ $searchInput.addEventListener('keypress', function (e){
 });
 $btnShowMore.addEventListener('click', showMore);
 $searchInput.addEventListener('input', getSearchSuggestions);
-$btnSearch.addEventListener('click', getSearchSuggestions);
-$btnSearch.addEventListener('click', getSearchSuggestions);
 
 
 // NAVBAR SEARCH

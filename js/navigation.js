@@ -46,7 +46,7 @@ function displayCreateGif() {
     $heroConteiner.classList.add('hide');
     $heroConteiner.classList.remove('hero__container');
     $favouritesSectionConteiner.classList.add('hide');
-    $favouritesGifsConteiner.classList.remove('main__favourites');
+    $favouritesSectionConteiner.classList.remove('main__favourites');
     $trendingTagsConteiner.classList.add('hide');
     $trendingGifsConteiner.classList.add('hide');
     $misGifosConteiner.classList.add('hide');

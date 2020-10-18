@@ -1,11 +1,11 @@
 .trendings__conteiner{
     .trending__gifs__conteiner{
         background-color: var(--secondary-background);
+        padding: 3rem 0;
   
         .trending_gifs_title{
           text-align: center;
           color: var(--principal-colour);
-          padding-top: 5rem;
         }
   
         .trending_gifs_paragraph{
@@ -31,49 +31,16 @@
             .trending_gif_content{
                 cursor: pointer;
                 position: relative;
-                padding-right: 2rem;
+                margin-right: 2rem;
     
                 .trendingGif_result{
                     width: 15.19rem;
                     height: 11.69rem;
-                }
-    
+                }    
                 .trendingGif_info{
-                    display: none;
-                    
-                    .icons{                            
-                    display: flex;
-                    justify-content: space-between;
-                    position: absolute;
-                    top: 1rem;
-                    left: 12rem;
-                    width: 40%;
+                  display: none;
                 }
-                .details{
-                    position: absolute;
-                    top: 13rem;
-                    left: 1rem;
-                    .gif_user , .gif_title{
-                        font-family: 'Roboto-regular', sans-serif;
-                        color: #ffffff;
-                    }
-                }            
-                }
-               
-               &:hover{
-                   .trendingGif_info{
-                       display: block;
-                       background-color: $azulOscuro;
-                       width: 92%;
-                       height: 99%;
-                       position: absolute;
-                       z-index: 1;
-                       top: 0;
-                       opacity: 80%;
-                   }
-               }
             }
-
           }
           }      
       }
@@ -82,8 +49,9 @@
 
 @media (min-width: 780px){
     .trendings__conteiner{
-        .trending__gifs__conteiner{
-                
+      padding: 5rem 0;
+        .trending__gifs__conteiner{  
+                   
             .trending_gifs_slider{
               margin: 0;
               display: flex;
@@ -101,46 +69,74 @@
                 margin: 0 1rem;
 
                 .trending_gif_content{
-
                   .trendingGif_result{
                       width: 22.30rem;
                       height: 17.19rem;
-                  }
-      
-                //   .trendingGif_info{
-                //       display: none;
+                  }   
+                  .trendingGif_info{
+                      width: 100%;
+                      height: 98%;
                       
-                //       .icons{                            
-                //       display: flex;
-                //       justify-content: space-between;
-                //       position: absolute;
-                //       top: 1rem;
-                //       left: 8rem;
-                //       width: 47%;
-                //   }
-                //   .details{
-                //       position: absolute;
-                //       top: 9rem;
-                //       left: 1rem;
-                //       .gif_user , .gif_title{
-                //           font-family: 'Roboto-regular', sans-serif;
-                //           color: #ffffff;
-                //       }
-                //   }            
-                //   }
+                      .icons{                            
+                      display: flex;
+                      justify-content: space-between;
+                      position: absolute;
+                      top: 1rem;
+                      left: 13rem;
+                      width: 35%;
+
+                      .icon{
+                        width: 2rem;
+                        height: 2rem;
+                      }
+                      .icon_fav{
+                        background: url('/assets/icon-fav.svg') center no-repeat;
+
+                          &:hover {
+                            background: url('/assets/icon-fav-hover.svg') center no-repeat;
+                          }
+
+                          &:active {
+                            background: url('/assets/icon-fav-active.svg') center no-repeat;
+                          }
+                      }
+                      .icon_download{
+                        background: url('/assets/icon-download.svg') center no-repeat;
+
+                          &:hover {
+                            background: url('/assets/icon-download-hover.svg') center
+                              no-repeat;
+                          }
+                      }
+                      .icon_max{
+                        background: url('/assets/icon-max-normal.svg') center no-repeat;
+
+                        &:hover {
+                          background: url('/assets/icon-max-hover.svg') center no-repeat;
+                        }
+                      }
+                  }
+                  .details{
+                      position: absolute;
+                      top: 13rem;
+                      left: 1rem;
+                      .gif_user , .gif_title{
+                          font-family: 'Roboto-regular', sans-serif;
+                          color: #ffffff;
+                      }
+                  }            
+                  }
                  
-                //  &:hover{
-                //      .trendingGif_info{
-                //          display: block;
-                //          background-color: var(--principal-colour);
-                //          width: 16.25rem;
-                //          height: 12.5rem;
-                //          position: absolute;
-                //          z-index: 1;
-                //          top: 0;
-                //          opacity: 80%;
-                //      }
-                //  }
+                 &:hover{
+                     .trendingGif_info{
+                         display: block;
+                         background-color: $azulOscuro;
+                         position: absolute;
+                         z-index: 1;
+                         top: 0;
+                         opacity: 80%;
+                     }
+                 }
               }
         
               }
