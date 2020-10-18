@@ -359,7 +359,7 @@ body .main .hero__container .hero__ilustration {
   }
   .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info {
     width: 100%;
-    height: 98%;
+    height: 98.5%;
   }
   .trendings__conteiner .trending__gifs__conteiner .trending_gifs_slider .trending_gifs_content .trending_gif_content .trendingGif_info .icons {
     display: -webkit-box;
@@ -422,6 +422,9 @@ body .main .hero__container .hero__ilustration {
 }
 
 .main .hero__container .hero__search .hero_input .active_search {
+  -webkit-transition: none;
+  transition: none;
+  color: var(--secondary-colour);
   width: 50vw;
   outline: none;
   background: var(--principal-background);
@@ -436,6 +439,9 @@ body .main .hero__container .hero__ilustration {
 }
 
 .main .hero__container .hero__search .hero_input .search_input {
+  color: var(--secondary-colour);
+  -webkit-transition: none;
+  transition: none;
   outline: none;
   background: var(--principal-background);
   border: 1px solid var(--principal-colour);
@@ -1118,6 +1124,9 @@ body .max_gif_conteiner .max_gif_content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1135,7 +1144,7 @@ body .max_gif_conteiner .max_gif_content {
 }
 
 body .max_gif_conteiner .max_gif_content .close_icon {
-  margin: 0 0 1rem 65%;
+  margin: 0 0 1rem 50%;
   cursor: pointer;
 }
 
@@ -1147,10 +1156,10 @@ body .max_gif_conteiner .max_gif_content .main_gif {
 }
 
 body .max_gif_conteiner .max_gif_content .gif_max_details {
+  width: 70vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1rem 16%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1177,20 +1186,17 @@ body .max_gif_conteiner .max_gif_content .gif_max_details .gifmax_btns {
   body .max_gif_conteiner .max_gif_content {
     padding: 0 20%;
   }
-  body .max_gif_conteiner .max_gif_content .close_icon {
-    margin: 0 0 1rem 65%;
-  }
   body .max_gif_conteiner .max_gif_content .main_gif {
-    width: 40vw;
+    width: 30vw;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
   body .max_gif_conteiner .max_gif_content .gif_max_details {
-    margin: 1rem 30%;
+    width: 30vw;
   }
   body .max_gif_conteiner .max_gif_content .gif_max_details .gif_max_info {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

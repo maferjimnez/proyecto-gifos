@@ -2,6 +2,7 @@ body{
     .max_gif_conteiner{
         .max_gif_content{
             justify-content: center;
+            align-items: center;
             display: flex;
             flex-direction: column;
             z-index: 200000;
@@ -12,7 +13,7 @@ body{
             left: 0;
             background-color: var(--principal-background);
             .close_icon{
-                margin: 0 0 1rem 65%;
+                margin: 0 0 1rem 50%;
                 cursor: pointer;
 
             }
@@ -21,8 +22,8 @@ body{
                 align-self: center;
             }
             .gif_max_details{
+                width: 70vw;
                 display: flex;
-                margin: 1rem 16%;
                 justify-content: space-between;
                 .gif_max_info{
                     color: var(--principal-colour);
@@ -47,19 +48,15 @@ body{
     .max_gif_conteiner{
         .max_gif_content{
             padding: 0 20%;
-            .close_icon{
-                margin: 0 0 1rem 65%;
-            }
 
             .main_gif{
-                width: 40vw;
+                width: 30vw;
                 align-self: center;
             }
             .gif_max_details{
-                margin: 1rem 30%;
-
+                width: 30vw;
                 .gif_max_info{
-                    font-size: 20px;
+                    font-size: 15px;
                 }
         }
     }

@@ -5,7 +5,7 @@ if (localStorage.getItem('UserGifs') === null) {
    arrUserGifos = []; 
 } else {
     arrUserGifos = JSON.parse(localStorage.getItem('UserGifs'));
-}
+};
 
 
 function recordVideo(){
@@ -35,11 +35,16 @@ function recordVideo(){
         $userVideo.classList.remove('hide');
         $videoConteiner.classList.remove('hide');
         $videoConteiner.classList.add('video_conteiner');
+        $videoOverlay.classList.add('hide');
+        $videoOverlay.classList.remove('video_overlay');
+    
 
         $stepOne.classList.remove('step_btn_central_active');
         $stepOne.classList.add('step_btn_central');
         $stepTwo.classList.remove('step_btn_central');
         $stepTwo.classList.add('step_btn_central_active');
+        $stepThree.classList.remove('step_btn_central_active');
+        $stepThree.classList.add('step_btn_central');
 
 
         $userVideo.srcObject = stream;
@@ -67,6 +72,7 @@ function startRecordingGif() {
     $recordingTimer.classList.add('recording_timer');
     $stopBtn.classList.remove('hide');
     $stopBtn.classList.add('buttons_central');
+
 
     recorder.startRecording();
     console.log();
@@ -99,7 +105,6 @@ function stopRecordingGif(){
 
     $stopBtn.classList.add('hide');
     $stopBtn.classList.remove('buttons_central');
-    // $uploadBtn.classList.remove('hide');
     $uploadBtn.classList.add('buttons_central');
     $uploadBtn.style.display = 'block';
     $recordAgainBtn.classList.remove('hide');
@@ -107,15 +112,12 @@ function stopRecordingGif(){
     $recordingTimer.classList.add('hide');
     $recordingTimer.classList.remove('recording_timer');
 
-    //clearTimeout(calculateRecordingTime);
     $recordingTimer.innerHTML = '00:00:00';
 };
 
 async function  uploadGif() {
     $uploadBtn.style.display = 'none';
     $uploadBtn.classList.remove('buttons_central');
-    $recordAgainBtn.classList.add('hide');
-    $recordAgainBtn.classList.remove('record_again');
 
     $stepTwo.classList.remove('step_btn_central_active');
     $stepTwo.classList.add('step_btn_central');

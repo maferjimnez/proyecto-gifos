@@ -7,6 +7,8 @@
             position: relative;
 
             .active_search{
+                transition: none;
+                color: var(--secondary-colour);
                 width: 50vw;
                 outline: none;
                 background:var(--principal-background);
@@ -21,6 +23,8 @@
             }
 
             .search_input {
+            color: var(--secondary-colour);
+            transition: none;
             outline: none;
             background:var(--principal-background);
             border: 1px solid var(--principal-colour);
