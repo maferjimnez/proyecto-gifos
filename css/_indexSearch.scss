@@ -35,11 +35,19 @@
             }
 
             #searchIcon {
+            transition: none;
             position: absolute;
             right: 6%;
             top: 30%;
             cursor: pointer;
-            }           
+            }  
+            
+            .cleanIcon{
+              position: absolute;
+              right: 6%;
+              top: 40%;
+              cursor: pointer;
+            }
         }
 
 

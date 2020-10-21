@@ -20,7 +20,8 @@ function setThemeLocalStorage() {
         $btnCrear.src = '/assets/CTA-crar-gifo-modo-noc.svg';
         $btnArrowPrevious.src = '/assets/button-slider-left-md-noct.svg';
         $btnArrowNext.src = '/assets/button-slider-right-md-noct.svg';
-
+        $btnCleanSearch.src = '/assets/close-modo-noct.svg';
+        $btnSearch.src = '/assets/icon-search-mod-noc.svg'
     } else {
         document.body.classList.remove('dark');
         $darkModeBtn.innerHTML = "MODO NOCTURNO"
@@ -30,6 +31,8 @@ function setThemeLocalStorage() {
         $btnCrear.src = '/assets/button-crear-gifo.svg';
         $btnArrowPrevious.src = 'assets/button-slider-left.svg';
         $btnArrowNext.src = 'assets/Button-Slider-right.svg';
+        $btnCleanSearch.src = '/assets/close.svg';
+        $btnSearch.src = '/assets/icon-search.svg'
 
     }
 };

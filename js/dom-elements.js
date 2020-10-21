@@ -24,6 +24,7 @@ const $searchErrorContainer = document.querySelector('.search__error__container'
 // searchbar hero
 const $searchInput = document.getElementById('search_input');
 const $btnSearch = document.getElementById('searchIcon');
+const $btnCleanSearch = document.querySelector('#cleanIcon');
 
 // searchbar navbar
 const $searchInputNavbar = document.querySelector('#search_input_navbar');

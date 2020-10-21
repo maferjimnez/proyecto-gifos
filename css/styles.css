@@ -452,9 +452,18 @@ body .main .hero__container .hero__ilustration {
 }
 
 .main .hero__container .hero__search .hero_input #searchIcon {
+  -webkit-transition: none;
+  transition: none;
   position: absolute;
   right: 6%;
   top: 30%;
+  cursor: pointer;
+}
+
+.main .hero__container .hero__search .hero_input .cleanIcon {
+  position: absolute;
+  right: 6%;
+  top: 40%;
   cursor: pointer;
 }
 

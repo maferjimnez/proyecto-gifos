@@ -163,7 +163,11 @@ const displaySuggestions = (suggestions) => {
     $recomendedSearchContainer.classList.add('recommendedSearch__container');
     $searchInput.classList.remove('search_input');
     $searchInput.classList.add('active_search');
-    
+    $btnCleanSearch.classList.remove('hide');
+    $btnCleanSearch.classList.add('cleanIcon');
+    $btnSearch.style.right = '94%'
+
+
     
     for (let i = 0; i < 4; i++) {
         const searchSuggestionItem = document.createElement('li');
@@ -191,6 +195,14 @@ $searchInput.addEventListener('keypress', function (e){
 });
 $btnShowMore.addEventListener('click', showMore);
 $searchInput.addEventListener('input', getSearchSuggestions);
+$btnCleanSearch.addEventListener('click', () =>{
+    $btnSearch.style.right = '6%'
+    $searchInput.value = '';
+    $btnCleanSearch.classList.add('hide');
+    $btnCleanSearch.classList.remove('cleanIcon');
+    cleanSearch();
+
+})
 
 
 // NAVBAR SEARCH
